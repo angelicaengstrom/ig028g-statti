@@ -1,4 +1,5 @@
 # IPP
 Projektarbete
 
-Vad ska vi göra?
+Vad?
+Hur?
