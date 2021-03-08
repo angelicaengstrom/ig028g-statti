@@ -1,8 +1,2 @@
 # IPP
-Projektarbete
-
-pskfhlgdm modmhthoghmlg
-erhlmeo
-ehlem
-ghdh
-thhthht
+Projektarbete, träningsapp utvecklad i androidstudio
