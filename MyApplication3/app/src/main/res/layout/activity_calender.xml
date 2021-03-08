@@ -21,7 +21,15 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Add"
-        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/menu_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calender"
+        tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
@@ -42,13 +50,6 @@
         tools:layout_editor_absoluteX="302dp"
         tools:layout_editor_absoluteY="658dp" />
 
-    <CalendarView
-        android:id="@+id/calendarView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="24dp"
-        tools:layout_editor_absoluteY="123dp" />
-
     <TextView
         android:id="@+id/textView5"
         android:layout_width="wrap_content"
@@ -56,4 +57,11 @@
         android:text="Gjorda träningspass:"
         tools:layout_editor_absoluteX="24dp"
         tools:layout_editor_absoluteY="487dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="22dp"
+        tools:layout_editor_absoluteY="113dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
