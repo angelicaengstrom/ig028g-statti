@@ -15,6 +15,8 @@
         tools:layout_editor_absoluteX="57dp"
         tools:layout_editor_absoluteY="40dp" />
 
+
+
     <Button
         android:id="@+id/menu_add"
         android:layout_width="wrap_content"
@@ -51,12 +53,12 @@
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
-        android:id="@+id/AddNotes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="+"
+        android:id="@+id/saveNote"
+        android:layout_width="88dp"
+        android:layout_height="56dp"
+        android:text="Save"
         tools:layout_editor_absoluteX="307dp"
-        tools:layout_editor_absoluteY="582dp" />
+        tools:layout_editor_absoluteY="592dp" />
 
     <com.google.android.material.textfield.TextInputEditText
         android:id="@+id/notes"
@@ -64,23 +66,23 @@
         android:layout_height="wrap_content"
         android:hint="Anteckningar"
         tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="491dp" />
+        tools:layout_editor_absoluteY="218dp" />
 
     <TextView
         android:id="@+id/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hur gick det?"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="450dp" />
+        android:text="Övriga anteckningar:"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="191dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vilken typ av träning körde du?"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="109dp" />
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="274dp" />
 
     <Button
         android:id="@+id/add_condition"
@@ -88,8 +90,8 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Kondition"
-        tools:layout_editor_absoluteX="17dp"
-        tools:layout_editor_absoluteY="150dp" />
+        tools:layout_editor_absoluteX="21dp"
+        tools:layout_editor_absoluteY="311dp" />
 
     <Button
         android:id="@+id/add_strength"
@@ -98,7 +100,7 @@
         android:clickable="true"
         android:text="Styrka"
         tools:layout_editor_absoluteX="160dp"
-        tools:layout_editor_absoluteY="150dp" />
+        tools:layout_editor_absoluteY="311dp" />
 
     <Button
         android:id="@+id/add_technique"
@@ -107,6 +109,63 @@
         android:clickable="true"
         android:text="Teknik"
         tools:layout_editor_absoluteX="277dp"
-        tools:layout_editor_absoluteY="150dp" />
+        tools:layout_editor_absoluteY="311dp" />
+
+    <TextView
+        android:id="@+id/textView8"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hur kändes träningspasset?"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="96dp" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hur är du fysiskt/psykiskt?"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="139dp" />
+
+    <Button
+        android:id="@+id/add_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add excersise"
+        tools:layout_editor_absoluteX="251dp"
+        tools:layout_editor_absoluteY="382dp" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/textInputLayout"
+        android:layout_width="169dp"
+        android:layout_height="43dp"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="380dp">
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/main_title"
+        android:layout_width="171dp"
+        android:layout_height="43dp"
+        android:hint="Title"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="380dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="65dp"
+        android:layout_height="57dp"
+        android:text="Bra"
+        tools:layout_editor_absoluteX="256dp"
+        tools:layout_editor_absoluteY="103dp" />
+
+    <CheckBox
+        android:id="@+id/checkBox2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dåligt"
+        tools:layout_editor_absoluteX="4dp"
+        tools:layout_editor_absoluteY="105dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
