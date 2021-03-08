@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Add">
+
+    <TextView
+        android:id="@+id/h1"
+        android:layout_width="293dp"
+        android:layout_height="56dp"
+        android:text="Lägg till träningspass"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="57dp"
+        tools:layout_editor_absoluteY="40dp" />
+
+    <Button
+        android:id="@+id/menu_calender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Calender"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/menu_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Graph"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/menu_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Settings"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/AddNotes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        tools:layout_editor_absoluteX="307dp"
+        tools:layout_editor_absoluteY="582dp" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Anteckningar"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="184dp" />
+
+    <TextView
+        android:id="@+id/h2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hur gick det?"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="137dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
