@@ -16,12 +16,20 @@
         tools:layout_editor_absoluteY="40dp" />
 
     <Button
+        android:id="@+id/menu_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Add"
+        tools:layout_editor_absoluteX="11dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
         android:id="@+id/menu_calender"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Calender"
-        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteX="99dp"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
