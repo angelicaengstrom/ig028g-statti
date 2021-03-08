@@ -6,4 +6,54 @@
     android:layout_height="match_parent"
     tools:context=".Calender">
 
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Kalender"
+        android:textSize="30sp"
+        tools:layout_editor_absoluteX="146dp"
+        tools:layout_editor_absoluteY="54dp" />
+
+    <Button
+        android:id="@+id/menu_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Add"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/menu_graph"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Graph"
+        tools:layout_editor_absoluteX="210dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <Button
+        android:id="@+id/menu_settings"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:text="Settings"
+        tools:layout_editor_absoluteX="302dp"
+        tools:layout_editor_absoluteY="658dp" />
+
+    <CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="123dp" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gjorda träningspass:"
+        tools:layout_editor_absoluteX="24dp"
+        tools:layout_editor_absoluteY="487dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
