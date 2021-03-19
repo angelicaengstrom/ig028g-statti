@@ -12,9 +12,9 @@
         android:layout_height="56dp"
         android:text="Lägg till träningspass"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="40dp" />
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 
     <Button
@@ -22,7 +22,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add"
-        tools:layout_editor_absoluteX="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
@@ -31,7 +33,9 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Calender"
-        tools:layout_editor_absoluteX="99dp"
+        app:layout_constraintEnd_toEndOf="@+id/menu_settings"
+        app:layout_constraintHorizontal_bias="0.31"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
@@ -40,7 +44,9 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Graph"
-        tools:layout_editor_absoluteX="210dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.66"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
@@ -49,7 +55,9 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Settings"
-        tools:layout_editor_absoluteX="302dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
@@ -57,31 +65,28 @@
         android:layout_width="88dp"
         android:layout_height="56dp"
         android:text="Save"
-        tools:layout_editor_absoluteX="307dp"
-        tools:layout_editor_absoluteY="592dp" />
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/notes"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Anteckningar"
-        tools:layout_editor_absoluteX="0dp"
-        tools:layout_editor_absoluteY="218dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.96"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="589dp" />
 
     <TextView
         android:id="@+id/h2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Övriga anteckningar:"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="191dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.08"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="200dp" />
 
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Vilken typ av träning körde du?"
-        tools:layout_editor_absoluteX="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="274dp" />
 
     <Button
@@ -90,7 +95,9 @@
         android:layout_height="wrap_content"
         android:clickable="true"
         android:text="Kondition"
-        tools:layout_editor_absoluteX="21dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.1"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="311dp" />
 
     <Button
@@ -116,15 +123,19 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hur kändes träningspasset?"
-        tools:layout_editor_absoluteX="11dp"
-        tools:layout_editor_absoluteY="96dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.135"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="74dp" />
 
     <TextView
         android:id="@+id/textView9"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Hur är du fysiskt/psykiskt?"
-        tools:layout_editor_absoluteX="11dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.15"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="139dp" />
 
     <Button
@@ -132,40 +143,53 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Add excersise"
-        tools:layout_editor_absoluteX="251dp"
-        tools:layout_editor_absoluteY="382dp" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayout"
-        android:layout_width="169dp"
-        android:layout_height="43dp"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="380dp">
-
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/main_title"
-        android:layout_width="171dp"
-        android:layout_height="43dp"
-        android:hint="Title"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="380dp" />
-
-    <CheckBox
-        android:id="@+id/checkBox"
-        android:layout_width="65dp"
-        android:layout_height="57dp"
-        android:text="Bra"
         tools:layout_editor_absoluteX="256dp"
-        tools:layout_editor_absoluteY="103dp" />
+        tools:layout_editor_absoluteY="367dp" />
 
-    <CheckBox
-        android:id="@+id/checkBox2"
+    <EditText
+        android:id="@+id/editTextTextPersonName"
+        android:layout_width="357dp"
+        android:layout_height="42dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.12"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="219dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Dåligt"
-        tools:layout_editor_absoluteX="4dp"
-        tools:layout_editor_absoluteY="105dp" />
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.16"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="367dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="94dp" />
+
+    <EditText
+        android:id="@+id/editTextTextPersonName4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:layout_editor_absoluteY="158dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
