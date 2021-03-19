@@ -61,7 +61,7 @@
         tools:layout_editor_absoluteY="658dp" />
 
     <Button
-        android:id="@+id/saveNote"
+        android:id="@+id/saveNoteBtn"
         android:layout_width="88dp"
         android:layout_height="56dp"
         android:text="Save"
