@@ -1,8 +1,11 @@
+//CREATED BY MAHMOD MOHAMMAD
+
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -40,8 +43,24 @@ public class register extends AppCompatActivity {
                 String email = mEmail.getText().toString().trim();
                 String password = mPassword.getText().toString().trim();
 
-                if()
+
+                if(TextUtils.isEmpty(email)){            //coment: the user did not enter his email.
+                    mEmail.setError("Email måste skrivas");
+                    return;
+                }
+
+                if(TextUtils.isEmpty(password)){
+                    mPassword.setError("Lösenordet måste skrivas");
+                    return;
+                }
+                if(password.length() < 8){
+                    mPassword.setError("Lösenordet måste minst vara 8 tecken");
+                    return;
+                }
+                progressBar.setVisibility(View.VISIBLE);
+
+                //The following code is to register the user
             }
         });
-    }
+
 }
