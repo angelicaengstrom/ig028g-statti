@@ -21,11 +21,13 @@ public class Add extends AppCompatActivity {
             }
         });
 
-        Button menu_calender = (Button) findViewById(R.id.menu_calender);
+        //Save
+        Button saveNoteBtn = (Button) findViewById(R.id.saveNoteBtn);
         menu_calender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                EditText otherNotesEditText = (Edit) findViewById(R.id.otherNotes);
+                //TextView (där texten visas)
             }
         });
     }
