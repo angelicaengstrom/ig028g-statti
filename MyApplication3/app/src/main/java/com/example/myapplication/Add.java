@@ -27,7 +27,6 @@ public class Add extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 EditText otherNotesEditText = (Edit) findViewById(R.id.otherNotes);
-                //TextView (där texten visas)
             }
         });
     }
