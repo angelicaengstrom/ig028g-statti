@@ -1734,7 +1734,6 @@ id META
 id NO_DEBUG
 id Password
 id Phone
-id Register
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1950,6 +1949,7 @@ id linear
 id listMode
 id list_item
 id login
+id loginBtn
 id masked
 id material_clock_display
 id material_clock_face
@@ -2235,7 +2235,6 @@ layout abc_tooltip
 layout activity_add
 layout activity_calender
 layout activity_graph
-layout activity_login
 layout activity_main
 layout activity_register
 layout custom_dialog
