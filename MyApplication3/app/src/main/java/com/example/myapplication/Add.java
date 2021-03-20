@@ -26,7 +26,7 @@ public class Add extends AppCompatActivity {
         menu_calender.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                EditText otherNotesEditText = (Edit) findViewById(R.id.otherNotes);
+                EditText otherNotesEditText = findViewById(R.id.otherNotes);
             }
         });
     }
