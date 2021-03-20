@@ -13,7 +13,6 @@
         <activity android:name=".Calender" />
         <activity android:name=".Add" />
         <activity android:name=".register" />
-        <activity android:name=".Login" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

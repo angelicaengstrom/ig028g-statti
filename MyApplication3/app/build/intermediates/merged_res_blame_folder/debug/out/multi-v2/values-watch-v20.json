@@ -1,0 +1,20 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-watch-v20/values-watch-v20.xml",
+            "map": [
+                {
+                    "source": "/home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f2c0150d83cccc24a884830fc44edbbf/appcompat-1.2.0/res/values-watch-v20/values-watch-v20.xml",
+                    "from": {
+                        "startLines": "2,5,8",
+                        "startColumns": "4,4,4",
+                        "startOffsets": "55,214,385",
+                        "endLines": "4,7,10",
+                        "endColumns": "12,12,12",
+                        "endOffsets": "209,380,553"
+                    }
+                }
+            ]
+        }
+    ]
+}

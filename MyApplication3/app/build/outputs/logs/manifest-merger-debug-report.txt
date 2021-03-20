@@ -1,0 +1,285 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+MERGED from [com.google.android.material:material:1.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b208d6ea08496dd3beca41ca248863fa/material-1.3.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/210224b323759090a66f3d39e88f6653/constraintlayout-2.0.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f2c0150d83cccc24a884830fc44edbbf/appcompat-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:17:1-42:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/61e488a7b48ffc8255adc230dafa50f0/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/283499019944b954344c21ecf1019372/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ce58e5dc51b474661757e4fb70a12be0/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:17:1-29:12
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/614df3a245b2c343e34e8a76449eebf2/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:17:1-28:12
+MERGED from [androidx.fragment:fragment:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d552d54d79891b2a9c69132582332e2f/fragment-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/09a3fc222215c93e4b8eb759ead0f0c4/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9d28e40defdf6a4e3602d97c075e17f2/drawerlayout-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1955be693eb56c1139576e45ec90d484/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8f6da53f8601c0b0ad135bf04e1fd79/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.transition:transition:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c939c9d1cce5aa2f18956c8b9d20ad18/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ef6bbd80072226febbd8b1eb2582757c/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/bf86200cdd995924b2760bb57cd14010/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1dd75e54f719b478d6b403c76e0463e7/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d41f6a590796eccba86906146b86c0e8/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/652ae343ce7045a2f751e9940f7d865d/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/967ac9d00d0570a1e1fe1c7644cdc60a/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcea55302b5d2e843f6bf32f4bea1587/jetified-activity-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5b59b01475618829fe79ad446c5facaf/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.customview:customview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8d4666f682775c60e9e0f1d669843aa7/customview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:17:1-26:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5c5e5af1473cda4f9f188f4b37076293/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5e826c1b109742f8bca7b17a6327c1d0/jetified-firebase-components-16.0.0/AndroidManifest.xml:15:1-23:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f549a48962f97668ee442149d558a50d/versionedparcelable-1.1.0/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a37cc7d38ecba109ecfb72735d489975/lifecycle-runtime-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c6f5bca5887ecb4409ba6069f8d7382e/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cae9d7df45129530ff877ef3c8a4c88d/jetified-savedstate-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/411b57b9b14e2dce30437831b520790e/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/86aa7fcb6f12855a4b953477a2672233/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/6320adba18b4d4720bd8695f5fffc52f/print-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8688f7244dd4ab0541bbbfd60a830f17/lifecycle-livedata-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e31b71f57c5cf8e3a670371795980592/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/dfe8cc82fa279aa5c223402d6e9d41f9/core-runtime-2.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/126fd7248f78719ccc6ed2d6585226da/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+	package
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:3:5-40
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-26:12
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:11-69
+application
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:5:5-24:19
+MERGED from [com.google.android.material:material:1.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b208d6ea08496dd3beca41ca248863fa/material-1.3.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b208d6ea08496dd3beca41ca248863fa/material-1.3.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/210224b323759090a66f3d39e88f6653/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/210224b323759090a66f3d39e88f6653/constraintlayout-2.0.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:23:5-40:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ce58e5dc51b474661757e4fb70a12be0/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ce58e5dc51b474661757e4fb70a12be0/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:25:5-37:19
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/614df3a245b2c343e34e8a76449eebf2/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/614df3a245b2c343e34e8a76449eebf2/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:7:5-20
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:22:5-26:19
+MERGED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:24:5-89
+MERGED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:24:5-89
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f549a48962f97668ee442149d558a50d/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f549a48962f97668ee442149d558a50d/versionedparcelable-1.1.0/AndroidManifest.xml:24:5-25:19
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:24:18-86
+	android:supportsRtl
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:10:9-35
+	android:label
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:8:9-41
+	android:roundIcon
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:9:9-54
+	android:icon
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:7:9-43
+	android:allowBackup
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:6:9-35
+	android:theme
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:11:9-51
+activity#com.example.myapplication.Graph
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:9-52
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:19-40
+activity#com.example.myapplication.Calender
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:9-46
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:19-43
+activity#com.example.myapplication.Add
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:9-41
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:19-38
+activity#com.example.myapplication.register
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:9-46
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:19-43
+activity#com.example.myapplication.Login
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:9-43
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:19-40
+activity#com.example.myapplication.MainActivity
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:9-23:20
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:19-47
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:13-22:29
+action#android.intent.action.MAIN
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:17-69
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:21:17-77
+	android:name
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:21:27-74
+uses-sdk
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b208d6ea08496dd3beca41ca248863fa/material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b208d6ea08496dd3beca41ca248863fa/material-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/210224b323759090a66f3d39e88f6653/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.0.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/210224b323759090a66f3d39e88f6653/constraintlayout-2.0.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f2c0150d83cccc24a884830fc44edbbf/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f2c0150d83cccc24a884830fc44edbbf/appcompat-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/61e488a7b48ffc8255adc230dafa50f0/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/61e488a7b48ffc8255adc230dafa50f0/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/283499019944b954344c21ecf1019372/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/283499019944b954344c21ecf1019372/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ce58e5dc51b474661757e4fb70a12be0/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ce58e5dc51b474661757e4fb70a12be0/jetified-firebase-auth-interop-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/614df3a245b2c343e34e8a76449eebf2/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/614df3a245b2c343e34e8a76449eebf2/jetified-play-services-tasks-17.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.fragment:fragment:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d552d54d79891b2a9c69132582332e2f/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d552d54d79891b2a9c69132582332e2f/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/09a3fc222215c93e4b8eb759ead0f0c4/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/09a3fc222215c93e4b8eb759ead0f0c4/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9d28e40defdf6a4e3602d97c075e17f2/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9d28e40defdf6a4e3602d97c075e17f2/drawerlayout-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1955be693eb56c1139576e45ec90d484/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1955be693eb56c1139576e45ec90d484/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8f6da53f8601c0b0ad135bf04e1fd79/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8f6da53f8601c0b0ad135bf04e1fd79/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c939c9d1cce5aa2f18956c8b9d20ad18/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c939c9d1cce5aa2f18956c8b9d20ad18/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ef6bbd80072226febbd8b1eb2582757c/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/ef6bbd80072226febbd8b1eb2582757c/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/bf86200cdd995924b2760bb57cd14010/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/bf86200cdd995924b2760bb57cd14010/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1dd75e54f719b478d6b403c76e0463e7/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1dd75e54f719b478d6b403c76e0463e7/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d41f6a590796eccba86906146b86c0e8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d41f6a590796eccba86906146b86c0e8/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/652ae343ce7045a2f751e9940f7d865d/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/652ae343ce7045a2f751e9940f7d865d/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/967ac9d00d0570a1e1fe1c7644cdc60a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/967ac9d00d0570a1e1fe1c7644cdc60a/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcea55302b5d2e843f6bf32f4bea1587/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcea55302b5d2e843f6bf32f4bea1587/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5b59b01475618829fe79ad446c5facaf/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5b59b01475618829fe79ad446c5facaf/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8d4666f682775c60e9e0f1d669843aa7/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8d4666f682775c60e9e0f1d669843aa7/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.3.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/81452ab971ad2d8b2fb0084eae478c00/core-1.3.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5c5e5af1473cda4f9f188f4b37076293/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5c5e5af1473cda4f9f188f4b37076293/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5e826c1b109742f8bca7b17a6327c1d0/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [com.google.firebase:firebase-components:16.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5e826c1b109742f8bca7b17a6327c1d0/jetified-firebase-components-16.0.0/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f549a48962f97668ee442149d558a50d/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f549a48962f97668ee442149d558a50d/versionedparcelable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a37cc7d38ecba109ecfb72735d489975/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a37cc7d38ecba109ecfb72735d489975/lifecycle-runtime-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c6f5bca5887ecb4409ba6069f8d7382e/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c6f5bca5887ecb4409ba6069f8d7382e/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cae9d7df45129530ff877ef3c8a4c88d/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cae9d7df45129530ff877ef3c8a4c88d/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/411b57b9b14e2dce30437831b520790e/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/411b57b9b14e2dce30437831b520790e/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/86aa7fcb6f12855a4b953477a2672233/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/86aa7fcb6f12855a4b953477a2672233/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/6320adba18b4d4720bd8695f5fffc52f/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/6320adba18b4d4720bd8695f5fffc52f/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8688f7244dd4ab0541bbbfd60a830f17/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/8688f7244dd4ab0541bbbfd60a830f17/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e31b71f57c5cf8e3a670371795980592/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e31b71f57c5cf8e3a670371795980592/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/dfe8cc82fa279aa5c223402d6e9d41f9/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/dfe8cc82fa279aa5c223402d6e9d41f9/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/126fd7248f78719ccc6ed2d6585226da/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/126fd7248f78719ccc6ed2d6585226da/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		ADDED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+		INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
+activity#com.google.firebase.auth.internal.FederatedSignInActivity
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+	android:permission
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+	tools:replace
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:31:13-47
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+MERGED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:32:9-36:35
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:36:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:34:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58

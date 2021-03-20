@@ -1,0 +1,19 @@
+{
+    "logs": [
+        {
+            "outputFile": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-h720dp-v13/values-h720dp-v13.xml",
+            "map": [
+                {
+                    "source": "/home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/f2c0150d83cccc24a884830fc44edbbf/appcompat-1.2.0/res/values-h720dp-v13/values-h720dp-v13.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "66",
+                        "endOffsets": "117"
+                    }
+                }
+            ]
+        }
+    ]
+}
