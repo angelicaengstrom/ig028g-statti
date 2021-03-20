@@ -2,8 +2,10 @@
 
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.media.SoundPool;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -12,6 +14,10 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
+import com.google.android.gms.tasks.OnCanceledListener;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class register extends AppCompatActivity {
@@ -27,11 +33,11 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mFullname   = findViewById(R.id.Fullname);
-        mEmail      = findViewById(R.id.Email);
+        mEmail      = findViewById((R.id.Email);
         mPassword   = findViewById(R.id.Password);
         mPhone      = findViewById(R.id.Phone);
-        mRegisterBtn= findViewById(R.id.loginBtn);
-        mLoginBtn   = findViewById(R.id.login);
+        mRegisterBtn= findViewById(R.id.registerBtn);
+        mLoginBtn   = findViewById(R.id.createText);
 
         fAuth = FirebaseAuth.getInstance();
         progressBar = findViewById(R.id.progressBar);
@@ -44,7 +50,7 @@ public class register extends AppCompatActivity {
                 String password = mPassword.getText().toString().trim();
 
 
-                if(TextUtils.isEmpty(email)){            //coment: the user did not enter his email.
+                if(TextUtils.isEmpty(email)){            //comment: the user did not enter his email.
                     mEmail.setError("Email måste skrivas");
                     return;
                 }
@@ -59,8 +65,9 @@ public class register extends AppCompatActivity {
                 }
                 progressBar.setVisibility(View.VISIBLE);
 
-                //The following code is to register the user
+                //The following code is to register the user, using FIREBASE :)
+
             }
         });
 
-}}
+}
