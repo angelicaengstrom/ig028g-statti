@@ -2237,7 +2237,6 @@ layout abc_tooltip
 layout activity_add
 layout activity_calender
 layout activity_graph
-layout activity_login
 layout activity_main
 layout activity_register
 layout custom_dialog
