@@ -22,7 +22,6 @@
         <activity android:name="com.example.myapplication.Calender" />
         <activity android:name="com.example.myapplication.Add" />
         <activity android:name="com.example.myapplication.register" />
-        <activity android:name="com.example.myapplication.Login" />
         <activity android:name="com.example.myapplication.MainActivity" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
