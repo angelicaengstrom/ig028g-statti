@@ -1804,6 +1804,7 @@ id all
 id always
 id animateToEnd
 id animateToStart
+id anteckningarTxtView
 id asConfigured
 id async
 id auto
@@ -1949,6 +1950,7 @@ id listMode
 id list_item
 id login
 id loginBtn
+id logoutbtn
 id masked
 id material_clock_display
 id material_clock_face
@@ -2129,7 +2131,6 @@ id textTop
 id textView2
 id textView3
 id textView4
-id textView5
 id textView6
 id textView7
 id textView8
@@ -2238,6 +2239,7 @@ layout activity_calender
 layout activity_graph
 layout activity_main
 layout activity_register
+layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
