@@ -36,7 +36,7 @@ public class Settings extends AppCompatActivity {
         menu_graphBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Settings.class);
+                Intent startIntent = new Intent(getApplicationContext(), Graph.class);
                 startActivity(startIntent);
             }
         });
