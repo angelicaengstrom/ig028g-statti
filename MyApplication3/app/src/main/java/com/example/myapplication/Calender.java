@@ -31,5 +31,14 @@ public class Calender extends AppCompatActivity {
                 startActivity(startIntent);
             }
         });
+
+        Button menu_settingsBtn = findViewById(R.id.menu_settings);
+        menu_settingsBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent(getApplicationContext(), Settings.class);
+                startActivity(startIntent);
+            }
+        });
     }
 }
