@@ -49,6 +49,7 @@ public class Add extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 otherNotesEditText = findViewById(R.id.otherNotes);
+
             }
         });
     }
