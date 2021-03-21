@@ -12,8 +12,11 @@
         android:layout_height="56dp"
         android:text="Träningsstatistik"
         android:textSize="30sp"
-        tools:layout_editor_absoluteX="57dp"
-        tools:layout_editor_absoluteY="40dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.01999998" />
     <Button
         android:id="@+id/menu_add"
         android:layout_width="wrap_content"
@@ -70,31 +73,47 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Välj typ av träning"
-        tools:layout_editor_absoluteX="66dp"
-        tools:layout_editor_absoluteY="120dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.23"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/h1"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/graf_condition"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Kondition"
-        tools:layout_editor_absoluteX="22dp"
-        tools:layout_editor_absoluteY="163dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.14"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/graf_strength"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Styrka"
-        tools:layout_editor_absoluteX="159dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/graf_condition"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
     <Button
         android:id="@+id/graf_technique"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Teknik"
-        tools:layout_editor_absoluteX="281dp"
-        tools:layout_editor_absoluteY="166dp" />
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toEndOf="@+id/graf_strength"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:layout_constraintVertical_bias="0.0" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
