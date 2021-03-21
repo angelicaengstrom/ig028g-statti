@@ -1,4 +1,4 @@
-#Sun Mar 21 14:27:20 CET 2021
+#Sun Mar 21 14:40:25 CET 2021
 base.0=/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex
