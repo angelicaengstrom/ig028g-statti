@@ -19,6 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
             @Override
             public void onClick(View v) {
+                //Gör ifsats om inlog korrekt => login
                 Intent startIntent = new Intent(getApplicationContext(), Add.class);
                 startActivity(startIntent);
             }
