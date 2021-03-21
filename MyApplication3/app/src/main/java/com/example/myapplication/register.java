@@ -2,10 +2,8 @@
 
 package com.example.myapplication;
 
-import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.media.SoundPool;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -14,10 +12,6 @@ import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
 
-import com.google.android.gms.tasks.OnCanceledListener;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
-import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class register extends AppCompatActivity {
@@ -33,8 +27,8 @@ public class register extends AppCompatActivity {
         setContentView(R.layout.activity_register);
 
         mFullname   = findViewById(R.id.Fullname);
-        mEmail      = findViewById(R.id.Email);
-        mPassword   = findViewById(R.id.Password);
+        mEmail      = findViewById(R.id.emailtxt);
+        mPassword   = findViewById(R.id.passwordtxt);
         mPhone      = findViewById(R.id.Phone);
         mRegisterBtn= findViewById(R.id.registerBtn);
         mLoginBtn   = findViewById(R.id.createText);
