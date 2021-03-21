@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.content.Intent;
 
 public class Add extends AppCompatActivity {
     EditText otherNotesEditText;
@@ -19,7 +20,8 @@ public class Add extends AppCompatActivity {
         menu_calenderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startIntent = new Intent(getApplicationContext(), Calender.class);
+                startActivity(startIntent);
             }
         });
 
@@ -27,7 +29,8 @@ public class Add extends AppCompatActivity {
         menu_graphBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent startIntent = new Intent(getApplicationContext(), Graph.class);
+                startActivity(startIntent);
             }
         });
 
