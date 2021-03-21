@@ -11,7 +11,7 @@
 9-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
 10
 11    <application
-11-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:5:5-23:19
+11-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:5:5-24:19
 12        android:allowBackup="true"
 12-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:6:9-35
 13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
@@ -28,89 +28,92 @@
 19        android:testOnly="true"
 20        android:theme="@style/Theme.MyApplication" >
 20-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:11:9-51
-21        <activity android:name="com.example.myapplication.Graph" />
-21-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:9-52
-21-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:19-40
-22        <activity android:name="com.example.myapplication.Calender" />
-22-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:9-46
-22-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:19-43
-23        <activity android:name="com.example.myapplication.Add" />
-23-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:9-41
-23-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:19-38
-24        <activity android:name="com.example.myapplication.register" />
-24-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:9-46
-24-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:19-43
-25        <activity android:name="com.example.myapplication.MainActivity" >
-25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:9-22:20
-25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:19-47
-26            <intent-filter>
-26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:13-21:29
-27                <action android:name="android.intent.action.MAIN" />
-27-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:17-69
-27-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:25-66
-28
-29                <category android:name="android.intent.category.LAUNCHER" />
-29-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:20:17-77
-29-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:20:27-74
-30            </intent-filter>
-31        </activity>
-32        <activity
-32-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
-33            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
-33-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
-34            android:excludeFromRecents="true"
-34-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
-35            android:exported="true"
-35-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
-36            android:launchMode="singleTask"
-36-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
-37            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
-37-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
-38            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-38-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
-39
-40        <service
-40-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
-41            android:name="com.google.firebase.components.ComponentDiscoveryService"
-41-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:34:13-84
-42            android:directBootAware="true"
-42-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
-43            android:exported="false" >
-43-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
-44            <meta-data
-44-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
-45                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-45-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
-46                android:value="com.google.firebase.components.ComponentRegistrar" />
-46-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
-47        </service>
-48
-49        <activity
-49-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
-50            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-50-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
-51            android:exported="false"
-51-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
-52            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-52-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
-53
-54        <provider
-54-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
-55            android:name="com.google.firebase.provider.FirebaseInitProvider"
-55-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
-56            android:authorities="com.example.myapplication.firebaseinitprovider"
-56-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
-57            android:exported="false"
-57-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
-58            android:initOrder="100" />
-58-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
-59
-60        <meta-data
-60-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
-61            android:name="com.google.android.gms.version"
-61-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
-62            android:value="@integer/google_play_services_version" />
-62-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
-63    </application>
-64
-65</manifest>
+21        <activity android:name="com.example.myapplication.Settings" />
+21-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:9-55
+21-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:19-43
+22        <activity android:name="com.example.myapplication.Graph" />
+22-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:9-43
+22-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:19-40
+23        <activity android:name="com.example.myapplication.Calender" />
+23-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:9-46
+23-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:19-43
+24        <activity android:name="com.example.myapplication.Add" />
+24-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:9-41
+24-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:19-38
+25        <activity android:name="com.example.myapplication.register" />
+25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:9-46
+25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:19-43
+26        <activity android:name="com.example.myapplication.MainActivity" >
+26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:9-23:20
+26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:19-47
+27            <intent-filter>
+27-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:13-22:29
+28                <action android:name="android.intent.action.MAIN" />
+28-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:17-69
+28-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:25-66
+29
+30                <category android:name="android.intent.category.LAUNCHER" />
+30-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:21:17-77
+30-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:21:27-74
+31            </intent-filter>
+32        </activity>
+33        <activity
+33-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:24:9-31:50
+34            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+34-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:25:13-85
+35            android:excludeFromRecents="true"
+35-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:26:13-46
+36            android:exported="true"
+36-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:27:13-36
+37            android:launchMode="singleTask"
+37-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:28:13-44
+38            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+38-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:29:13-102
+39            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+39-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:30:13-72
+40
+41        <service
+41-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:33:9-39:19
+42            android:name="com.google.firebase.components.ComponentDiscoveryService"
+42-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:34:13-84
+43            android:directBootAware="true"
+43-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:34:13-43
+44            android:exported="false" >
+44-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:35:13-37
+45            <meta-data
+45-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:36:13-38:85
+46                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+46-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:37:17-109
+47                android:value="com.google.firebase.components.ComponentRegistrar" />
+47-->[com.google.firebase:firebase-auth:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/681a1ef89ff48b115e315992c4daef31/jetified-firebase-auth-19.2.0/AndroidManifest.xml:38:17-82
+48        </service>
+49
+50        <activity
+50-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
+51            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+51-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:24:13-79
+52            android:exported="false"
+52-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:25:13-37
+53            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+53-->[com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/16ee7d535d5bcfc42734367bac6d128f/jetified-play-services-base-17.1.0/AndroidManifest.xml:26:13-72
+54
+55        <provider
+55-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:26:9-30:39
+56            android:name="com.google.firebase.provider.FirebaseInitProvider"
+56-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:27:13-77
+57            android:authorities="com.example.myapplication.firebaseinitprovider"
+57-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:28:13-72
+58            android:exported="false"
+58-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:29:13-37
+59            android:initOrder="100" />
+59-->[com.google.firebase:firebase-common:19.3.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/561224d95afb1c86e82bde3d66c2b645/jetified-firebase-common-19.3.0/AndroidManifest.xml:30:13-36
+60
+61        <meta-data
+61-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:23:9-25:69
+62            android:name="com.google.android.gms.version"
+62-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:24:13-58
+63            android:value="@integer/google_play_services_version" />
+63-->[com.google.android.gms:play-services-basement:17.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a52bfb92d2b276c79d11db281b8aa668/jetified-play-services-basement-17.0.0/AndroidManifest.xml:25:13-66
+64    </application>
+65
+66</manifest>
