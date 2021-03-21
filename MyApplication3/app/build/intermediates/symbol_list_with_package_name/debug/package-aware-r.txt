@@ -1727,12 +1727,10 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
-id Email
 id FUNCTION
 id Fullname
 id META
 id NO_DEBUG
-id Password
 id Phone
 id SHIFT
 id SHOW_ALL
@@ -1887,6 +1885,7 @@ id easeInOut
 id easeOut
 id edit_query
 id elastic
+id emailtxt
 id end
 id endToStart
 id enterAlways
@@ -2029,6 +2028,7 @@ id parentPanel
 id parentRelative
 id parent_matrix
 id password_toggle
+id passwordtxt
 id path
 id pathRelative
 id peekHeight
