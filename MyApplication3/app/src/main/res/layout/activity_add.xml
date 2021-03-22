@@ -176,6 +176,7 @@
         app:layout_constraintTop_toBottomOf="@+id/h2" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/BottomNavigationView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
