@@ -20,6 +20,18 @@
                       </LayoutPositions>
                     </value>
                   </entry>
+                  <entry key="fourthfragment">
+                    <value>
+                      <LayoutPositions>
+                        <option name="myPosition">
+                          <Point>
+                            <option name="x" value="23" />
+                            <option name="y" value="-277" />
+                          </Point>
+                        </option>
+                      </LayoutPositions>
+                    </value>
+                  </entry>
                   <entry key="secondfragment">
                     <value>
                       <LayoutPositions>
