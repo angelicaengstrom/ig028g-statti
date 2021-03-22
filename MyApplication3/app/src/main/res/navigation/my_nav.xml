@@ -8,21 +8,21 @@
     <fragment
         android:id="@+id/firstfragment"
         android:name="com.example.myapplication.firstfragment"
-        android:label="fragment_firstfragment"
+        android:label="Add note"
         tools:layout="@layout/fragment_firstfragment" />
     <fragment
         android:id="@+id/secondfragment"
         android:name="com.example.myapplication.secondfragment"
-        android:label="fragment_secondfragment"
+        android:label="Calender"
         tools:layout="@layout/fragment_secondfragment" />
     <fragment
         android:id="@+id/thirdfragment"
         android:name="com.example.myapplication.thirdfragment"
-        android:label="fragment_thirdfragment"
+        android:label="Graph"
         tools:layout="@layout/fragment_thirdfragment" />
     <fragment
         android:id="@+id/fourthfragment"
         android:name="com.example.myapplication.fourthfragment"
-        android:label="fragment_fourthfragment"
+        android:label="Settings"
         tools:layout="@layout/fragment_fourthfragment" />
 </navigation>
