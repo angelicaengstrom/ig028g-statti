@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     tools:context=".firstfragment">
 
     <TextView
@@ -11,6 +12,5 @@
         android:layout_height="wrap_content"
         android:text="firstfrag"
         android:textSize="25sp"
-        tools:layout_editor_absoluteX="171dp"
-        tools:layout_editor_absoluteY="354dp" />
+        app:layout_constraintBottom_toBottomOf="parent" />
 </FrameLayout>
