@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.navigation.ui.AppBarConfiguration;
 
 import android.os.Bundle;
 import android.view.View;
@@ -15,6 +16,13 @@ public class Add extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+
+        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.BottomNavigationView);
+        val navController = findNavController(R.id.fragment);
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstfragment, R.id.secondfragment, R.id.thirdfragment, R.id.fourthfragment));
+        setupActionBarWithNavController(navController, appBarConfiguration);
+
+        bottomNavigationView.setupWithNavController(navController);
 
         Button menu_calenderBtn = findViewById(R.id.menu_calender);
         menu_calenderBtn.setOnClickListener(new View.OnClickListener() {
