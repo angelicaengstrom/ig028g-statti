@@ -3,21 +3,21 @@
 
 
     <item
-        android:id="@+id/firstfragment"
+        android:id="@+id/nav_note"
         android:title="Note"
         android:icon="@drawable/ic_baseline_event_note_24"/>
 
     <item
-        android:id="@+id/secondfragment"
+        android:id="@+id/nav_calender"
         android:title="Calender"
         android:icon="@drawable/ic_baseline_date_range_24" />
 
     <item
-        android:id="@+id/thirdfragment"
+        android:id="@+id/nav_graph"
         android:title="Graph"
         android:icon="@drawable/ic_baseline_leaderboard_24"/>
     <item
-        android:id="@id/fourthfragment"
+        android:id="@+id/nav_settings"
         android:title="Settings"
         android:icon="@drawable/ic_baseline_settings_24"/>
 </menu>
