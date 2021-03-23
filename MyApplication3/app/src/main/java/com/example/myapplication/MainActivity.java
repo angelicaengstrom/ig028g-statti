@@ -10,13 +10,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView register;
     private EditText editTextEmail, editTextPassword;
     private Button signIn;
-    private pro
+    private ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         register= (TextView) findViewById(R.id.register);
 
         register.setOnClickListener(this);
+        signIn = (Button) findViewById(R.id.signIn);
+        editTextEmail = (EditText) findViewById(R.id.email);
+        editTextPassword = (EditText) findViewById(R.id.password);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar);
     }
 
     @Override
@@ -33,6 +38,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 startActivity(new Intent(this, registerUser.class));
                 break;
 
+            case R.id.signIn:
+                userLogin();
+                break:
+
         }
+    }
+
+    private void userLogin() {
     }
 }
