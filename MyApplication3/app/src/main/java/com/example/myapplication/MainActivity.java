@@ -85,12 +85,14 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
-                    //skicka vidare till första sidan,,,, kalender ????
+                    //skicka vidare till första sidan,,,, kanske kalender ????
+                    startActivity(new Intent(MainActivity.this, Calender.class));
                 }else{
-                    Toast.makeText(MainActivity.this, "Inloggning har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
+                    Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
                 }
             }
         });
         }
     }
 }
+
