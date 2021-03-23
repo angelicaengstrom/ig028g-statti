@@ -1759,6 +1759,7 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable photo
+drawable selector
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1841,7 +1842,6 @@ id all
 id always
 id animateToEnd
 id animateToStart
-id anteckningarTxtView
 id asConfigured
 id async
 id auto
@@ -1854,11 +1854,12 @@ id beginOnFirstDraw
 id beginning
 id blocking
 id bottom
-id bottom_menu
+id bottom_navigation
 id bounce
 id buttonPanel
 id cache_measures
 id calendarView2
+id calender
 id cancel_action
 id cancel_button
 id center
@@ -1943,7 +1944,6 @@ id fixed
 id flip
 id floating
 id forever
-id fragment_container
 id fragment_container_view_tag
 id ghost_view
 id ghost_view_holder
@@ -2013,10 +2013,6 @@ id material_timepicker_ok_button
 id material_timepicker_view
 id material_value_index
 id media_actions
-id menu_add
-id menu_calender
-id menu_graph
-id menu_settings
 id message
 id middle
 id mini
@@ -2062,6 +2058,7 @@ id never
 id noScroll
 id none
 id normal
+id note
 id notification_background
 id notification_main_column
 id notification_main_column_container
@@ -2122,6 +2119,7 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id settings
 id shortcut
 id showCustom
 id showHome
@@ -2175,7 +2173,6 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
-id textView2
 id textView3
 id textView4
 id textView7
@@ -2382,6 +2379,7 @@ layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu bottom_menu
+menu menu_navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
 plurals mtrl_badge_content_description
