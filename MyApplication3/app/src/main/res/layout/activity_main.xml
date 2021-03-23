@@ -22,6 +22,7 @@
         android:layout_width="172dp"
         android:layout_height="98dp"
         android:text="APPNAME"
+        android:textSize="60sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
