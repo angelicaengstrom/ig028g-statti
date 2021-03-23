@@ -1,13 +1,18 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Add extends AppCompatActivity {
     EditText otherNotesEditText;
@@ -17,12 +22,12 @@ public class Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-        val bottomNavigationView = findViewById<BottomNavigationView>(R.id.BottomNavigationView);
-        val navController = findNavController(R.id.fragment);
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.firstfragment, R.id.secondfragment, R.id.thirdfragment, R.id.fourthfragment));
-        setupActionBarWithNavController(navController, appBarConfiguration);
+        BottomNavigationView bottomNav = findViewById(R.id.bottom_menu);
+        bottomNav.setOnNavigationItemSelectedListener(navListener);
 
-        bottomNavigationView.setupWithNavController(navController);
+        getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                new NoteFragment()).commit();
+
 
         Button menu_calenderBtn = findViewById(R.id.menu_calender);
         menu_calenderBtn.setOnClickListener(new View.OnClickListener() {
@@ -61,4 +66,31 @@ public class Add extends AppCompatActivity {
             }
         });
     }
+    private BottomNavigationView.OnNavigationItemSelectedListener navListener =
+            new BottomNavigationView.OnNavigationItemSelectedListener() {
+                @Override
+                public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                    Fragment selectedFragment = null;
+
+                    switch(item.getItemId()){
+                        case R.id.nav_note:
+                            selectedFragment = new NoteFragment();
+                            break;
+                        case R.id.nav_calender:
+                            selectedFragment = new CalenderFragment();
+                            break;
+                        case R.id.nav_graph:
+                            selectedFragment = new GraphFragment();
+                            break;
+                        case R.id.nav_settings:
+                            selectedFragment = new SettingsFragment();
+                            break;
+                    }
+
+                    getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
+                            selectedFragment).commit();
+
+                    return true;
+                }
+            };
 }
