@@ -14,6 +14,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -85,6 +86,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     //skicka vidare till första sidan,,,, kalender ????
+                }else{
+                    Toast.makeText(MainActivity.this, "Inloggning har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
                 }
             }
         });
