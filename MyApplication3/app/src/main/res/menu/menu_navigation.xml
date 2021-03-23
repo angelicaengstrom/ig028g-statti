@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <item
+        android:id="@+id/note"
+        android:title="Note"
+        android:icon="@drawable/ic_baseline_event_note_24" />
+
+    <item
+        android:id="@+id/calender"
+        android:title="Calender"
+        android:icon="@drawable/ic_baseline_date_range_24" />
+
+    <item
+        android:id="@+id/graph"
+        android:title="Graph"
+        android:icon="@drawable/ic_baseline_leaderboard_24" />
+
+    <item
+        android:id="@+id/settings"
+        android:title="Settings"
+        android:icon="@drawable/ic_baseline_settings_24" />
+
+</menu>
