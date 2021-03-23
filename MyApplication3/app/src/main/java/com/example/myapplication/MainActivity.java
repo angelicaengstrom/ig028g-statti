@@ -66,6 +66,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             return;
 
         }
+        if(password.length()< 8){
+            editTextPassword.setError("Lösenordet är fel, försök igen");
+            editTextPassword.requestFocus();
+            return;
+        }
+        
         }
     }
 }
