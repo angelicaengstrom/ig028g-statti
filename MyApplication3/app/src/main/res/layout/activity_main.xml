@@ -51,13 +51,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Registera ?"
-        tools:layout_editor_absoluteX="43dp"
-        tools:layout_editor_absoluteY="355dp" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/button" />
 
     <TextView
         android:id="@+id/textView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="253dp"
+        android:text="Glömt lösenord?"
+        app:layout_constraintEnd_toEndOf="parent"
         tools:layout_editor_absoluteY="349dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>
