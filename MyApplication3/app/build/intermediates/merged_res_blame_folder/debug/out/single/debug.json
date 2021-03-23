@@ -12,6 +12,10 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_event_note_24.xml"
     },
     {
+        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_calender.xml.flat",
+        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_calender.xml"
+    },
+    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_baseline_date_range_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-ldpi/ic_baseline_date_range_24.png"
     },
@@ -84,10 +88,6 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/activity_register.xml"
     },
     {
-        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/navigation_my_nav.xml.flat",
-        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/navigation/my_nav.xml"
-    },
-    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-xhdpi_ic_baseline_date_range_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_date_range_24.png"
     },
@@ -128,6 +128,10 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/activity_settings.xml"
     },
     {
+        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_graph.xml.flat",
+        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_graph.xml"
+    },
+    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_baseline_settings_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-hdpi/ic_baseline_settings_24.png"
     },
@@ -160,10 +164,6 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/mipmap-xxxhdpi/ic_launcher.png"
     },
     {
-        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_secondfragment.xml.flat",
-        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_secondfragment.xml"
-    },
-    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/mipmap-hdpi_ic_launcher.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/mipmap-hdpi/ic_launcher.png"
     },
@@ -192,6 +192,10 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-xxxhdpi/ic_baseline_leaderboard_24.png"
     },
     {
+        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_settings.xml.flat",
+        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_settings.xml"
+    },
+    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-xxhdpi_ic_baseline_date_range_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-xxhdpi/ic_baseline_date_range_24.png"
     },
@@ -216,6 +220,10 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_settings_24.xml"
     },
     {
+        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_note.xml.flat",
+        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_note.xml"
+    },
+    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-ldpi_ic_baseline_leaderboard_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-ldpi/ic_baseline_leaderboard_24.png"
     },
@@ -228,20 +236,8 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-xhdpi/ic_baseline_settings_24.png"
     },
     {
-        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_thirdfragment.xml.flat",
-        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_thirdfragment.xml"
-    },
-    {
-        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_firstfragment.xml.flat",
-        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_firstfragment.xml"
-    },
-    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_activity_add.xml.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/activity_add.xml"
-    },
-    {
-        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_fragment_fourthfragment.xml.flat",
-        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/fragment_fourthfragment.xml"
     },
     {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-xxxhdpi_ic_baseline_date_range_24.png.flat",
