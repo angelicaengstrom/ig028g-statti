@@ -28,7 +28,7 @@ public class Add extends AppCompatActivity {
         getSupportFragmentManager().beginTransaction().replace(R.id.fragment_container,
                 new NoteFragment()).commit();
 
-
+    /*
         Button menu_calenderBtn = findViewById(R.id.menu_calender);
         menu_calenderBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -65,6 +65,8 @@ public class Add extends AppCompatActivity {
 
             }
         });
+
+     */
     }
     private BottomNavigationView.OnNavigationItemSelectedListener navListener =
             new BottomNavigationView.OnNavigationItemSelectedListener() {
