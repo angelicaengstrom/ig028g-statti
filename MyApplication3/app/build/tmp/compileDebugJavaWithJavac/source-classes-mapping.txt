@@ -1,8 +1,6 @@
 com/example/myapplication/Calender.java
  com.example.myapplication.Calender
  com.example.myapplication.Calender$1
- com.example.myapplication.Calender$2
- com.example.myapplication.Calender$3
 com/example/myapplication/Add.java
  com.example.myapplication.Add
  com.example.myapplication.Add$1
@@ -11,16 +9,11 @@ com/example/myapplication/SettingsFragment.java
 com/example/myapplication/Graph.java
  com.example.myapplication.Graph
  com.example.myapplication.Graph$1
- com.example.myapplication.Graph$2
- com.example.myapplication.Graph$3
 com/example/myapplication/NoteFragment.java
  com.example.myapplication.NoteFragment
 com/example/myapplication/Settings.java
  com.example.myapplication.Settings
  com.example.myapplication.Settings$1
- com.example.myapplication.Settings$2
- com.example.myapplication.Settings$3
- com.example.myapplication.Settings$4
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
 com/example/myapplication/GraphFragment.java

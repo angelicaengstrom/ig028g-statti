@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.content.Intent;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Calender extends AppCompatActivity {
 
@@ -14,30 +18,30 @@ public class Calender extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
 
-        Button menu_addBtn = findViewById(R.id.menu_add);
-        menu_addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Add.class);
-                startActivity(startIntent);
-            }
-        });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        Button menu_graphBtn = findViewById(R.id.menu_graph);
-        menu_graphBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Graph.class);
-                startActivity(startIntent);
-            }
-        });
+        bottomNavigationView.setSelectedItemId(R.id.calender);
 
-        Button menu_settingsBtn = findViewById(R.id.menu_settings);
-        menu_settingsBtn.setOnClickListener(new View.OnClickListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Settings.class);
-                startActivity(startIntent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.note:
+                        startActivity(new Intent(getApplicationContext(), Add.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.calender:
+                        return true;
+                    case R.id.graph:
+                        startActivity(new Intent(getApplicationContext(), Graph.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.settings:
+                        startActivity(new Intent(getApplicationContext(), Settings.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                }
+                return false;
             }
         });
     }

@@ -1,11 +1,15 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class Settings extends AppCompatActivity {
 
@@ -14,39 +18,30 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        Button menu_calenderBtn = findViewById(R.id.menu_calender);
-        menu_calenderBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Calender.class);
-                startActivity(startIntent);
-            }
-        });
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
-        Button menu_addBtn = findViewById(R.id.menu_add);
-        menu_addBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Add.class);
-                startActivity(startIntent);
-            }
-        });
+        bottomNavigationView.setSelectedItemId(R.id.settings);
 
-        Button menu_graphBtn = findViewById(R.id.menu_graph);
-        menu_graphBtn.setOnClickListener(new View.OnClickListener() {
+        bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), Graph.class);
-                startActivity(startIntent);
-            }
-        });
-
-        Button logoutBtn = findViewById(R.id.logoutbtn);
-        logoutBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent startIntent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(startIntent);
+            public boolean onNavigationItemSelected(@NonNull MenuItem item) {
+                switch(item.getItemId()){
+                    case R.id.note:
+                        startActivity(new Intent(getApplicationContext(), Add.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.calender:
+                        startActivity(new Intent(getApplicationContext(), Calender.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.graph:
+                        startActivity(new Intent(getApplicationContext(), Graph.class));
+                        overridePendingTransition(0,0);
+                        return true;
+                    case R.id.settings:
+                        return true;
+                }
+                return false;
             }
         });
     }
