@@ -88,9 +88,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user.is)
-                    //skicka vidare till första sidan,,,, kanske kalender ????
-                    startActivity(new Intent(MainActivity.this, Calender.class));
+                    if (user.isEmailVerified()) {
+                        //skicka vidare till första sidan,,,, kanske kalender ????
+                        startActivity(new Intent(MainActivity.this, Calender.class));
+                    }else {
+                        user.sendEmailVerification();
+                        Toast.makeText(MainActivity.this,"Varifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
+                    }
                 }else{
                     Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
                 }
