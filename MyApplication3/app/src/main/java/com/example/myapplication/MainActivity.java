@@ -46,5 +46,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     }
 
     private void userLogin() {
+        String email = editTextEmail.getText().toString().trim();
+        String password = editTextPassword.getText().toString().trim();
+
+        if (email.isEmpty()){
+            editTextEmail.setError("Du måste skriva ditt email för att logga in");
+            editTextEmail.requestFocus();
+            return;
+        }
     }
 }
