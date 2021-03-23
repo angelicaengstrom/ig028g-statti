@@ -25,7 +25,7 @@
         android:layout_height="79dp"
         android:layout_marginTop="64dp"
         android:text="APPNAME"
-        android:textSize="50"
+        android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.369"
         app:layout_constraintStart_toStartOf="parent"
