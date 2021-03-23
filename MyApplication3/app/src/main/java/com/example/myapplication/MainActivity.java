@@ -54,5 +54,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             editTextEmail.requestFocus();
             return;
         }
+        if (password.isEmpty()) {
+            editTextPassword.setError("Du måste skriva lösenord");
+            editTextPassword.requestFocus();
+            return;
+            
+        }
+        }
     }
 }
