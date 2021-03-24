@@ -1,6 +1,6 @@
 //Förlåt Jag märkte inte att du skrev kod här
 // när jag ändrade hela sidan :(
-
+//nästan färdig !
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
@@ -36,6 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         register.setOnClickListener(this);
         signIn = (Button) findViewById(R.id.signIn);
+        signIn.setOnClickListener(this);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
