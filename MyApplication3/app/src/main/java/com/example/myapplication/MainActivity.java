@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.signIn:
                 userLogin();
-                break:
+                break;
 
         }
     }
@@ -102,5 +102,5 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         });
         }
     }
-}
+
 
