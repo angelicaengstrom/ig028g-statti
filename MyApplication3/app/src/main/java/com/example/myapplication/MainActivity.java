@@ -1,6 +1,7 @@
 //Förlåt Jag märkte inte att du skrev kod här
 // när jag ändrade hela sidan :(
-//nästan färdig !
+//nästan färdig , glömt lösenord kvar !
+
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
