@@ -52,7 +52,26 @@
         android:layout_marginStart="158dp"
         android:layout_marginLeft="158dp"
         android:layout_marginTop="33dp"
-        android:text="Display Name" />
+        android:text="Display Name"
+        android:textStyle="bold"/>
+
+    <Button
+        android:id="@+id/updateProfileBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="151dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Uppdatera profilbild"
+        android:textColor="#ffff"
+        android:textSize="10sp"
+        android:textStyle="bold"
+        android:onClick="updateProfile"/>
 
     <TextView
         android:id="@+id/ViewEmail"
@@ -78,6 +97,18 @@
         android:layout_marginTop="11dp"
         tools:srcCompat="@tools:sample/avatars"
         />
+
+    <ProgressBar
+        android:id="@+id/progressBar3"
+        style="?android:attr/progressBarStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="55dp"
+        android:layout_marginLeft="55dp"
+        android:layout_marginTop="150dp" />
 
 
 </RelativeLayout>
