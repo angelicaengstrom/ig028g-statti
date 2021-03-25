@@ -92,7 +92,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()) {
                         //skicka vidare till första sidan,,,, kanske kalender ????
-                        startActivity(new Intent(MainActivity.this, Calender.class));
+                        startActivity(new Intent(MainActivity.this, Add.class));
                     }else {
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this,"Varifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
