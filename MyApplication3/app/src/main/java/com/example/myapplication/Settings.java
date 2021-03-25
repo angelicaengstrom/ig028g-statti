@@ -53,7 +53,6 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onClick(View v){
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Settings.this, MainActivity.class));
                 finish();
             }
         });
