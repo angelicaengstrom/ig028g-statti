@@ -1,6 +1,8 @@
 com/example/myapplication/Calender.java
  com.example.myapplication.Calender
  com.example.myapplication.Calender$1
+com/example/myapplication/forgetPassword.java
+ com.example.myapplication.forgetPassword
 com/example/myapplication/Add.java
  com.example.myapplication.Add
  com.example.myapplication.Add$1
