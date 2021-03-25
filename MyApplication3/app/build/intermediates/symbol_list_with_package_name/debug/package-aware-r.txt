@@ -1767,11 +1767,11 @@ id ALT
 id BOTTOM_END
 id BOTTOM_START
 id CTRL
+id Email
 id FUNCTION
-id Fullname
 id META
 id NO_DEBUG
-id Phone
+id Password
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1836,6 +1836,7 @@ id activity_chooser_view_content
 id add
 id adjust_height
 id adjust_width
+id age
 id alertTitle
 id aligned
 id all
@@ -1848,6 +1849,7 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id banner
 id barrier
 id baseline
 id beginOnFirstDraw
@@ -1889,7 +1891,6 @@ id contiguous
 id coordinator
 id cos
 id counterclockwise
-id createText
 id custom
 id customPanel
 id cut
@@ -1925,7 +1926,7 @@ id easeInOut
 id easeOut
 id edit_query
 id elastic
-id emailtxt
+id email
 id end
 id endToStart
 id end_padder
@@ -1945,6 +1946,7 @@ id flip
 id floating
 id forever
 id fragment_container_view_tag
+id fullname
 id ghost_view
 id ghost_view_holder
 id gone
@@ -1989,8 +1991,6 @@ id line3
 id linear
 id listMode
 id list_item
-id login
-id loginBtn
 id logoutbtn
 id masked
 id material_clock_display
@@ -2047,12 +2047,8 @@ id mtrl_picker_text_input_range_start
 id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
-id nav_calender
 id nav_controller_view_tag
-id nav_graph
 id nav_host_fragment_container
-id nav_note
-id nav_settings
 id navigation_header_container
 id never
 id noScroll
@@ -2072,8 +2068,8 @@ id parent
 id parentPanel
 id parentRelative
 id parent_matrix
+id password
 id password_toggle
-id passwordtxt
 id path
 id pathRelative
 id peekHeight
@@ -2088,7 +2084,8 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
-id registerBtn
+id register
+id registerUser
 id reverseSawtooth
 id right
 id rightToLeft
@@ -2124,6 +2121,7 @@ id shortcut
 id showCustom
 id showHome
 id showTitle
+id signIn
 id sin
 id skipCollapsed
 id slide
@@ -2174,7 +2172,6 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView3
-id textView4
 id textView7
 id text_input_end_icon
 id text_input_error_icon
@@ -2281,7 +2278,7 @@ layout activity_add
 layout activity_calender
 layout activity_graph
 layout activity_main
-layout activity_register
+layout activity_register_user
 layout activity_settings
 layout custom_dialog
 layout design_bottom_navigation_item
@@ -2299,10 +2296,6 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
-layout fragment_calender
-layout fragment_graph
-layout fragment_note
-layout fragment_settings
 layout material_chip_input_combo
 layout material_clock_display
 layout material_clock_display_divider
@@ -2378,7 +2371,6 @@ layout text_view_with_line_height_from_layout
 layout text_view_with_line_height_from_style
 layout text_view_with_theme_line_height
 layout text_view_without_line_height
-menu bottom_menu
 menu menu_navigation
 mipmap ic_launcher
 mipmap ic_launcher_round
@@ -2520,6 +2512,7 @@ style Animation_AppCompat_DropDownUp
 style Animation_AppCompat_Tooltip
 style Animation_Design_BottomSheetDialog
 style Animation_MaterialComponents_BottomSheetDialog
+style Apptheme
 style Base_AlertDialog_AppCompat
 style Base_AlertDialog_AppCompat_Light
 style Base_Animation_AppCompat_Dialog
