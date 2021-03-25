@@ -40,8 +40,9 @@
         android:layout_marginLeft="30dp"
         android:text="Övriga anteckningar:" />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/saveNoteBtn"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -50,7 +51,8 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="68dp"
-        android:text="Save note" />
+        android:textSize="20dp"
+        app:srcCompat="@drawable/ic_baseline_add_24"/>
 
     <!--
 
