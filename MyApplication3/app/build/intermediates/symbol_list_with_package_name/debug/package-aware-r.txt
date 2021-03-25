@@ -1860,7 +1860,6 @@ id bottom_navigation
 id bounce
 id buttonPanel
 id cache_measures
-id calendarView2
 id calender
 id cancel_action
 id cancel_button
@@ -1924,6 +1923,7 @@ id dropdown_menu
 id easeIn
 id easeInOut
 id easeOut
+id editTextTextPersonName
 id edit_query
 id elastic
 id email
@@ -2277,6 +2277,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add
 layout activity_calender
+layout activity_forget_password
 layout activity_graph
 layout activity_main
 layout activity_register_user
