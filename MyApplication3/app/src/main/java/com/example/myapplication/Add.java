@@ -13,9 +13,11 @@ import android.widget.EditText;
 import android.content.Intent;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Add extends AppCompatActivity {
-    EditText otherNotesEditText;
+    private EditText editNote1, editNote2, editNote3;
+    private FirebaseAuth mAuth;
 
 
     @Override
@@ -23,6 +25,12 @@ public class Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_add);
+
+        mAuth = FirebaseAuth.getInstance();
+        editNote1 = (EditText) findViewById(R.id.Note1);
+        editNote2 = (EditText) findViewById(R.id.Note2);
+        editNote3 = (EditText) findViewById(R.id.Note3);
+
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.note);
 
@@ -50,4 +58,14 @@ public class Add extends AppCompatActivity {
         });
 
     }
+    /*
+
+    @Override
+    public void onClick(View view) {
+        String note1 = editNote1.getText().toString().trim();
+        String note2 = editNote2.getText().toString().trim();
+        String note3 = editNote3.getText().toString().trim();
+
+        mAuth.
+    }*/
 }
