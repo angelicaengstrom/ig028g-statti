@@ -84,7 +84,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Var snäll och korrigera ditt e-post !");
+            editTextEmail.setError("Var snäll och korrigera ditt e-post!");
             editTextEmail.requestFocus();
             return;
         }
@@ -94,7 +94,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
         if (password.length() < 8){
-            editTextPassword.setError("Lösenord måste vara minst 8 tecken !");
+            editTextPassword.setError("Lösenord måste vara minst 8 tecken!");
             editTextPassword.requestFocus();
             return;
         }
