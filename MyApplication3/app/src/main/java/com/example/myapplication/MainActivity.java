@@ -46,6 +46,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         editTextPassword = (EditText) findViewById(R.id.Password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
+        progressBar.setVisibility(View.GONE);
         mAuth = FirebaseAuth.getInstance();
         forgotPassword = (TextView) findViewById(R.id.forgotPassword);
     }
