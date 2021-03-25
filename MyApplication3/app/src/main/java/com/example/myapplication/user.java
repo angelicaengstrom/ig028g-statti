@@ -6,6 +6,7 @@ public class user {
     public user(){
 
     }
+
     public user(String fullName, String age, String Email){
         this.fullName = fullName;
         this.age = age;

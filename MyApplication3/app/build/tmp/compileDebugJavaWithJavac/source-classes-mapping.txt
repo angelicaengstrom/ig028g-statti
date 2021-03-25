@@ -12,6 +12,8 @@ com/example/myapplication/Graph.java
 com/example/myapplication/Settings.java
  com.example.myapplication.Settings
  com.example.myapplication.Settings$1
+ com.example.myapplication.Settings$2
+ com.example.myapplication.Settings$3
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
 com/example/myapplication/registerUser.java

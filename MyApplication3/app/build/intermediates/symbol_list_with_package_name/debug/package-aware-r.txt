@@ -1779,6 +1779,8 @@ id SHOW_PROGRESS
 id SYM
 id TOP_END
 id TOP_START
+id ViewEmail
+id ViewFullname
 id accelerate
 id accessibility_action_clickable_span
 id accessibility_custom_action_0
@@ -1949,7 +1951,6 @@ id fragment_container_view_tag
 id fullname
 id ghost_view
 id ghost_view_holder
-id go
 id gone
 id graf_condition
 id graf_strength
