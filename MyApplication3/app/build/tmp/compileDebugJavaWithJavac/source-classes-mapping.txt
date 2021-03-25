@@ -4,25 +4,20 @@ com/example/myapplication/Calender.java
 com/example/myapplication/Add.java
  com.example.myapplication.Add
  com.example.myapplication.Add$1
-com/example/myapplication/SettingsFragment.java
- com.example.myapplication.SettingsFragment
 com/example/myapplication/Graph.java
  com.example.myapplication.Graph
  com.example.myapplication.Graph$1
-com/example/myapplication/NoteFragment.java
- com.example.myapplication.NoteFragment
 com/example/myapplication/Settings.java
  com.example.myapplication.Settings
  com.example.myapplication.Settings$1
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
-com/example/myapplication/GraphFragment.java
- com.example.myapplication.GraphFragment
+com/example/myapplication/registerUser.java
+ com.example.myapplication.registerUser
+ com.example.myapplication.registerUser$1
+ com.example.myapplication.registerUser$1$1
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
  com.example.myapplication.MainActivity$1
-com/example/myapplication/CalenderFragment.java
- com.example.myapplication.CalenderFragment
-com/example/myapplication/register.java
- com.example.myapplication.register
- com.example.myapplication.register$1
+com/example/myapplication/user.java
+ com.example.myapplication.user
