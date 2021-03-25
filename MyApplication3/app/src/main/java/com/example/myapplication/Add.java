@@ -16,7 +16,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class Add extends AppCompatActivity {
-    private EditText editNote1, editNote2, editNote3;
+    private EditText editNote1;
     private FirebaseAuth mAuth;
 
 
@@ -28,8 +28,6 @@ public class Add extends AppCompatActivity {
 
         mAuth = FirebaseAuth.getInstance();
         editNote1 = (EditText) findViewById(R.id.Note1);
-        editNote2 = (EditText) findViewById(R.id.Note2);
-        editNote3 = (EditText) findViewById(R.id.Note3);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.note);
