@@ -134,6 +134,6 @@ public class Settings extends AppCompatActivity {
                     Bitmap bitmap = (Bitmap) data.getExtras().get("data");
                     profileImageView.setI
             }
-        }*/
-    }
+        }
+    }*/
 }
