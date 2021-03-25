@@ -27,7 +27,8 @@ public class Add extends AppCompatActivity {
         setContentView(R.layout.activity_add);
 
         if(FirebaseAuth.getInstance().getCurrentUser() == null){
-            startActivity(new Intent(this, MainActivity.class));
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
             finish();
         }
 
