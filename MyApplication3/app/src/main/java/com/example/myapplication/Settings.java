@@ -1,10 +1,13 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.graphics.Bitmap;
 import android.os.Bundle;
+import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -25,8 +28,9 @@ public class Settings extends AppCompatActivity {
     private DatabaseReference reference;
 
     private String userID;
-
     private Button logout;
+
+    int TAKE_IMAGE_CODE = 10001;
 
 
     @Override
@@ -99,5 +103,25 @@ public class Settings extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void handleImageClick(View view) {
+        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
+        if (intent.resolveActivity(getPackageManager()) != null){
+            startActivityForResult(intent, TAKE_IMAGE_CODE);
+        }
+    }
+    /*
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == TAKE_IMAGE_CODE) {
+            switch(resultCode){
+                case RESULT_OK:
+                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
+                    profileImageView.setI
+            }
+        }*/
     }
 }
