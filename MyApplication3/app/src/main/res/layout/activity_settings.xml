@@ -45,7 +45,6 @@
         android:text="Logga ut"
         android:textColor="#ffff"
         android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_centerInParent="true" />
+        android:textStyle="bold" />
 
 </RelativeLayout>
