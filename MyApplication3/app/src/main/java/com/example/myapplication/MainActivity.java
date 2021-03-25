@@ -50,6 +50,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         forgotPassword = (TextView) findViewById(R.id.forgotPassword);
         forgotPassword.setOnClickListener(this);
+
+        //gör att personen inte kan komma tillbaka till login
+        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+            startActivity(new Intent(this, Add.class));
+            this.finish();
+        }
     }
 
     @Override
