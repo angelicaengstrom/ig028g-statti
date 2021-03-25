@@ -6,14 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".Calender">
 
-    <CalendarView
-        android:id="@+id/calendarView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="18dp"
-        android:layout_centerInParent="true"
-         />
-
 
     <TextView
         android:layout_width="wrap_content"
@@ -23,11 +15,11 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
-        android:layout_marginStart="96dp"
-        android:layout_marginLeft="96dp"
-        android:layout_marginTop="83dp"
-        android:layout_marginRight="114dp"
-        android:layout_marginBottom="526dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginLeft="100dp"
+        android:layout_marginTop="1dp"
+        android:layout_marginRight="110dp"
+        android:layout_marginBottom="608dp"
         android:text="Calender"
         android:textSize="50sp"
         android:textStyle="bold" />
