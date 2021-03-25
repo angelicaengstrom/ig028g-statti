@@ -26,7 +26,7 @@ import com.google.firebase.auth.FirebaseUser;
 public class MainActivity extends AppCompatActivity implements View.OnClickListener{
     private TextView register;
     private EditText editTextEmail, editTextPassword;
-    private Button signIn;// go;
+    private Button signIn;
 
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
@@ -35,14 +35,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //go = (Button) findViewById(R.id.go);
-
         register= (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
 
         signIn = (Button) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);
-        //go.setOnClickListener(this);
 
         editTextEmail = (EditText) findViewById(R.id.Email);
         editTextPassword = (EditText) findViewById(R.id.Password);
@@ -61,10 +58,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.signIn:
                 userLogin();
                 break;
-
-            /*case R.id.go:
-                startActivity(new Intent(this, Add.class));
-                break;*/
 
         }
     }
@@ -102,13 +95,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    //if (user.isEmailVerified()) {
+                    if (user.isEmailVerified()) {
                         //skicka vidare till första sidan,,,, add ????
                         startActivity(new Intent(MainActivity.this, Add.class));
-                    /*}else {
+                    }else {
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this,"Verifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
-                    }*/
+                    }
                 }else{
                     Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
                 }
