@@ -23,12 +23,24 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
-        <activity android:name="com.example.myapplication.registerUser" />
-        <activity android:name="com.example.myapplication.Settings" />
-        <activity android:name="com.example.myapplication.Graph" />
-        <activity android:name="com.example.myapplication.Calender" />
-        <activity android:name="com.example.myapplication.Add" />
-        <activity android:name="com.example.myapplication.MainActivity" >
+        <activity
+            android:name="com.example.myapplication.registerUser"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.example.myapplication.Settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.example.myapplication.Graph"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.example.myapplication.Calender"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.example.myapplication.Add"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity
+            android:name="com.example.myapplication.MainActivity"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
