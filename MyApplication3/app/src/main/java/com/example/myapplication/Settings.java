@@ -11,6 +11,7 @@ import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -29,6 +30,9 @@ public class Settings extends AppCompatActivity {
 
     private String userID;
     private Button logout;
+
+    ImageView profileImageView = (ImageView) findViewById(R.id.profileImageView);
+    Button updateProfileBtn = (Button) findViewById(R.id.updateProfileBtn);
 
     int TAKE_IMAGE_CODE = 10001;
 
@@ -103,6 +107,9 @@ public class Settings extends AppCompatActivity {
                 return false;
             }
         });
+    }
+
+    public void updateProfile(View view) {
     }
     /*
     public void handleImageClick(View view) {
