@@ -44,10 +44,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signIn.setOnClickListener(this);
         //go.setOnClickListener(this);
 
-        editTextEmail = (EditText) findViewById(R.id.email);
-        editTextPassword = (EditText) findViewById(R.id.password);
+        editTextEmail = (EditText) findViewById(R.id.Email);
+        editTextPassword = (EditText) findViewById(R.id.Password);
 
-        progressBar = (ProgressBar) findViewById(R.id.progressBar);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         mAuth = FirebaseAuth.getInstance();
     }
 
@@ -102,13 +102,13 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-                    if (user.isEmailVerified()) {
+                    //if (user.isEmailVerified()) {
                         //skicka vidare till första sidan,,,, add ????
                         startActivity(new Intent(MainActivity.this, Add.class));
-                    }else {
+                    /*}else {
                         user.sendEmailVerification();
                         Toast.makeText(MainActivity.this,"Verifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
-                    }
+                    }*/
                 }else{
                     Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
                 }
