@@ -14,8 +14,6 @@ com/example/myapplication/Settings.java
  com.example.myapplication.Settings$1
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
-com/example/myapplication/user.java
- com.example.myapplication.user
 com/example/myapplication/registerUser.java
  com.example.myapplication.registerUser
  com.example.myapplication.registerUser$1
@@ -23,3 +21,5 @@ com/example/myapplication/registerUser.java
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
  com.example.myapplication.MainActivity$1
+com/example/myapplication/user.java
+ com.example.myapplication.user
