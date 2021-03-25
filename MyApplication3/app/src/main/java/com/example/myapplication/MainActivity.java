@@ -42,8 +42,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         signIn = (Button) findViewById(R.id.signIn);
         signIn.setOnClickListener(this);
 
-        editTextEmail = (EditText) findViewById(R.id.Email);
-        editTextPassword = (EditText) findViewById(R.id.Password);
+        editTextEmail = (EditText) findViewById(R.id.email);
+        editTextPassword = (EditText) findViewById(R.id.password);
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar2);
         progressBar.setVisibility(View.GONE);
