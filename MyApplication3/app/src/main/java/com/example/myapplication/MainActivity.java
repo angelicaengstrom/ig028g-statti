@@ -115,7 +115,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                         finish();
                     }else {
                         user.sendEmailVerification();
-                        Toast.makeText(MainActivity.this,"Verifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Verifiera ditt konto via e-post", Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();
