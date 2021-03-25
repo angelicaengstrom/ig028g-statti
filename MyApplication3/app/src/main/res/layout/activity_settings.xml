@@ -6,87 +6,71 @@
     android:layout_height="match_parent"
     tools:context=".Settings">
 
-    <TextView
+
+    <Button
+        android:id="@+id/logoutbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Settings"
-        android:textSize="50sp"
-        android:textStyle="bold"
-        android:layout_centerInParent="true"
-        />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginTop="320dp"
+        android:backgroundTint="@color/teal_700"
+        android:text="Logga ut"
+        android:textColor="#ffff"
+        android:textSize="20sp"
+        android:textStyle="bold" />
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottom_navigation"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/ViewFullname"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        app:itemBackground="@color/teal_700"
-        app:itemIconTint="@drawable/selector"
-        app:itemTextColor="@drawable/selector"
-        app:menu="@menu/menu_navigation" />
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="324dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginRight="248dp" />
 
+    <TextView
+        android:id="@+id/ViewEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ViewFullname"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="71dp"
+        android:layout_marginLeft="71dp"
+        android:layout_marginTop="222dp"
+        android:layout_marginEnd="248dp"
+        android:layout_marginRight="248dp"
+        android:layout_marginBottom="34dp" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="673dp">
+        android:layout_height="61dp"
+        android:layout_alignParentBottom="true">
 
-        <Button
-            android:id="@+id/logoutbtn"
-            android:layout_width="wrap_content"
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginStart="147dp"
-            android:layout_marginLeft="147dp"
-            android:layout_marginTop="398dp"
-            android:layout_marginEnd="144dp"
-            android:layout_marginRight="144dp"
-            android:layout_marginBottom="227dp"
-            android:backgroundTint="@color/teal_700"
-            android:text="Logga ut"
-            android:textColor="#ffff"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            app:itemBackground="@color/teal_700"
+            app:itemIconTint="@drawable/selector"
+            app:itemTextColor="@drawable/selector"
+            app:menu="@menu/menu_navigation" />
 
-        <TextView
-            android:id="@+id/ViewFullname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="62dp"
-            android:layout_marginLeft="62dp"
-            android:layout_marginTop="70dp"
-            android:layout_marginEnd="291dp"
-            android:layout_marginRight="291dp"
-            android:layout_marginBottom="584dp"
-            />
-
-        <TextView
-            android:id="@+id/ViewEmail"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentLeft="true"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="64dp"
-            android:layout_marginLeft="64dp"
-            android:layout_marginTop="106dp"
-            android:layout_marginEnd="289dp"
-            android:layout_marginRight="289dp"
-            android:layout_marginBottom="548dp"
-             />
 
     </RelativeLayout>
 
