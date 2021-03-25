@@ -104,14 +104,14 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
-
+    /*
     public void handleImageClick(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         if (intent.resolveActivity(getPackageManager()) != null){
             startActivityForResult(intent, TAKE_IMAGE_CODE);
         }
     }
-    /*
+
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
