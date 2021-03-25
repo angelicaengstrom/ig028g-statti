@@ -52,6 +52,10 @@
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-anydpi-v21/ic_baseline_leaderboard_24.xml"
     },
     {
+        "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/layout_activity_forget_password.xml.flat",
+        "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/res/layout/activity_forget_password.xml"
+    },
+    {
         "merged": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/intermediates/res/merged/debug/drawable-hdpi_ic_baseline_date_range_24.png.flat",
         "source": "/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/build/generated/res/pngs/debug/drawable-hdpi/ic_baseline_date_range_24.png"
     },
