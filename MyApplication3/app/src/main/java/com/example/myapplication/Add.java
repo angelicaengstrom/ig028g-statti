@@ -13,12 +13,20 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
 
+import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
+import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GetTokenResult;
+import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.Date;
+import java.util.HashMap;
+import java.util.Map;
 
 public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private EditText editNote1;
@@ -38,6 +46,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show();
         });*/
+
+
 
         mAuth = FirebaseAuth.getInstance();
         editNote1 = (EditText) findViewById(R.id.Note1);
@@ -97,5 +107,53 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         Log.d(TAG, "onSuccess: " + getTokenResult.getToken());
                     }
                 });
+    }
+    
+    public void saveNote(View view){
+        FirebaseFirestore.getInstance();
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("text", "sov mycket");
+        map.put("feeling", 5);
+        map.put("trainsession", 10);
+        map.put("created", new Timestamp(new Date()));
+
+        FirebaseFirestore.getInstance().collection("notes")
+                .add(map)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "onSuccess: task was succesfull");
+                        Log.d(TAG, "onSuccess: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.d(TAG, "onFailure: task was NOT succesfull");
+                    }
+                });
+
+        /* SKAPAR EN NY COLLECTION
+        Map<String, Object> map = new HashMap<>();
+        map.put("name", "iPhone11");
+        map.put("price", 699);
+        map.put("isAvailable", true);
+
+        FirebaseFirestore.getInstance()
+                .collection("products")
+                .add(map)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "onSuccess: Product is added succesfully");
+                        Log.d(TAG, "onSuccess: " + documentReference.getId());
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                    }
+                });*/
     }
 }
