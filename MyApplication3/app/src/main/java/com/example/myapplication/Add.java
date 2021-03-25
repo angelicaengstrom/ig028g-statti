@@ -6,18 +6,25 @@ import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.content.Intent;
 
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
+import com.google.android.material.snackbar.Snackbar;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.GetTokenResult;
 
-public class Add extends AppCompatActivity {
+public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private EditText editNote1;
     private FirebaseAuth mAuth;
+    private static final String TAG = "Add";
+
 
 
     @Override
@@ -25,12 +32,12 @@ public class Add extends AppCompatActivity {
         super.onCreate(savedInstanceState);
 
         setContentView(R.layout.activity_add);
-
-        if(FirebaseAuth.getInstance().getCurrentUser() == null){
-            Intent intent = new Intent(this, MainActivity.class);
-            startActivity(intent);
-            finish();
-        }
+/*
+        FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
+        fab.setOnClickListener((view) -> {
+            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                    .setAction("Action", null).show();
+        });*/
 
         mAuth = FirebaseAuth.getInstance();
         editNote1 = (EditText) findViewById(R.id.Note1);
@@ -62,14 +69,33 @@ public class Add extends AppCompatActivity {
         });
 
     }
-    /*
 
     @Override
-    public void onClick(View view) {
-        String note1 = editNote1.getText().toString().trim();
-        String note2 = editNote2.getText().toString().trim();
-        String note3 = editNote3.getText().toString().trim();
+    protected void onStart() {
+        super.onStart();
+        FirebaseAuth.getInstance().addAuthStateListener(this);
+    }
 
-        mAuth.
-    }*/
+    @Override
+    protected void onStop() {
+        super.onStop();
+        FirebaseAuth.getInstance().removeAuthStateListener(this);
+    }
+
+    @Override
+    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        if (firebaseAuth.getCurrentUser() == null) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            return;
+        }
+        firebaseAuth.getCurrentUser().getIdToken(true)
+                .addOnSuccessListener(new OnSuccessListener<GetTokenResult>() {
+                    @Override
+                    public void onSuccess(GetTokenResult getTokenResult) {
+                        Log.d(TAG, "onSuccess: " + getTokenResult.getToken());
+                    }
+                });
+    }
 }
