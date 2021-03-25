@@ -1,4 +1,4 @@
-//Jag kodar den sidan !!
+//Färdig
 
 package com.example.myapplication;
 
@@ -57,7 +57,7 @@ public class forgetPassword extends AppCompatActivity {
                 if (task.isSuccessful()){
                     Toast.makeText(forgetPassword.this, "Var snäll *check* ditt epost", Toast.LENGTH_LONG.).show();
                 }else{
-                    
+                    Toast.makeText(forgetPassword.this,"Något fel har inträffat, försök igen senare",Toast.LENGTH_LONG).show();
                 }
             }
         })
