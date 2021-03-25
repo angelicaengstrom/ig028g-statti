@@ -46,14 +46,18 @@
         android:id="@+id/ViewFullname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="158dp"
-        android:layout_marginLeft="158dp"
-        android:layout_marginTop="33dp"
-        android:text="Display Name"
-        android:textStyle="bold"/>
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="42dp"
+        android:layout_marginLeft="42dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_toEndOf="@+id/profileImageView"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:text="show:user.name"
+        android:textStyle="bold" />
 
     <Button
         android:id="@+id/updateProfileBtn"
@@ -80,10 +84,14 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginRight="80dp"
-        android:text="Display Email" />
+        android:layout_marginStart="43dp"
+        android:layout_marginLeft="43dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginRight="34dp"
+        android:layout_toEndOf="@+id/profileImageView"
+        android:layout_toRightOf="@+id/profileImageView"
+        android:text="show.user.email" />
 
     <ImageView
         android:id="@+id/profileImageView"
