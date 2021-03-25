@@ -1,3 +1,5 @@
+//Jag kodar den sidan !!
+
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
