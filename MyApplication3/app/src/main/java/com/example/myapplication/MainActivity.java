@@ -1,6 +1,4 @@
-//Förlåt Jag märkte inte att du skrev kod här
-// när jag ändrade hela sidan :(
-//nästan färdig , glömt lösenord kvar !
+//FÄRDIG 'M'
 
 package com.example.myapplication;
 
