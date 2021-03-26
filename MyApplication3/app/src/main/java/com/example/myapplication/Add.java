@@ -75,6 +75,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        String trainingType = spinner.getSelectedItem().toString(); //måste fixa så den uppdateras i samma stund
 
         //Add Note
 
