@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.content.Intent;
@@ -13,10 +14,13 @@ import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
 
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.Timestamp;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -24,6 +28,7 @@ import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
+import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
@@ -34,6 +39,8 @@ import java.util.Map;
 
 public class Calender extends AppCompatActivity {
     private static final String TAG = "Add";
+    CalenderRecyclerAdapter calenderRecyclerAdapter;
+    RecyclerView recyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -52,8 +59,13 @@ public class Calender extends AppCompatActivity {
             }
         });
 
-        selectedDayTextView.getText();
+        String date = selectedDayTextView.getText().toString();
 
+        //Anteckningar
+        recyclerView = findViewById(R.id.recyclerView);
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        initRecyclerView(userId, date);
+        
 
         //Navigeringsmeny
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -81,6 +93,21 @@ public class Calender extends AppCompatActivity {
                 return false;
             }
         });
+    }
+    private void initRecyclerView(String user, String date){
+        Query query = FirebaseFirestore.getInstance()
+                .collection("notes")
+                .whereEqualTo("userId", user)
+                .whereEqualTo("created", date);
+
+        FirestoreRecyclerOptions<Note> options = new FirestoreRecyclerOptions.Builder<Note>()
+                .setQuery(query, Note.class)
+                .build();
+
+        calenderRecyclerAdapter = new CalenderRecyclerAdapter(options);
+        recyclerView.setAdapter(calenderRecyclerAdapter);
+
+        calenderRecyclerAdapter.startListening();
     }
     /*
     public void readDocument(View view){
