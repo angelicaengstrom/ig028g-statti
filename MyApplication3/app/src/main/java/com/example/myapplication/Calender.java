@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -14,12 +15,19 @@ import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.Timestamp;
+import com.google.firebase.firestore.DocumentChange;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.EventListener;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
+import com.google.firebase.firestore.SetOptions;
 
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class Calender extends AppCompatActivity {
     private static final String TAG = "Add";
@@ -118,5 +126,93 @@ public class Calender extends AppCompatActivity {
                         Log.e(TAG, "onFailure: ", e);
                     }
                 });
+    }
+    public void getAllDocumentsWithRealtimeUpdates(View view){
+
+        /* //Ger en lista på alla dokument
+        FirebaseFirestore.getInstance()
+                .collection("notes")
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(error != null){
+                            Log.e(TAG, "onEvent: ", error);
+                            return;
+                        }
+                        if(value != null){
+                            Log.d(TAG, "onEvent: ---------------------");
+                            //List<DocumentSnapshot> snapshotList = value.getDocuments();
+                            //for(DocumentSnapshot snapshot : snapshotList){
+                              //  Log.d(TAG, "onEvent: " + snapshot.getData());
+                            //}
+                            List<DocumentChange> documentChangeList = value.getDocumentChanges();
+                            for(DocumentChange documentChange : documentChangeList){
+                                Log.d(TAG, "onEvent: " + documentChange.getDocument().getData());
+                            }
+                        } else {
+                            Log.e(TAG, "onEvent: query snapshot was null");
+                        }
+                    }
+                });
+*/
+        //Är bara attached till 4BVVZBlzaCfVY2zF9fd8
+        FirebaseFirestore.getInstance()
+                .collection("notes")
+                .document("4BVVZBlzaCfVY2zF9fd8")
+                .addSnapshotListener(new EventListener<DocumentSnapshot>() {
+                    @Override
+                    public void onEvent(@Nullable DocumentSnapshot value, @Nullable FirebaseFirestoreException error) {
+                        if(error != null){
+                            Log.e(TAG, "onEvent: ", error);
+                            return;
+                        }
+                        if(value != null){
+                            Log.d(TAG, "onEvent: ----------------------");
+                            Log.d(TAG, "onEvent: " + value.getData());
+                        } else{
+                            Log.e(TAG, "onEvent: query snapshot was null");
+                        }
+                    }
+                });
+    }
+
+    public void updateDocument(View view){
+        DocumentReference docRef = FirebaseFirestore.getInstance()
+                .collection("notes")
+                .document("4BVVZBlzaCfVY2zF9fd8");
+
+        Map<String, Object> map = new HashMap<>();
+        map.put("feeling", 3);
+        map.put("condition", false); //kan lägga till flera saker
+
+
+        /*docRef.update(map) //till ett specifikt dokument
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "onSuccess: updated the doc");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "onFailure: ", e);
+                    }
+                });*/
+
+        docRef.set(map, SetOptions.merge()) //Kan skapa dokument som inte finns också
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "onSuccess: set the doc");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "onFailure: ", e);
+                    }
+                });
+
     }
 }
