@@ -109,17 +109,21 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 });
     }
     
-    public void saveNote(View view){
+    public void createDocument(View view){
         FirebaseFirestore.getInstance();
 
+        /*
         Map<String, Object> map = new HashMap<>();
         map.put("text", "sov mycket");
         map.put("feeling", 5);
         map.put("trainsession", 10);
-        map.put("created", new Timestamp(new Date()));
+        map.put("created", new Timestamp(new Date()));*/
+
+        Note note = new Note("sov mycket", 5, 10);
 
         FirebaseFirestore.getInstance().collection("notes")
-                .add(map)
+                //.add(map)
+                .add(note)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
