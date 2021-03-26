@@ -63,7 +63,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         int month = cal.get(Calendar.MONTH);
         int day = cal.get(Calendar.DAY_OF_MONTH);
 
-        String date = month + "/" + day + " - " + year;
+        String date = day + "/" + month + " - " + year;
         displayDate.setText(date);
 
         displayDate.setOnClickListener(new View.OnClickListener() {
@@ -82,44 +82,15 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         dateSetListener = new DatePickerDialog.OnDateSetListener() {
             @Override
             public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                String date = month + "/" + dayOfMonth + " - " + year;
+                String date = dayOfMonth + "/" + month + " - " + year;
                 displayDate.setText(date);
             }
         };
 
         //Obligatoriska frågor
         otherNoteEditText = findViewById(R.id.otherNote);
-        feelingTextView = (TextView) findViewById(R.id.feelingTextView);
         feelingSeekbar = (SeekBar) findViewById(R.id.feelingSeekbar);
-        trainsessionTextView = (TextView) findViewById(R.id.trainsessionTextView);
         trainsessionSeekbar = (SeekBar) findViewById(R.id.trainingsessionSeekbar);
-
-
-        feelingSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                feelingTextView.setText(String.valueOf(progress));
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
-
-        trainsessionSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
-            @Override
-            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
-                trainsessionTextView.setText(String.valueOf(progress));
-            }
-            @Override
-            public void onStartTrackingTouch(SeekBar seekBar) {
-            }
-            @Override
-            public void onStopTrackingTouch(SeekBar seekBar) {
-            }
-        });
 
 
 
