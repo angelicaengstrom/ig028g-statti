@@ -66,20 +66,7 @@
         android:layout_marginStart="30dp"
         android:layout_marginLeft="30dp"
         android:layout_marginTop="68dp"
-        android:text="Hur mår du idag? (1-10)" />
-
-    <EditText
-        android:id="@+id/feelingEditText"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginLeft="200dp"
-        android:layout_marginTop="367dp"
-        android:ems="10"
-        android:inputType="numberSigned" />
+        android:text="Hur mår du idag?" />
 
     <TextView
         android:id="@+id/textView3"
@@ -91,20 +78,7 @@
         android:layout_marginStart="29dp"
         android:layout_marginLeft="29dp"
         android:layout_marginTop="136dp"
-        android:text="Hur bra presterade du? (1-10)" />
-
-    <EditText
-        android:id="@+id/trainsessionEditText"
-        android:layout_width="60dp"
-        android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginStart="76dp"
-        android:layout_marginLeft="76dp"
-        android:layout_marginTop="368dp"
-        android:ems="10"
-        android:inputType="numberSigned" />
+        android:text="Hur bra presterade du?" />
 
     <TextView
         android:id="@+id/textView2"
@@ -140,19 +114,6 @@
         android:layout_marginEnd="22dp"
         android:layout_marginRight="22dp"
         android:text="Datum" />
-
-    <TextView
-        android:id="@+id/feelingTextView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="67dp"
-        android:layout_marginEnd="107dp"
-        android:layout_marginRight="107dp"
-        android:text="0"
-        android:textSize="16sp" />
 
     <SeekBar
         android:id="@+id/feelingSeekbar"
@@ -195,18 +156,53 @@
         android:text="Skapa nytt träningspass"
         android:textSize="12sp" />
 
-    <TextView
-        android:id="@+id/trainsessionTextView"
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="50dp"
+        android:layout_marginTop="93dp"
+        app:srcCompat="@drawable/ic_baseline_sentiment_very_dissatisfied_24" />
+
+    <ImageView
+        android:id="@+id/imageView3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="135dp"
-        android:layout_marginEnd="82dp"
-        android:layout_marginRight="82dp"
-        android:text="0"
-        android:textSize="16sp" />
+        android:layout_marginTop="95dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:srcCompat="@drawable/ic_baseline_tag_faces_24" />
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="165dp"
+        android:layout_marginEnd="36dp"
+        android:layout_marginRight="36dp"
+        app:srcCompat="@drawable/ic_baseline_tag_faces_24" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="52dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="163dp"
+        app:srcCompat="@drawable/ic_baseline_sentiment_very_dissatisfied_24" />
 
     <!--
 
