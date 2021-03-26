@@ -1,6 +1,10 @@
 <resources>
     <string name="app_name">Träningsapp</string>
-    <string name="add_h1">Lägg till träningspass</string>
+    <string-array name="trainingType">
+        <item>Kondition</item>
+        <item>Styrka</item>
+        <item>Teknik</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
