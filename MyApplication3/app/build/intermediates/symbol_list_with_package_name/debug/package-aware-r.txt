@@ -1771,7 +1771,6 @@ id CTRL
 id FUNCTION
 id META
 id NO_DEBUG
-id Note1
 id SHIFT
 id SHOW_ALL
 id SHOW_PATH
@@ -1937,6 +1936,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id feelingTextView
 id fill
 id fill_horizontal
 id fill_vertical
@@ -2062,6 +2062,7 @@ id notification_main_column
 id notification_main_column_container
 id off
 id on
+id otherNote
 id outline
 id outward
 id packed
@@ -2177,6 +2178,8 @@ id textSpacerNoButtons
 id textSpacerNoTitle
 id textStart
 id textTop
+id textView
+id textView3
 id textView4
 id textView7
 id text_input_end_icon
@@ -2196,6 +2199,7 @@ id toggle
 id top
 id topPanel
 id touch_outside
+id trainsessionTextView
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
