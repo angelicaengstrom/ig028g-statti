@@ -46,9 +46,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Log.d(TAG, "onClick: " + otherNoteEditText.getText());
+                        Log.d(TAG, "onClick: " + otherNoteEditText.getText()
+                        + feelingEditText.getText() + trainsessionEditText.getText());
+                        /*
                         Log.d(TAG, "onClick: " + feelingEditText.getText());
-                        Log.d(TAG, "onClick: " + trainsessionEditText.getText());
+                        Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
                     }
 
         });
