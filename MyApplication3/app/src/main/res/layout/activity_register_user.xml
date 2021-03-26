@@ -18,7 +18,7 @@
         android:gravity="center_horizontal"
         android:text="Appnamn"
         android:textAlignment="center"
-        android:textColor="@color/black"
+        android:textColor="@color/common_google_signin_btn_text_light"
         android:textSize="60sp"
         android:textStyle="bold"
         app:layout_constraintHorizontal_bias="0.0"
@@ -90,10 +90,10 @@
 
     <Button
         android:id="@+id/registerUser"
-        android:layout_width="297dp"
-        android:layout_height="91dp"
+        android:layout_width="264dp"
+        android:layout_height="56dp"
         android:layout_marginTop="208dp"
-        android:text="Registera ny användare"
+        android:text="Registera"
         android:textSize="24sp"
         app:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintHorizontal_bias="0.495"
