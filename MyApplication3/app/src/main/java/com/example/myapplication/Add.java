@@ -100,6 +100,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
+        String trainingType = spinner.getSelectedItem().toString();
 
         //Add Note
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
@@ -107,10 +108,10 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + spinner.getSelectedItem().toString());
+                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + trainingType);
 
-                        addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
-                                trainsessionSeekbar.getProgress() );
+                        //addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
+                          //      trainsessionSeekbar.getProgress() );
                         /*
                         Log.d(TAG, "onClick: " + feelingEditText.getText());
                         Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
@@ -186,7 +187,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }
+    }/*
 
     private void addNote(String text, int feeling, int trainsession){
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -207,7 +208,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-    }
+    }*/
     /*
     
     public void createDocument(View view){
