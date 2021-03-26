@@ -61,6 +61,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array trainingType
 attr action
 attr actionBarDivider
 attr actionBarItemBackground
@@ -1895,6 +1896,7 @@ id custom
 id customPanel
 id cut
 id dark
+id dateBtn
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2179,6 +2181,7 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView2
 id textView3
 id textView4
 id textView7
@@ -2199,6 +2202,8 @@ id toggle
 id top
 id topPanel
 id touch_outside
+id trainingType
+id trainsessionBtn
 id trainsessionTextView
 id transitionToEnd
 id transitionToStart
@@ -2414,7 +2419,6 @@ string abc_searchview_description_voice
 string abc_shareactionprovider_share_with
 string abc_shareactionprovider_share_with_application
 string abc_toolbar_collapse_description
-string add_h1
 string app_name
 string appbar_scrolling_view_behavior
 string bottom_sheet_behavior
