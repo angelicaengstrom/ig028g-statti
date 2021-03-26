@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Add">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -17,7 +18,7 @@
         app:menu="@menu/menu_navigation" />
 
     <EditText
-        android:id="@+id/Note1"
+        android:id="@+id/otherNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -27,6 +28,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="21dp"
         android:ems="10"
+        android:hint="t.ex. sömn"
         android:inputType="textPersonName" />
 
     <TextView
@@ -40,8 +42,9 @@
         android:layout_marginLeft="30dp"
         android:text="Övriga anteckningar:" />
 
-    <Button
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/saveNoteBtn"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -50,7 +53,90 @@
         android:layout_marginEnd="15dp"
         android:layout_marginRight="15dp"
         android:layout_marginBottom="68dp"
-        android:text="Save note" />
+        android:textSize="20dp"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="68dp"
+        android:text="Hur mår du idag? (1-10)" />
+
+    <EditText
+        android:id="@+id/feelingTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="89dp"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="136dp"
+        android:text="Hur bra presterade du? (1-10)" />
+
+    <EditText
+        android:id="@+id/trainsessionTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="155dp"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:clickable="true"
+        app:backgroundTint="#919191"
+        app:rippleColor="#AAAAAA"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="203dp"
+        android:text="Träningstyp:" />
+    
+    <Spinner
+        android:id="@+id/trainingType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
     <!--
 

@@ -30,6 +30,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
+    private static final String TAG = "MainActivity";
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -50,6 +52,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mAuth = FirebaseAuth.getInstance();
         forgotPassword = (TextView) findViewById(R.id.forgotPassword);
         forgotPassword.setOnClickListener(this);
+
+        //gör att personen inte kan komma tillbaka till login
+        if(FirebaseAuth.getInstance().getCurrentUser() != null){
+            startActivity(new Intent(this, Add.class));
+            this.finish();
+        }
     }
 
     @Override
@@ -104,10 +112,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()) {
                         //skicka vidare till första sidan,,,, add ????
-                        startActivity(new Intent(MainActivity.this, Add.class));
+                        Intent intent = new Intent(MainActivity.this, Add.class);
+                        startActivity(intent);
+                        finish();
                     }else {
                         user.sendEmailVerification();
-                        Toast.makeText(MainActivity.this,"Verifiera ditt konto från ditt e-post", Toast.LENGTH_LONG).show();
+                        Toast.makeText(MainActivity.this,"Verifiera ditt konto via e-post", Toast.LENGTH_LONG).show();
                     }
                 }else{
                     Toast.makeText(MainActivity.this, "Inloggningen har misslyckades, var snäll försök igen", Toast.LENGTH_LONG).show();

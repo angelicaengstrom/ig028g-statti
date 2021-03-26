@@ -11,6 +11,8 @@ import android.provider.MediaStore;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +32,10 @@ public class Settings extends AppCompatActivity {
     private String userID;
     private Button logout;
 
+    ImageView profileImageView;
+    Button updateProfileBtn;
+    ProgressBar progressBar;
+
     int TAKE_IMAGE_CODE = 10001;
 
 
@@ -38,13 +44,16 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
+        progressBar = findViewById(R.id.progressBar3);
+        updateProfileBtn = (Button) findViewById(R.id.updateProfileBtn);
+        profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 FirebaseAuth.getInstance().signOut();
-                startActivity(new Intent(Settings.this, MainActivity.class));
+                finish();
             }
         });
 
@@ -104,6 +113,9 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
+
+    public void updateProfile(View view) {
+    }
     /*
     public void handleImageClick(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -122,6 +134,6 @@ public class Settings extends AppCompatActivity {
                     Bitmap bitmap = (Bitmap) data.getExtras().get("data");
                     profileImageView.setI
             }
-        }*/
-    }
+        }
+    }*/
 }
