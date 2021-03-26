@@ -19,6 +19,7 @@ import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.QuerySnapshot;
@@ -66,7 +67,7 @@ public class Calender extends AppCompatActivity {
     }
     public void readDocument(View view){
         /*
-        FirebaseFirestore.getInstance()
+        FirebaseFirestore.getInstance() //ta ut alla dokument
                 .collection("notes")
                 .get()
                 .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
@@ -115,9 +116,15 @@ public class Calender extends AppCompatActivity {
                 .addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
                     @Override
                     public void onSuccess(DocumentSnapshot documentSnapshot) {
+                        /*
                         Log.d(TAG, "onSuccess: " + documentSnapshot.getId());
                         Log.d(TAG, "onSuccess: " + documentSnapshot.getData());
-                        Log.d(TAG, "onSuccess: " + documentSnapshot.getTimestamp("created"));
+                        Log.d(TAG, "onSuccess: " + documentSnapshot.getTimestamp("created"));*/
+
+                        Note note = documentSnapshot.toObject(Note.class);
+                        Log.d(TAG, "onSuccess: " + note.toString());
+                        Log.d(TAG, "onSuccess: " + note.getText()); //Ger endast namn osv
+
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -183,7 +190,9 @@ public class Calender extends AppCompatActivity {
 
         Map<String, Object> map = new HashMap<>();
         map.put("feeling", 3);
-        map.put("condition", false); //kan lägga till flera saker
+        map.put("condition", false); //lägger till brand som inte finns
+        map.put("condition", FieldValue.delete()); //tar bort brand
+        map.put("feeling", FieldValue.increment(2)); //ökar värdet med 2
 
 
         /*docRef.update(map) //till ett specifikt dokument
@@ -214,5 +223,23 @@ public class Calender extends AppCompatActivity {
                     }
                 });
 
+    }
+    public void deleteDocument(View view){
+        FirebaseFirestore.getInstance()
+                .collection("notes")
+                .document("123")
+                .delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "onSuccess: We have deleted the document");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "onFailure: ", e);
+                    }
+                });
     }
 }
