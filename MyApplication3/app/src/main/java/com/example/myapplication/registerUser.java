@@ -23,7 +23,7 @@ import com.google.firebase.database.FirebaseDatabase;
 
 public class registerUser extends AppCompatActivity implements View.OnClickListener {
     private TextView banner, registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextgender;
     private ProgressBar progressBar;
     private FirebaseAuth mAuth;
 
@@ -43,7 +43,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         editTextAge = (EditText) findViewById(R.id.age);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
-
+        editTextgender = (EditText) findViewById(R.id.gender);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
@@ -66,6 +66,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String fullName = editTextFullName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
+        String gender = editTextgender.getText().toString().trim();
 
         if(fullName.isEmpty()){
             editTextFullName.setError("Namnet måste skrivas");
@@ -98,6 +99,8 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
             editTextPassword.requestFocus();
             return;
         }
+
+
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
