@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#FFFFFF"
     tools:context=".Add">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
@@ -53,7 +54,7 @@
         android:layout_marginRight="15dp"
         android:layout_marginBottom="68dp"
         android:textSize="20dp"
-        app:srcCompat="@drawable/ic_baseline_add_24"/>
+        app:srcCompat="@drawable/ic_baseline_add_24" />
 
     <TextView
         android:id="@+id/textView"
@@ -104,6 +105,38 @@
         android:layout_marginTop="155dp"
         android:ems="10"
         android:inputType="numberSigned" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="272dp"
+        android:layout_marginEnd="54dp"
+        android:layout_marginRight="54dp"
+        android:clickable="true"
+        app:backgroundTint="#919191"
+        app:rippleColor="#AAAAAA"
+        app:srcCompat="@drawable/ic_baseline_add_24" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="203dp"
+        android:text="Träningstyp:" />
+    
+    <Spinner
+        android:id="@+id/trainingType"
+        android:layout_width=""
+        android:layout_height=""
 
     <!--
 
