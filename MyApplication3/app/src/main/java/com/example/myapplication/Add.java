@@ -5,6 +5,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
+import android.app.DatePickerDialog;
+import android.graphics.Color;
+import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.MenuItem;
@@ -12,9 +15,11 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.content.Intent;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnFailureListener;
@@ -28,6 +33,7 @@ import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
@@ -36,11 +42,44 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
     private EditText otherNoteEditText, feelingEditText, trainsessionEditText;
+    private TextView displayDate;
+    private DatePickerDialog.OnDateSetListener dateSetListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
+
+        displayDate = findViewById(R.id.dateBtn);
+
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int day = cal.get(Calendar.DAY_OF_MONTH);
+
+        String date = month + "/" + day + " - " + year;
+        displayDate.setText(date);
+
+        displayDate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                DatePickerDialog dialog = new DatePickerDialog(
+                        Add.this,
+                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
+                        dateSetListener,
+                        year, month, day);
+                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
+                dialog.show();
+            }
+        });
+
+        dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                String date = month + "/" + dayOfMonth + " - " + year;
+                displayDate.setText(date);
+            }
+        };
 
         otherNoteEditText = findViewById(R.id.otherNote);
         feelingEditText = findViewById(R.id.feelingTextView);
