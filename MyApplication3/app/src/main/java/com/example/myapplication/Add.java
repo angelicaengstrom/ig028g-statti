@@ -18,6 +18,8 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.content.Intent;
+import android.widget.ProgressBar;
+import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -32,6 +34,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.protobuf.StringValue;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -41,15 +44,18 @@ import java.util.Map;
 public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener, AdapterView.OnItemSelectedListener{
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
-    private EditText otherNoteEditText, feelingEditText, trainsessionEditText;
-    private TextView displayDate;
+    private EditText otherNoteEditText;
+    private TextView displayDate, feelingTextView, trainsessionTextView;
     private DatePickerDialog.OnDateSetListener dateSetListener;
+    private SeekBar feelingSeekbar, trainsessionSeekbar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
+
+        //Date
         displayDate = findViewById(R.id.dateBtn);
 
         Calendar cal = Calendar.getInstance();
@@ -81,10 +87,41 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
             }
         };
 
+        //Obligatoriska frågor
         otherNoteEditText = findViewById(R.id.otherNote);
-        feelingEditText = findViewById(R.id.feelingTextView);
-        trainsessionEditText = findViewById(R.id.trainsessionTextView);
+        feelingTextView = (TextView) findViewById(R.id.feelingTextView);
+        feelingSeekbar = (SeekBar) findViewById(R.id.feelingSeekbar);
+        trainsessionTextView = (TextView) findViewById(R.id.trainsessionTextView);
+        trainsessionSeekbar = (SeekBar) findViewById(R.id.trainingsessionSeekbar);
 
+        feelingSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                feelingTextView.setText(String.valueOf(progress));
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+        trainsessionSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
+            @Override
+            public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
+                trainsessionTextView.setText(String.valueOf(progress));
+            }
+            @Override
+            public void onStartTrackingTouch(SeekBar seekBar) {
+            }
+            @Override
+            public void onStopTrackingTouch(SeekBar seekBar) {
+            }
+        });
+
+
+        //Traintype
         Spinner spinner = findViewById(R.id.trainingType);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter
                 .createFromResource(this, R.array.trainingType, android.R.layout.simple_spinner_item);
@@ -92,12 +129,13 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
+        //Save Note
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingEditText.getText() + trainsessionEditText.getText());
+                        + feelingSeekbar + trainsessionSeekbar);
                         /*
                         Log.d(TAG, "onClick: " + feelingEditText.getText());
                         Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
