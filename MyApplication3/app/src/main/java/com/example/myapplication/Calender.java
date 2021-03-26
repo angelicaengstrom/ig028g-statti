@@ -65,6 +65,7 @@ public class Calender extends AppCompatActivity {
             }
         });
     }
+    /*
     public void readDocument(View view){
         /*
         FirebaseFirestore.getInstance() //ta ut alla dokument
@@ -107,7 +108,7 @@ public class Calender extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         Log.e(TAG, "onFailure: ", e);
                     }
-                });*/
+                });
 
         FirebaseFirestore.getInstance()
                 .collection("notes")
@@ -119,7 +120,7 @@ public class Calender extends AppCompatActivity {
                         /*
                         Log.d(TAG, "onSuccess: " + documentSnapshot.getId());
                         Log.d(TAG, "onSuccess: " + documentSnapshot.getData());
-                        Log.d(TAG, "onSuccess: " + documentSnapshot.getTimestamp("created"));*/
+                        Log.d(TAG, "onSuccess: " + documentSnapshot.getTimestamp("created"));
 
                         Note note = documentSnapshot.toObject(Note.class);
                         Log.d(TAG, "onSuccess: " + note.toString());
@@ -161,7 +162,7 @@ public class Calender extends AppCompatActivity {
                         }
                     }
                 });
-*/
+
         //Är bara attached till 4BVVZBlzaCfVY2zF9fd8
         FirebaseFirestore.getInstance()
                 .collection("notes")
@@ -207,7 +208,7 @@ public class Calender extends AppCompatActivity {
                     public void onFailure(@NonNull Exception e) {
                         Log.e(TAG, "onFailure: ", e);
                     }
-                });*/
+                });
 
         docRef.set(map, SetOptions.merge()) //Kan skapa dokument som inte finns också
                 .addOnSuccessListener(new OnSuccessListener<Void>() {
@@ -241,5 +242,5 @@ public class Calender extends AppCompatActivity {
                         Log.e(TAG, "onFailure: ", e);
                     }
                 });
-    }
+    }*/
 }
