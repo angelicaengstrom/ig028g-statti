@@ -37,7 +37,6 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
         LayoutInflater layoutInflater = LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.calender_row, parent);
         return new CalenderViewHolder(view);
-        return null;
     }
 
     class CalenderViewHolder extends RecyclerView.ViewHolder {
