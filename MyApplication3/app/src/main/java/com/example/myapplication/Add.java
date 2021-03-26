@@ -94,6 +94,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         trainsessionTextView = (TextView) findViewById(R.id.trainsessionTextView);
         trainsessionSeekbar = (SeekBar) findViewById(R.id.trainingsessionSeekbar);
 
+
         feelingSeekbar.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @Override
             public void onProgressChanged(SeekBar seekBar, int progress, boolean fromUser) {
@@ -121,6 +122,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         });
 
 
+
         //Traintype
         Spinner spinner = findViewById(R.id.trainingType);
         ArrayAdapter<CharSequence> adapter = ArrayAdapter
@@ -135,7 +137,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar + trainsessionSeekbar);
+                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress());
                         /*
                         Log.d(TAG, "onClick: " + feelingEditText.getText());
                         Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
