@@ -112,6 +112,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     }
                 });
     }
+    /*
     
     public void createDocument(View view){
         FirebaseFirestore.getInstance();
@@ -121,7 +122,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         map.put("text", "sov mycket");
         map.put("feeling", 5);
         map.put("trainsession", 10);
-        map.put("created", new Timestamp(new Date()));*/
+        map.put("created", new Timestamp(new Date()));
 
         Note note = new Note("sov mycket", 5, 10);
 
@@ -162,6 +163,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onFailure(@NonNull Exception e) {
                     }
-                });*/
+                });
     }
+    */
 }
