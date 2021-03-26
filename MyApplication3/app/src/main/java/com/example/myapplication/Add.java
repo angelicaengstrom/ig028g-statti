@@ -45,7 +45,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
     private EditText otherNoteEditText;
-    private TextView displayDate, feelingTextView, trainsessionTextView;
+    private TextView displayDate;
     private DatePickerDialog.OnDateSetListener dateSetListener;
     private SeekBar feelingSeekbar, trainsessionSeekbar;
 
@@ -55,6 +55,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         setContentView(R.layout.activity_add);
 
         //Date
+        /*
         displayDate = findViewById(R.id.dateBtn);
 
         Calendar cal = Calendar.getInstance();
@@ -84,13 +85,12 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 String date = dayOfMonth + "/" + month + " - " + year;
                 displayDate.setText(date);
             }
-        };
+        };*/
 
         //Obligatoriska frågor
         otherNoteEditText = findViewById(R.id.otherNote);
         feelingSeekbar = (SeekBar) findViewById(R.id.feelingSeekbar);
         trainsessionSeekbar = (SeekBar) findViewById(R.id.trainingsessionSeekbar);
-
 
 
         //Traintype
@@ -103,6 +103,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         String trainingType = spinner.getSelectedItem().toString();
 
         //Add Note
+
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -112,9 +113,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
                         //addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
                           //      trainsessionSeekbar.getProgress() );
-                        /*
-                        Log.d(TAG, "onClick: " + feelingEditText.getText());
-                        Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
                     }
 
         });
@@ -187,7 +185,9 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
-    }/*
+    }
+    /*
+
 
     private void addNote(String text, int feeling, int trainsession){
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
