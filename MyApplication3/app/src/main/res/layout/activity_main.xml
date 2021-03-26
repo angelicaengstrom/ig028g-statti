@@ -29,13 +29,13 @@
         android:id="@+id/banner"
         android:layout_width="286dp"
         android:layout_height="79dp"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
         android:text="APPNAME"
         android:textAlignment="center"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.369"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,8 +57,8 @@
 
     <Button
         android:id="@+id/signIn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="223dp"
+        android:layout_height="41dp"
         android:layout_marginTop="36dp"
         android:text="logga in"
         app:backgroundTint="@android:color/holo_red_dark"
@@ -77,10 +77,10 @@
         android:text="Registera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/forgotPassword"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.037"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signIn"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.04" />
 
     <TextView
         android:id="@+id/forgotPassword"
