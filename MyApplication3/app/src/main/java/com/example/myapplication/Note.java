@@ -1,5 +1,5 @@
 package com.example.myapplication;
-
+/*
 public class Note {
 
     private String text;
@@ -49,3 +49,4 @@ public class Note {
                 "}";
     }
 }
+*/
