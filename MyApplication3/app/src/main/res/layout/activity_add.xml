@@ -107,15 +107,15 @@
         android:inputType="numberSigned" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/floatingActionButton"
+        android:id="@+id/trainsessionBtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="272dp"
-        android:layout_marginEnd="54dp"
-        android:layout_marginRight="54dp"
+        android:layout_marginTop="189dp"
+        android:layout_marginEnd="42dp"
+        android:layout_marginRight="42dp"
         android:clickable="true"
         app:backgroundTint="#919191"
         app:rippleColor="#AAAAAA"
@@ -132,11 +132,29 @@
         android:layout_marginLeft="29dp"
         android:layout_marginTop="203dp"
         android:text="Träningstyp:" />
-    
+
     <Spinner
         android:id="@+id/trainingType"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="127dp"
+        android:layout_marginLeft="127dp"
+        android:layout_marginTop="202dp" />
+
+    <TextView
+        android:id="@+id/dateBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="3dp"
+        android:layout_marginEnd="22dp"
+        android:layout_marginRight="22dp"
+        android:text="Datum" />
 
     <!--
 
