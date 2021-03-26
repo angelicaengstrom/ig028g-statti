@@ -4,24 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/material_on_primary_emphasis_medium"
     tools:context=".registerUser">
 
     <!-- android:background="@drawable/photo" -->
 
+
     <TextView
         android:id="@+id/banner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
+        android:layout_width="265dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
         android:text="Appnamn"
         android:textAlignment="center"
+        android:textColor="@color/black"
         android:textSize="60sp"
         android:textStyle="bold"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:gravity="center_horizontal" />
-
+        app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
         android:id="@+id/fullname"
@@ -31,6 +34,7 @@
         android:ems="10"
         android:hint="För- pch efternamn"
         android:inputType="text"
+        android:textColorHint="@android:color/holo_red_dark"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -45,6 +49,7 @@
         android:ems="10"
         android:hint="Ålder"
         android:inputType="number"
+        android:textColorHint="@android:color/holo_red_dark"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -59,6 +64,7 @@
         android:ems="10"
         android:hint="E-post"
         android:inputType="textEmailAddress"
+        android:textColorHint="@android:color/holo_red_dark"
         android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -73,20 +79,23 @@
         android:ems="10"
         android:hint="Lösenord"
         android:inputType="textPassword"
-        android:textSize="24sp"
+        android:textColorHint="@android:color/holo_red_dark"
 
+        android:textSize="24sp"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/email" />
 
+
     <Button
         android:id="@+id/registerUser"
-        android:layout_width="300dp"
-        android:layout_height="70dp"
-        android:layout_marginTop="80dp"
+        android:layout_width="297dp"
+        android:layout_height="91dp"
+        android:layout_marginTop="208dp"
         android:text="Registera ny användare"
         android:textSize="24sp"
+        app:backgroundTint="@android:color/holo_red_dark"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -103,4 +112,24 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/gender"
+        android:layout_width="306dp"
+        android:layout_height="56dp"
+        android:layout_marginStart="90dp"
+        android:layout_marginLeft="90dp"
+        android:layout_marginEnd="112dp"
+        android:layout_marginRight="112dp"
+        android:ems="10"
+        android:hint="kön"
+        android:inputType="textPersonName"
+        android:textColorHint="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/registerUser"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.422"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintVertical_bias="0.282" />
 </androidx.constraintlayout.widget.ConstraintLayout>
