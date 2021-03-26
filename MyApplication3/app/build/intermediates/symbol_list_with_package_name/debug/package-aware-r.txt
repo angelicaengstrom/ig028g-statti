@@ -1898,6 +1898,7 @@ id custom
 id customPanel
 id cut
 id dark
+id dataTextView
 id dateBtn
 id date_picker_actions
 id decelerate
@@ -2205,6 +2206,7 @@ id textinput_suffix_text
 id time
 id title
 id titleDividerNoCustom
+id titleTextView
 id title_template
 id toggle
 id top
@@ -2302,6 +2304,7 @@ layout activity_calender
 layout activity_forget_password
 layout activity_graph
 layout activity_main
+layout activity_profile
 layout activity_register_user
 layout activity_settings
 layout custom_dialog
@@ -2362,6 +2365,7 @@ layout mtrl_picker_header_title_text
 layout mtrl_picker_header_toggle
 layout mtrl_picker_text_input_date
 layout mtrl_picker_text_input_date_range
+layout note_row
 layout notification_action
 layout notification_action_tombstone
 layout notification_media_action
