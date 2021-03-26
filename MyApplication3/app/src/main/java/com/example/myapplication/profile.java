@@ -1,5 +1,3 @@
-//MAHMOD ,,, Under genomförande
-
 package com.example.myapplication;
 
 import androidx.appcompat.app.AppCompatActivity;
