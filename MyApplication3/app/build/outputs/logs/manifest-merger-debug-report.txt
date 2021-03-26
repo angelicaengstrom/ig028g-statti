@@ -13,6 +13,7 @@ MERGED from [androidx.navigation:navigation-fragment:2.2.2] /home/angelicaengstr
 MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9467dea77a5cea6c22f80debdbcfbe43/legacy-support-v4-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:15:1-39:12
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:2:1-26:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8767dc4d06925d0d3d12179fa4a1bb1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c7f8487a83fb70bc0fe95934361948bc/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.appcompat:appcompat-resources:1.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d7b34cee353deadfb156adcfd673b719/jetified-appcompat-resources-1.2.0/AndroidManifest.xml:17:1-24:12
@@ -58,6 +59,8 @@ MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /home/angelicaengstrom
 MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/108ec4d3697c46900f7718a8c101df12/lifecycle-livedata-core-2.2.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/7bb25a4f6f211f0fd403b91af1b9692f/core-runtime-2.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1f6b045666a31134b82a56c243bf4255/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e53fbbcf78ffb18c7cd795b35d4efb56/jetified-protolite-well-known-types-17.1.1/AndroidManifest.xml:2:1-11:12
+MERGED from [io.grpc:grpc-android:1.28.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/10a3513949333938587db48c8411373d/jetified-grpc-android-1.28.0/AndroidManifest.xml:2:1-13:12
 INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-33:12
 INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-33:12
 INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:2:1-33:12
@@ -87,6 +90,8 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstro
 MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:28:5-36:19
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:29:5-37:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:16:5-24:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:16:5-24:19
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a63935de15513710d98bf227aa324a8b/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a63935de15513710d98bf227aa324a8b/jetified-play-services-base-17.1.0/AndroidManifest.xml:22:5-27:19
 MERGED from [com.google.firebase:firebase-auth-interop:19.0.2] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/6115e061c96511d50753812d4de24f21/jetified-firebase-auth-interop-19.0.2/AndroidManifest.xml:7:5-8:19
@@ -187,6 +192,8 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstro
 MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:19:5-21:41
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8767dc4d06925d0d3d12179fa4a1bb1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8767dc4d06925d0d3d12179fa4a1bb1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c7f8487a83fb70bc0fe95934361948bc/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
@@ -277,6 +284,10 @@ MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/angelicaengstrom/.grad
 MERGED from [androidx.arch.core:core-runtime:2.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/7bb25a4f6f211f0fd403b91af1b9692f/core-runtime-2.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1f6b045666a31134b82a56c243bf4255/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.annotation:annotation-experimental:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1f6b045666a31134b82a56c243bf4255/jetified-annotation-experimental-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e53fbbcf78ffb18c7cd795b35d4efb56/jetified-protolite-well-known-types-17.1.1/AndroidManifest.xml:7:5-9:41
+MERGED from [com.google.firebase:protolite-well-known-types:17.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e53fbbcf78ffb18c7cd795b35d4efb56/jetified-protolite-well-known-types-17.1.1/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.28.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/10a3513949333938587db48c8411373d/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
+MERGED from [io.grpc:grpc-android:1.28.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/10a3513949333938587db48c8411373d/jetified-grpc-android-1.28.0/AndroidManifest.xml:7:5-9:41
 INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
 INJECTED from /home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml
 	android:targetSdkVersion
@@ -309,6 +320,8 @@ MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstro
 MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:29:9-35:19
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:30:9-36:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:17:9-23:19
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:17:9-23:19
 MERGED from [com.google.firebase:firebase-common:19.5.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9b2ec3a49389295e09fe37e42c5e30ad/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
 MERGED from [com.google.firebase:firebase-common:19.5.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9b2ec3a49389295e09fe37e42c5e30ad/jetified-firebase-common-19.5.0/AndroidManifest.xml:33:9-46:19
 	android:exported
@@ -329,12 +342,18 @@ uses-permission#android.permission.ACCESS_NETWORK_STATE
 ADDED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:25:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:13:5-79
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:13:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/10a3513949333938587db48c8411373d/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
+MERGED from [io.grpc:grpc-android:1.28.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/10a3513949333938587db48c8411373d/jetified-grpc-android-1.28.0/AndroidManifest.xml:11:5-79
 	android:name
 		ADDED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:25:22-76
 uses-permission#android.permission.INTERNET
 ADDED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:26:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
 MERGED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:27:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:14:5-67
+MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:14:5-67
 	android:name
 		ADDED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:26:22-64
 meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
@@ -349,6 +368,12 @@ ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/
 		ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:35:17-82
 	android:name
 		ADDED from [com.google.firebase:firebase-storage:19.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/04e5af647045a364540a09e61e98dc24/jetified-firebase-storage-19.1.1/AndroidManifest.xml:34:17-107
+meta-data#com.google.firebase.components:com.google.firebase.firestore.FirestoreRegistrar
+ADDED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:20:13-22:85
+	android:value
+		ADDED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:22:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:21:17-111
 activity#com.google.android.gms.common.api.GoogleApiActivity
 ADDED from [com.google.android.gms:play-services-base:17.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/a63935de15513710d98bf227aa324a8b/jetified-play-services-base-17.1.0/AndroidManifest.xml:23:9-26:75
 	android:exported
