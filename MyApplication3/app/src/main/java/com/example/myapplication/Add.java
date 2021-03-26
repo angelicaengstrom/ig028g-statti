@@ -54,7 +54,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_add);
 
-
         //Date
         displayDate = findViewById(R.id.dateBtn);
 
@@ -102,13 +101,16 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-        //Save Note
+        //Add Note
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress());
+                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + spinner.getSelectedItem().toString());
+
+                        addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
+                                trainsessionSeekbar.getProgress() );
                         /*
                         Log.d(TAG, "onClick: " + feelingEditText.getText());
                         Log.d(TAG, "onClick: " + trainsessionEditText.getText());*/
@@ -184,6 +186,27 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     @Override
     public void onNothingSelected(AdapterView<?> parent) {
 
+    }
+
+    private void addNote(String text, int feeling, int trainsession){
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Note note = new Note(text, feeling, trainsession, new Timestamp(new Date()), userId);
+
+        FirebaseFirestore.getInstance()
+                .collection("notes")
+                .add(note)
+                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                    @Override
+                    public void onSuccess(DocumentReference documentReference) {
+                        Log.d(TAG, "onSuccess: Succesfully added the note");
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                    }
+                });
     }
     /*
     
