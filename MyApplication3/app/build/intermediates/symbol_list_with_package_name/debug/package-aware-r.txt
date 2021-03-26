@@ -1719,7 +1719,9 @@ drawable ic_baseline_add_24
 drawable ic_baseline_date_range_24
 drawable ic_baseline_event_note_24
 drawable ic_baseline_leaderboard_24
+drawable ic_baseline_sentiment_very_dissatisfied_24
 drawable ic_baseline_settings_24
+drawable ic_baseline_tag_faces_24
 drawable ic_clock_black_24dp
 drawable ic_keyboard_black_24dp
 drawable ic_launcher_background
@@ -1938,7 +1940,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
-id feelingTextView
+id feelingSeekbar
 id fill
 id fill_horizontal
 id fill_vertical
@@ -1977,6 +1979,10 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView2
+id imageView3
+id imageView4
+id imageView5
 id info
 id invisible
 id inward
@@ -2056,6 +2062,7 @@ id nav_controller_view_tag
 id nav_host_fragment_container
 id navigation_header_container
 id never
+id newTrainsessionBtn
 id noScroll
 id none
 id normal
@@ -2204,8 +2211,7 @@ id top
 id topPanel
 id touch_outside
 id trainingType
-id trainsessionBtn
-id trainsessionTextView
+id trainingsessionSeekbar
 id transitionToEnd
 id transitionToStart
 id transition_current_scene
