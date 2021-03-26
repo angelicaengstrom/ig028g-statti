@@ -69,7 +69,7 @@
         android:text="Hur mår du idag? (1-10)" />
 
     <EditText
-        android:id="@+id/feelingTextView"
+        android:id="@+id/feelingEditText"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -94,7 +94,7 @@
         android:text="Hur bra presterade du? (1-10)" />
 
     <EditText
-        android:id="@+id/trainsessionTextView"
+        android:id="@+id/trainsessionEditText"
         android:layout_width="60dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -141,14 +141,18 @@
         android:layout_marginRight="22dp"
         android:text="Datum" />
 
-    <ProgressBar
-        style="?android:attr/progressBarStyleHorizontal"
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/feelingTextView"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
-        android:layout_marginStart="-3dp"
-        android:layout_marginTop="325dp" />
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="67dp"
+        android:layout_marginEnd="107dp"
+        android:layout_marginRight="107dp"
+        android:text="0"
+        android:textSize="16sp" />
 
     <SeekBar
         android:id="@+id/feelingSeekbar"
@@ -160,7 +164,9 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="67dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="53dp" />
+        android:layout_marginEnd="53dp"
+        android:max="10"
+        android:progress="5" />
 
     <SeekBar
         android:id="@+id/trainingsessionSeekbar"
@@ -171,10 +177,12 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="67dp"
         android:layout_marginLeft="67dp"
-        android:layout_marginTop="170dp" />
+        android:layout_marginTop="170dp"
+        android:max="10"
+        android:progress="5" />
 
     <Button
-        android:id="@+id/trainsessionBtn"
+        android:id="@+id/newTrainsessionBtn"
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -186,6 +194,19 @@
         android:layout_marginTop="228dp"
         android:text="Skapa nytt träningspass"
         android:textSize="12sp" />
+
+    <TextView
+        android:id="@+id/trainsessionTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="135dp"
+        android:layout_marginEnd="82dp"
+        android:layout_marginRight="82dp"
+        android:text="0"
+        android:textSize="16sp" />
 
     <!--
 
