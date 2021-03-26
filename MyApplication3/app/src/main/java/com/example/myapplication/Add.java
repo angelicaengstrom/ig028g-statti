@@ -29,28 +29,32 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
-    private EditText editNote1;
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
-
-
+    private EditText otherNoteEditText, feelingEditText, trainsessionEditText;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
         setContentView(R.layout.activity_add);
-/*
-        FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
-        fab.setOnClickListener((view) -> {
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show();
-        });*/
 
+        otherNoteEditText = findViewById(R.id.otherNote);
+        feelingEditText = findViewById(R.id.feelingTextView);
+        trainsessionEditText = findViewById(R.id.trainsessionTextView);
+
+        FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
+        fab.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Log.d(TAG, "onClick: " + otherNoteEditText.getText());
+                        Log.d(TAG, "onClick: " + feelingEditText.getText());
+                        Log.d(TAG, "onClick: " + trainsessionEditText.getText());
+                    }
+
+        });
 
 
         mAuth = FirebaseAuth.getInstance();
-        editNote1 = (EditText) findViewById(R.id.Note1);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.note);
