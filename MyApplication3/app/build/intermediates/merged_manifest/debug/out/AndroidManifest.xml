@@ -14,6 +14,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name="androidx.multidex.MultiDexApplication"
         android:allowBackup="true"
         android:appComponentFactory="androidx.core.app.CoreComponentFactory"
         android:debuggable="true"
