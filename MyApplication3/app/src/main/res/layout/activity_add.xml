@@ -106,21 +106,6 @@
         android:ems="10"
         android:inputType="numberSigned" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/trainsessionBtn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:layout_marginTop="257dp"
-        android:layout_marginEnd="23dp"
-        android:layout_marginRight="23dp"
-        android:clickable="true"
-        app:backgroundTint="#919191"
-        app:rippleColor="#AAAAAA"
-        app:srcCompat="@drawable/ic_baseline_add_24" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
@@ -167,7 +152,7 @@
 
     <SeekBar
         android:id="@+id/feelingSeekbar"
-        android:layout_width="263dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
@@ -175,11 +160,11 @@
         android:layout_centerHorizontal="true"
         android:layout_marginStart="67dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="78dp" />
+        android:layout_marginEnd="53dp" />
 
     <SeekBar
         android:id="@+id/trainingsessionSeekbar"
-        android:layout_width="262dp"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
@@ -187,6 +172,20 @@
         android:layout_marginStart="67dp"
         android:layout_marginLeft="67dp"
         android:layout_marginTop="170dp" />
+
+    <Button
+        android:id="@+id/trainsessionBtn"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginTop="228dp"
+        android:text="Skapa nytt träningspass"
+        android:textSize="12sp" />
 
     <!--
 
