@@ -17,7 +17,7 @@
         app:menu="@menu/menu_navigation" />
 
     <EditText
-        android:id="@+id/Note1"
+        android:id="@+id/otherNote"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -27,6 +27,7 @@
         android:layout_marginLeft="30dp"
         android:layout_marginTop="21dp"
         android:ems="10"
+        android:hint="t.ex. sömn"
         android:inputType="textPersonName" />
 
     <TextView
@@ -53,6 +54,56 @@
         android:layout_marginBottom="68dp"
         android:textSize="20dp"
         app:srcCompat="@drawable/ic_baseline_add_24"/>
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="68dp"
+        android:text="Hur mår du idag? (1-10)" />
+
+    <EditText
+        android:id="@+id/feelingTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="89dp"
+        android:ems="10"
+        android:inputType="numberSigned" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="136dp"
+        android:text="Hur bra presterade du? (1-10)" />
+
+    <EditText
+        android:id="@+id/trainsessionTextView"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="29dp"
+        android:layout_marginLeft="29dp"
+        android:layout_marginTop="155dp"
+        android:ems="10"
+        android:inputType="numberSigned" />
 
     <!--
 
