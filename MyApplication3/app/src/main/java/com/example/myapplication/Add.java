@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
 
+import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
@@ -36,6 +37,7 @@ import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.protobuf.StringValue;
 
+import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -45,8 +47,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
     private EditText otherNoteEditText;
-    private TextView displayDate;
-    private DatePickerDialog.OnDateSetListener dateSetListener;
+    private Button dateBtn;
+    private DatePickerDialog datePickerDialog;
     private SeekBar feelingSeekbar, trainsessionSeekbar;
 
     @Override
@@ -55,37 +57,10 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         setContentView(R.layout.activity_add);
 
         //Date
-        /*
-        displayDate = findViewById(R.id.dateBtn);
+        initDatePicker();
+        dateBtn = findViewById(R.id.dateBtn);
+        dateBtn.setText(getTodaysDate());
 
-        Calendar cal = Calendar.getInstance();
-        int year = cal.get(Calendar.YEAR);
-        int month = cal.get(Calendar.MONTH);
-        int day = cal.get(Calendar.DAY_OF_MONTH);
-
-        String date = day + "/" + month + " - " + year;
-        displayDate.setText(date);
-
-        displayDate.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                DatePickerDialog dialog = new DatePickerDialog(
-                        Add.this,
-                        android.R.style.Theme_Holo_Light_Dialog_MinWidth,
-                        dateSetListener,
-                        year, month, day);
-                dialog.getWindow().setBackgroundDrawable(new ColorDrawable(Color.TRANSPARENT));
-                dialog.show();
-            }
-        });
-
-        dateSetListener = new DatePickerDialog.OnDateSetListener() {
-            @Override
-            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
-                String date = dayOfMonth + "/" + month + " - " + year;
-                displayDate.setText(date);
-            }
-        };*/
 
         //Obligatoriska frågor
         otherNoteEditText = findViewById(R.id.otherNote);
@@ -100,7 +75,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        String trainingType = spinner.getSelectedItem().toString();
 
         //Add Note
 
@@ -109,10 +83,12 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onClick(View v) {
                         Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + trainingType);
+                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + spinner.getSelectedItem().toString()
+                        + dateBtn.getText());
 
-                        //addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
-                          //      trainsessionSeekbar.getProgress() );
+                        addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
+                                trainsessionSeekbar.getProgress(), spinner.getSelectedItem().toString(),
+                                dateBtn.getText().toString());
                     }
 
         });
@@ -146,6 +122,36 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         });
 
     }
+
+    private String getTodaysDate() {
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+        month = month + 1;
+        String date = dayOfMonth + "/" + month + " - " + year;
+        return date;
+    }
+
+    private void initDatePicker() {
+        DatePickerDialog.OnDateSetListener dateSetListener = new DatePickerDialog.OnDateSetListener() {
+            @Override
+            public void onDateSet(DatePicker view, int year, int month, int dayOfMonth) {
+                month = month + 1;
+                String date = dayOfMonth + "/" + month + " - " + year;
+                dateBtn.setText(date);
+            }
+        };
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+
+        int style = AlertDialog.THEME_HOLO_LIGHT;
+
+        datePickerDialog = new DatePickerDialog(this, style, dateSetListener, year, month, dayOfMonth);
+    }
+
 
     @Override
     protected void onStart() {
@@ -186,12 +192,10 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
-    /*
 
-
-    private void addNote(String text, int feeling, int trainsession){
+    private void addNote(String text, int feeling, int trainsession, String trainingType, String date){
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        Note note = new Note(text, feeling, trainsession, new Timestamp(new Date()), userId);
+        Note note = new Note(text, feeling, trainsession, trainingType, date, userId);
 
         FirebaseFirestore.getInstance()
                 .collection("notes")
@@ -200,6 +204,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "onSuccess: Succesfully added the note");
+                        Toast.makeText(Add.this, "Note have been added", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
@@ -208,7 +213,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     }
                 });
-    }*/
+    }
+
+    public void openDatePicker(View view) {
+        datePickerDialog.show();
+    }
     /*
     
     public void createDocument(View view){
