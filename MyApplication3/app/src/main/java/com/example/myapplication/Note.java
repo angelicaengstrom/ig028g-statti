@@ -7,11 +7,11 @@ public class Note {
     private String text;
     private int feeling;
     private int trainsession;
-    private Timestamp created;
+    private String created;
     private String userId;
     private String trainingType;
 
-    public Note(String text, int feeling, int trainsession, String trainingType, Timestamp created, String userId) {
+    public Note(String text, int feeling, int trainsession, String trainingType, String created, String userId) {
         this.text = text;
         this.feeling = feeling;
         this.trainsession = trainsession;
@@ -55,11 +55,11 @@ public class Note {
         this.trainingType = trainingType;
     }
 
-    public Timestamp getCreated() {
+    public String getCreated() {
         return created;
     }
 
-    public void setCreated(Timestamp created) {
+    public void setCreated(String created) {
         this.created = created;
     }
 
@@ -78,7 +78,7 @@ public class Note {
                 ", feeling=" + feeling +
                 ", trainsession=" + trainsession +
                 ", trainingtype='" + trainingType + '\'' +
-                ", created=" + created +
+                ", created='" + created + '\'' +
                 ", userId='" + userId + '\'' +
                 '}';
     }
