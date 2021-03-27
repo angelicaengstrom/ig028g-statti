@@ -1,7 +1,5 @@
 package com.example.myapplication;
 
-import com.google.firebase.Timestamp;
-
 public class Note {
 
     private String text;
