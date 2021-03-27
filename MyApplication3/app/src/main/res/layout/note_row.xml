@@ -6,7 +6,7 @@
     android:layout_height="35dp"
     android:background="?attr/selectableItemBackground">
 
-    <EditText
+    <TextView
         android:id="@+id/titleTextView"
         android:layout_width="335dp"
         android:layout_height="match_parent"
