@@ -7,4 +7,16 @@
         <item name="colorAccent">@color/teal_700</item>
         <item name="colorPrimaryDark">@color/teal_700</item>
     </style>
+    <style name="CalenderViewCustom" parent="Theme.AppCompat" >
+        <item name="colorAccent">#8E8E8E</item>
+        <item name="colorPrimary">#8E8E8E</item>
+    </style>
+    <style name="CalenderViewDateCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/teal_700</item>
+        <item name="android:weekNumberColor">@color/teal_700</item>
+    </style>
+    <style name="CalenderViewWeekCustomText" parent="android:TextAppearance.DeviceDefault.Small">
+        <item name="android:textColor">@color/teal_700</item>
+
+    </style>
 </resources>
