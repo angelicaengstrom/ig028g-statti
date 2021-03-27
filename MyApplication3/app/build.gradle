@@ -49,7 +49,7 @@ dependencies {
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
     implementation 'com.android.support:multidex:1.0.3'
     implementation 'androidx.recyclerview:recyclerview:1.0.0'
-    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.2'
+    implementation 'it.xabaras.android:recyclerview-swipedecorator:1.2.3'
 
     // FirebaseUI for Firebase Realtime Database
     implementation 'com.firebaseui:firebase-ui-database:7.1.1'
