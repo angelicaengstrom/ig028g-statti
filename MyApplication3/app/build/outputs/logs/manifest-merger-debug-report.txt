@@ -20,6 +20,9 @@ MERGED from [androidx.legacy:legacy-support-v4:1.0.0] /home/angelicaengstrom/.gr
 MERGED from [com.google.firebase:firebase-database:19.7.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64586309a9c174e8202610efe122327c/jetified-firebase-database-19.7.0/AndroidManifest.xml:15:1-38:12
 MERGED from [com.google.firebase:firebase-storage:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/7c7e4c328571e47b0628e302276a2148/jetified-firebase-storage-19.2.0/AndroidManifest.xml:15:1-39:12
 MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:2:1-26:12
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [it.xabaras.android:recyclerview-swipedecorator:1.2.3] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d7aadcb9e52d3e556c30f8d5e432b3e5/jetified-recyclerview-swipedecorator-1.2.3/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.browser:browser:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cf4b6279b5ee659374cc69a6a292575e/browser-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8767dc4d06925d0d3d12179fa4a1bb1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/c7f8487a83fb70bc0fe95934361948bc/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -31,7 +34,6 @@ MERGED from [androidx.transition:transition:1.2.0] /home/angelicaengstrom/.gradl
 MERGED from [com.github.bumptech.glide:glide:4.11.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/64f2c313a06f7f84db688f4461fcf8f2/jetified-glide-4.11.0/AndroidManifest.xml:2:1-12:12
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e4f7094beb6f5370b9fdcf59c66c5fd3/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e9ce49bbb246328ed9fbef97d6aa62b4/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5aad1647ae4e889abdeaab4ab07a3603/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9cf98b671ee200feb557ad91ef9a3579/jetified-play-services-auth-19.0.0/AndroidManifest.xml:17:1-40:12
 MERGED from [androidx.lifecycle:lifecycle-extensions:2.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e9f8ad1d650e225b3acbffdc76b0034c/lifecycle-extensions-2.2.0/AndroidManifest.xml:17:1-27:12
@@ -47,7 +49,6 @@ MERGED from [com.google.android.gms:play-services-basement:17.1.1] /home/angelic
 MERGED from [androidx.fragment:fragment:1.2.4] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/77c1656fd6659de665ea29268968dea6/fragment-1.2.4/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.media:media:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cbfb4e43f798a1cd04e53763d03adb1a/media-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/db889ea64d16a07318448041b39e1285/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/860a7cb661f0f6b1bb67f57d27715b94/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/feef1f828a5e02b388bbcca05d9b3338/slidingpanelayout-1.0.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.customview:customview:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/024d0659a3246560f1b743f7b8f5313c/customview-1.0.0/AndroidManifest.xml:17:1-22:12
@@ -242,6 +243,12 @@ MERGED from [com.google.firebase:firebase-storage:19.2.0] /home/angelicaengstrom
 MERGED from [com.google.firebase:firebase-storage:19.2.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/7c7e4c328571e47b0628e302276a2148/jetified-firebase-storage-19.2.0/AndroidManifest.xml:20:5-22:41
 MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:7:5-9:41
 MERGED from [com.google.firebase:firebase-firestore:22.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/1b5a9ebef469875d1d39c8e5b85769d9/jetified-firebase-firestore-22.1.1/AndroidManifest.xml:7:5-9:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [it.xabaras.android:recyclerview-swipedecorator:1.2.3] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d7aadcb9e52d3e556c30f8d5e432b3e5/jetified-recyclerview-swipedecorator-1.2.3/AndroidManifest.xml:7:5-9:41
+MERGED from [it.xabaras.android:recyclerview-swipedecorator:1.2.3] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/d7aadcb9e52d3e556c30f8d5e432b3e5/jetified-recyclerview-swipedecorator-1.2.3/AndroidManifest.xml:7:5-9:41
 MERGED from [androidx.browser:browser:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cf4b6279b5ee659374cc69a6a292575e/browser-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.browser:browser:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cf4b6279b5ee659374cc69a6a292575e/browser-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-ui:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/b8767dc4d06925d0d3d12179fa4a1bb1/legacy-support-core-ui-1.0.0/AndroidManifest.xml:20:5-44
@@ -264,8 +271,6 @@ MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angeli
 MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e4f7094beb6f5370b9fdcf59c66c5fd3/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e9ce49bbb246328ed9fbef97d6aa62b4/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/e9ce49bbb246328ed9fbef97d6aa62b4/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.viewpager2:viewpager2:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/fcf5af611bc33846b591cd77e4d0a38c/jetified-viewpager2-1.0.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5aad1647ae4e889abdeaab4ab07a3603/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/5aad1647ae4e889abdeaab4ab07a3603/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [com.google.android.gms:play-services-auth:19.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/9cf98b671ee200feb557ad91ef9a3579/jetified-play-services-auth-19.0.0/AndroidManifest.xml:20:5-44
@@ -296,8 +301,6 @@ MERGED from [androidx.media:media:1.0.0] /home/angelicaengstrom/.gradle/caches/t
 MERGED from [androidx.media:media:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/cbfb4e43f798a1cd04e53763d03adb1a/media-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/db889ea64d16a07318448041b39e1285/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/db889ea64d16a07318448041b39e1285/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.recyclerview:recyclerview:1.1.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/06bdd8e905652ff2ad1e1ea1ee0aa01a/recyclerview-1.1.0/AndroidManifest.xml:20:5-22:41
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/860a7cb661f0f6b1bb67f57d27715b94/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.viewpager:viewpager:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/860a7cb661f0f6b1bb67f57d27715b94/viewpager-1.0.0/AndroidManifest.xml:20:5-44
 MERGED from [androidx.slidingpanelayout:slidingpanelayout:1.0.0] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/feef1f828a5e02b388bbcca05d9b3338/slidingpanelayout-1.0.0/AndroidManifest.xml:20:5-44
