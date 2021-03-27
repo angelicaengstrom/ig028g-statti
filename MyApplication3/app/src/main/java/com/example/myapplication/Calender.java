@@ -46,8 +46,6 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
     private int currentMonth = 0;
     private int currentDay = 0;
     private FirebaseAuth mAuth;
-    TextView selectedDayTextView;
-    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -59,17 +57,13 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
         //Anteckningar
         recyclerView = findViewById(R.id.recyclerView);
 
-
-
         //Calender
         CalendarView calendarView = findViewById(R.id.calendarView);
-        selectedDayTextView = findViewById(R.id.selectedDayTextView);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 month = month + 1;
-                date = dayOfMonth + "/" + month + " - " + year;
-                selectedDayTextView.setText(date);
+                String date = dayOfMonth + "/" + month + " - " + year;
                 String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 initRecyclerView(userId, date);
@@ -114,6 +108,9 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
     protected void onStop() {
         super.onStop();
         FirebaseAuth.getInstance().removeAuthStateListener(this);
+        if(calenderRecyclerAdapter != null){
+            calenderRecyclerAdapter.stopListening();
+        }
     }
 
     @Override
