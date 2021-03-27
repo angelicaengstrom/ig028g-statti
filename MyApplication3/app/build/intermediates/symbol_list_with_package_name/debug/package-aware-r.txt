@@ -63,6 +63,7 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array gender
 array trainingType
 attr action
 attr actionBarDivider
@@ -1784,9 +1785,11 @@ drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_add_24
+drawable ic_baseline_add_box_24
 drawable ic_baseline_add_photo_alternate_24
 drawable ic_baseline_close
 drawable ic_baseline_date_range_24
+drawable ic_baseline_delete_24
 drawable ic_baseline_event_note_24
 drawable ic_baseline_leaderboard_24
 drawable ic_baseline_sentiment_very_dissatisfied_24
@@ -2063,7 +2066,6 @@ id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
 id fullname
-id gender
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2099,6 +2101,7 @@ id imageView2
 id imageView3
 id imageView4
 id imageView5
+id image_add
 id image_remove
 id info
 id invisible
@@ -2287,6 +2290,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner
 id spinner_prefix
 id spline
 id split_action_bar
