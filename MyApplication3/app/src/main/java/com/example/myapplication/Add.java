@@ -4,9 +4,12 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
+import androidx.recyclerview.widget.ItemTouchHelper;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.DialogInterface;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -19,12 +22,14 @@ import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
 import android.content.Intent;
+import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.SeekBar;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
@@ -34,7 +39,9 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.DocumentReference;
+import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.Query;
 import com.google.protobuf.StringValue;
 
 import java.text.SimpleDateFormat;
@@ -43,13 +50,16 @@ import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
 
-public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener, AdapterView.OnItemSelectedListener{
+public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener, AdapterView.OnItemSelectedListener, RowRecyclerAdapter.RowListener {
     private FirebaseAuth mAuth;
     private static final String TAG = "Add";
     private EditText otherNoteEditText;
     private Button dateBtn;
     private DatePickerDialog datePickerDialog;
     private SeekBar feelingSeekbar, trainsessionSeekbar;
+    RowRecyclerAdapter rowRecyclerAdapter;
+    RecyclerView rowRecyclerView;
+    LinearLayout layoutList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -75,10 +85,21 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
-        String trainingType = spinner.getSelectedItem().toString(); //måste fixa så den uppdateras i samma stund
+
+
+        //Add exercises
+        Button addRow = findViewById(R.id.newTrainsessionBtn);
+        rowRecyclerView = findViewById(R.id.rowRecyclerView);
+        String trainingType;
+        addRow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                addRow(spinner.getSelectedItem().toString());
+                initRecyclerView(spinner.getSelectedItem().toString());
+            }
+        });
 
         //Add Note
-
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -95,6 +116,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         dateBtn.setText(getTodaysDate());
                         trainsessionSeekbar.setProgress(5);
                         feelingSeekbar.setProgress(5);
+                        //Gör row tom okcså här, samt traintype
                     }
 
         });
@@ -102,6 +124,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         mAuth = FirebaseAuth.getInstance();
 
+        //Navigation menu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.note);
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
@@ -169,6 +192,9 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     protected void onStop() {
         super.onStop();
         FirebaseAuth.getInstance().removeAuthStateListener(this);
+        if(rowRecyclerAdapter != null){
+            rowRecyclerAdapter.stopListening();
+        }
     }
 
     @Override
@@ -198,6 +224,71 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     public void onNothingSelected(AdapterView<?> parent) {
 
     }
+    private void addRow(String trainingType){ //Recyclerview inuti recyclerview
+        String title;
+        Row row;
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        switch(trainingType){
+            case "Kondition":
+                title = "Titel ex. Löpning";
+                row = new Row(title, userId, new Timestamp(new Date()));
+                FirebaseFirestore.getInstance()
+                        .collection(trainingType)
+                        .add(row)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "onSuccess: Succesfully added the row");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                break;
+            case "Styrka":
+                title = "Titel ex. Squats";
+                row = new Row(title, userId, new Timestamp(new Date()));
+                FirebaseFirestore.getInstance()
+                        .collection(trainingType)
+                        .add(row)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "onSuccess: Succesfully added the row");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                break;
+            case "Teknik":
+                title = "Titel ex. Fotboll";
+                row = new Row(title, userId, new Timestamp(new Date()));
+                FirebaseFirestore.getInstance()
+                        .collection(trainingType)
+                        .add(row)
+                        .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
+                            @Override
+                            public void onSuccess(DocumentReference documentReference) {
+                                Log.d(TAG, "onSuccess: Succesfully added the row");
+                            }
+                        })
+                        .addOnFailureListener(new OnFailureListener() {
+                            @Override
+                            public void onFailure(@NonNull Exception e) {
+                                Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                break;
+        }
+    }
 
     private void addNote(String text, int feeling, int trainsession, String trainingType, String date){
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
@@ -223,6 +314,70 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
     public void openDatePicker(View view) {
         datePickerDialog.show();
+    }
+
+    private void initRecyclerView(String trainingType){
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        Timestamp date = new Timestamp(new Date());
+
+        Query query = FirebaseFirestore.getInstance()
+                .collection(trainingType)
+                .whereEqualTo("userId", userId);
+
+        FirestoreRecyclerOptions<Row> options = new FirestoreRecyclerOptions.Builder<Row>()
+                .setQuery(query, Row.class)
+                .build();
+
+        rowRecyclerAdapter = new RowRecyclerAdapter(options, this);
+        rowRecyclerView.setAdapter(rowRecyclerAdapter);
+
+        rowRecyclerAdapter.startListening();
+
+        ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
+        itemTouchHelper.attachToRecyclerView(rowRecyclerView);
+
+
+    }
+
+    ItemTouchHelper.SimpleCallback simpleCallback = new ItemTouchHelper.SimpleCallback(0, ItemTouchHelper.LEFT) {
+        @Override
+        public boolean onMove(@NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, @NonNull RecyclerView.ViewHolder target) {
+            return false;
+        }
+
+        @Override
+        public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
+            if(direction == ItemTouchHelper.LEFT){
+                Toast.makeText(Add.this,"Ta bort", Toast.LENGTH_SHORT).show();
+            }
+        }
+    };
+
+    @Override
+    public void handleEditNote(DocumentSnapshot snapshot) {
+        Row row = snapshot.toObject(Row.class);
+        EditText editText = new EditText(this);
+        editText.setText(row.getTitle().toString());
+
+        new AlertDialog.Builder(this)
+                .setTitle("Ändra titel")
+                .setView(editText)
+                .setPositiveButton("Ändra", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        String newTitle = editText.getText().toString();
+                        row.setTitle(newTitle);
+                        snapshot.getReference().set(row)
+                                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                                    @Override
+                                    public void onSuccess(Void aVoid) {
+                                        Log.d(TAG, "onSuccess: ");
+                                    }
+                                });
+                    }
+                })
+                .setNegativeButton("Avbryt", null)
+                .show();
     }
     /*
     
