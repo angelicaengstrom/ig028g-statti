@@ -5,6 +5,12 @@
         <item>Styrka</item>
         <item>Teknik</item>
     </string-array>
+
+    <string-array name="gender">
+        <item>man</item>
+        <item>kvinna</item>
+        <item>annat</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
