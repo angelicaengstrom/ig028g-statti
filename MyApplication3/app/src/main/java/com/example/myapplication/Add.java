@@ -90,6 +90,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
                                 trainsessionSeekbar.getProgress(), spinner.getSelectedItem().toString(),
                                 dateBtn.getText().toString());
+
+                        otherNoteEditText.setText("");
+                        dateBtn.setText(getTodaysDate());
+                        trainsessionSeekbar.setProgress(5);
+                        feelingSeekbar.setProgress(5);
                     }
 
         });
