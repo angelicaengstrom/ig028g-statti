@@ -26,7 +26,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="31dp"
         android:layout_marginLeft="31dp"
-        android:layout_marginTop="201dp"
+        android:layout_marginTop="189dp"
         android:ems="10"
         android:hint="t.ex. sömn"
         android:inputType="textPersonName" />
@@ -40,7 +40,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="31dp"
         android:layout_marginLeft="31dp"
-        android:layout_marginTop="182dp"
+        android:layout_marginTop="165dp"
         android:text="Övriga anteckningar:" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
@@ -199,30 +199,38 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rowRecyclerView"
         android:layout_width="320dp"
-        android:layout_height="320dp"
+        android:layout_height="153dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_marginStart="11dp"
-        android:layout_marginLeft="11dp"
-        android:layout_marginTop="331dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginStart="-4dp"
+        android:layout_marginLeft="-4dp"
+        android:layout_marginTop="322dp"
+        android:layout_marginBottom="58dp"
         android:background="#FFFF"
-        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
     <Button
-            android:id="@+id/newTrainsessionBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="267dp"
-            android:layout_marginLeft="267dp"
-            android:layout_marginTop="274dp"
-            android:background="@drawable/round_primary"
-            android:drawableRight="@drawable/ic_baseline_add_24"
-            android:paddingLeft="10dp"
-            android:paddingRight="10dp"
-            android:text="Add"
-            android:textAllCaps="false"
-            android:textColor="@color/white"
-            android:textSize="12sp" />
+        android:id="@+id/newTrainsessionBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="36dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="177dp"
+        android:layout_marginLeft="177dp"
+        android:layout_marginTop="274dp"
+        android:layout_marginBottom="209dp"
+        android:background="@drawable/round_primary"
+        android:drawableRight="@drawable/ic_baseline_add_24"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:text="Lägg till övning"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
 
     <TextView
         android:id="@+id/textView5"
