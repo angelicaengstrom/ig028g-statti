@@ -1785,6 +1785,7 @@ drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
+drawable ic_baseline_close
 drawable ic_baseline_date_range_24
 drawable ic_baseline_event_note_24
 drawable ic_baseline_leaderboard_24
@@ -1832,6 +1833,8 @@ drawable notification_template_icon_low_bg
 drawable notification_tile_bg
 drawable notify_panel_notification_icon_bg
 drawable photo
+drawable round_gray
+drawable round_primary
 drawable selector
 drawable test_custom_background
 drawable tooltip_frame_dark
@@ -1993,7 +1996,6 @@ id custom
 id customPanel
 id cut
 id dark
-id dataTextView
 id dateBtn
 id date_picker_actions
 id decelerate
@@ -2025,6 +2027,7 @@ id dynamic
 id easeIn
 id easeInOut
 id easeOut
+id editData
 id editTextTextPersonName
 id edit_phone_number
 id edit_query
@@ -2096,6 +2099,7 @@ id imageView2
 id imageView3
 id imageView4
 id imageView5
+id image_remove
 id info
 id invisible
 id invisible_frame
@@ -2108,6 +2112,7 @@ id labelGroup
 id labeled
 id largeLabel
 id layout
+id layoutList
 id left
 id leftToRight
 id light
@@ -2237,6 +2242,7 @@ id right_icon
 id right_side
 id root
 id rounded
+id rowRecyclerView
 id row_index_key
 id saveNoteBtn
 id save_non_transition_alpha
@@ -2261,7 +2267,6 @@ id search_src_text
 id search_voice_btn
 id select_dialog_listview
 id selected
-id selectedDayTextView
 id selection_type
 id send_code
 id send_sms_tos
@@ -2282,6 +2287,7 @@ id snackbar_text
 id snap
 id snapMargins
 id spacer
+id spinner_prefix
 id spline
 id split_action_bar
 id spread
@@ -2323,14 +2329,11 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
-id textView10
-id textView12
 id textView2
 id textView3
 id textView4
 id textView5
 id textView7
-id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2476,6 +2479,7 @@ layout design_navigation_menu
 layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
+layout exersice_row
 layout fui_activity_invisible
 layout fui_activity_register_email
 layout fui_activity_register_phone
@@ -3035,6 +3039,9 @@ style Base_Widget_MaterialComponents_Snackbar
 style Base_Widget_MaterialComponents_TextInputEditText
 style Base_Widget_MaterialComponents_TextInputLayout
 style Base_Widget_MaterialComponents_TextView
+style CalenderViewCustom
+style CalenderViewDateCustomText
+style CalenderViewWeekCustomText
 style CardView
 style CardView_Dark
 style CardView_Light
