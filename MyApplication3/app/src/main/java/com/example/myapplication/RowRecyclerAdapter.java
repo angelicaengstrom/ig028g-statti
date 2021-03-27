@@ -47,7 +47,7 @@ public class RowRecyclerAdapter extends FirestoreRecyclerAdapter<Row, RowRecycle
             titleTextView = itemView.findViewById(R.id.titleTextView);
             imageView = itemView.findViewById(R.id.image_add);
 
-            titleTextView.setOnClickListener(new View.OnClickListener() {
+            itemView.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     DocumentSnapshot snapshot = getSnapshots().getSnapshot(getAdapterPosition());
@@ -62,9 +62,14 @@ public class RowRecyclerAdapter extends FirestoreRecyclerAdapter<Row, RowRecycle
                 }
             });
         }
+
+        public void deleteItem() {
+            rowListener.handleDeleteItem(getSnapshots().getSnapshot(getAdapterPosition()));
+        }
     }
     interface RowListener{
         public void handleEditNote(DocumentSnapshot snapshot);
+        public void handleDeleteItem(DocumentSnapshot snapshot);
     }
 
 }
