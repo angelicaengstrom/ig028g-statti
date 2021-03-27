@@ -9,9 +9,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ProgressBar;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -21,10 +24,13 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
-public class registerUser extends AppCompatActivity implements View.OnClickListener {
+public class registerUser extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
     private TextView banner, registerUser;
-    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword, editTextgender;
+    private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword ;
     private ProgressBar progressBar;
+
+    private Spinner spinner;
+
     private FirebaseAuth mAuth;
 
 
@@ -43,7 +49,15 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         editTextAge = (EditText) findViewById(R.id.age);
         editTextEmail = (EditText) findViewById(R.id.email);
         editTextPassword = (EditText) findViewById(R.id.password);
-        editTextgender = (EditText) findViewById(R.id.gender);
+        spinner = (Spinner) findViewById(R.id.spinner);
+
+        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.gender, android.R.layout.simple_spinner_item);
+        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spinner.setAdapter(adapter);
+        spinner.setAdapter(adapter);
+        spinner.setOnItemSelectedListener(this);
+
+
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
 
@@ -66,7 +80,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String fullName = editTextFullName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
-        String gender = editTextgender.getText().toString().trim();
+
 
         if(fullName.isEmpty()){
             editTextFullName.setError("Namnet måste skrivas");
@@ -135,6 +149,17 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
                 });
 
 
+
+    }
+
+    @Override
+    public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
+        String choice = adapterView.getItemAtPosition(i).toString();
+        Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
+    }
+
+    @Override
+    public void onNothingSelected(AdapterView<?> adapterView) {
 
     }
 }
