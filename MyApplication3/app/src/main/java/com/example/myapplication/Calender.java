@@ -47,6 +47,7 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
     private int currentDay = 0;
     private FirebaseAuth mAuth;
     TextView selectedDayTextView;
+    String date;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +68,11 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 month = month + 1;
-                String date = dayOfMonth + "/" + month + " - " + year;
-                currentYear = year;
-                currentMonth = month + 1;
-                currentDay = dayOfMonth;
+                date = dayOfMonth + "/" + month + " - " + year;
                 selectedDayTextView.setText(date);
+                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+                initRecyclerView(userId, date);
             }
         });
 
@@ -130,14 +131,13 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                         Log.d(TAG, "onSuccess: " + getTokenResult.getToken());
                     }
                 });
-        String date = selectedDayTextView.getText().toString();
-        initRecyclerView(firebaseAuth.getCurrentUser(), date);
+
     }
 
-    private void initRecyclerView(FirebaseUser user, String date){
+    private void initRecyclerView(String user, String date){
         Query query = FirebaseFirestore.getInstance()
                 .collection("notes")
-                .whereEqualTo("userId", user.getUid())
+                .whereEqualTo("userId", user)
                 .whereEqualTo("created", date);
 
         FirestoreRecyclerOptions<Note> options = new FirestoreRecyclerOptions.Builder<Note>()
