@@ -25,9 +25,9 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
 
     @Override
     protected void onBindViewHolder(@NonNull CalenderViewHolder holder, int position, @NonNull Note note) {
-        holder.trainingTypeTextView.setText(note.getText());
-        holder.feelingTextView.setText(note.getText());
-        holder.trainingsessionTextView.setText(note.getText());
+        holder.trainingTypeTextView.setText(note.getTrainingType());
+        holder.feelingTextView.setText(""+note.getFeeling());
+        holder.trainingsessionTextView.setText(""+note.getTrainsession());
         holder.otherNotesTextView.setText(note.getText());
     }
 
