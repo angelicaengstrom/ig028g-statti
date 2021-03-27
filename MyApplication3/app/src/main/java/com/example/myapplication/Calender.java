@@ -21,6 +21,7 @@ import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.GetTokenResult;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
@@ -37,35 +38,42 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class Calender extends AppCompatActivity {
+public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private static final String TAG = "Add";
     CalenderRecyclerAdapter calenderRecyclerAdapter;
     RecyclerView recyclerView;
+    private int currentYear = 0;
+    private int currentMonth = 0;
+    private int currentDay = 0;
+    private FirebaseAuth mAuth;
+    TextView selectedDayTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_calender);
 
+        mAuth = FirebaseAuth.getInstance();
+
+        //Anteckningar
+        recyclerView = findViewById(R.id.recyclerView);
+
+
+
         //Calender
         CalendarView calendarView = findViewById(R.id.calendarView);
-        TextView selectedDayTextView = findViewById(R.id.selectedDayTextView);
+        selectedDayTextView = findViewById(R.id.selectedDayTextView);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 month = month + 1;
                 String date = dayOfMonth + "/" + month + " - " + year;
+                currentYear = year;
+                currentMonth = month + 1;
+                currentDay = dayOfMonth;
                 selectedDayTextView.setText(date);
             }
         });
-
-        String date = selectedDayTextView.getText().toString();
-
-        //Anteckningar
-        recyclerView = findViewById(R.id.recyclerView);
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
-        initRecyclerView(userId, date);
-        
 
         //Navigeringsmeny
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -94,10 +102,42 @@ public class Calender extends AppCompatActivity {
             }
         });
     }
-    private void initRecyclerView(String user, String date){
+
+    @Override
+    protected void onStart() {
+        super.onStart();
+        FirebaseAuth.getInstance().addAuthStateListener(this);
+    }
+
+    @Override
+    protected void onStop() {
+        super.onStop();
+        FirebaseAuth.getInstance().removeAuthStateListener(this);
+    }
+
+    @Override
+    public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
+        if (firebaseAuth.getCurrentUser() == null) {
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            this.finish();
+            return;
+        }
+        firebaseAuth.getCurrentUser().getIdToken(true)
+                .addOnSuccessListener(new OnSuccessListener<GetTokenResult>() {
+                    @Override
+                    public void onSuccess(GetTokenResult getTokenResult) {
+                        Log.d(TAG, "onSuccess: " + getTokenResult.getToken());
+                    }
+                });
+        String date = selectedDayTextView.getText().toString();
+        initRecyclerView(firebaseAuth.getCurrentUser(), date);
+    }
+
+    private void initRecyclerView(FirebaseUser user, String date){
         Query query = FirebaseFirestore.getInstance()
                 .collection("notes")
-                .whereEqualTo("userId", user)
+                .whereEqualTo("userId", user.getUid())
                 .whereEqualTo("created", date);
 
         FirestoreRecyclerOptions<Note> options = new FirestoreRecyclerOptions.Builder<Note>()
