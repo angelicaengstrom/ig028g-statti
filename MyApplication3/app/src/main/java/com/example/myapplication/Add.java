@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.recyclerview.widget.ItemTouchHelper;
@@ -10,6 +11,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.content.DialogInterface;
+import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
@@ -49,6 +51,8 @@ import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+
+import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener, AdapterView.OnItemSelectedListener, RowRecyclerAdapter.RowListener {
     private FirebaseAuth mAuth;
@@ -99,7 +103,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
             }
         });
 
-        //Add Note
+        //Save Note
         FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
@@ -348,8 +352,22 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         @Override
         public void onSwiped(@NonNull RecyclerView.ViewHolder viewHolder, int direction) {
             if(direction == ItemTouchHelper.LEFT){
-                Toast.makeText(Add.this,"Ta bort", Toast.LENGTH_SHORT).show();
+                Toast.makeText(Add.this,"Borttagen", Toast.LENGTH_SHORT).show();
+
+                RowRecyclerAdapter.RowViewHolder rowViewHolder = (RowRecyclerAdapter.RowViewHolder) viewHolder;
+                rowViewHolder.deleteItem();
+
             }
+        }
+
+        @Override
+        public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
+            new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
+                    .addBackgroundColor(ContextCompat.getColor(Add.this, R.color.teal_700))
+                    .addActionIcon(R.drawable.ic_baseline_delete_24)
+                    .create()
+                    .decorate();
+            super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
     };
 
@@ -377,6 +395,27 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     }
                 })
                 .setNegativeButton("Avbryt", null)
+                .show();
+    }
+
+    @Override
+    public void handleDeleteItem(DocumentSnapshot snapshot) {
+        DocumentReference documentReference = snapshot.getReference();
+        Row row = snapshot.toObject(Row.class);
+        documentReference.delete()
+                .addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        Log.d(TAG, "onSuccess: Item deleted");
+                    }
+                });
+        Snackbar.make(rowRecyclerView, "Övning borttagen", Snackbar.LENGTH_LONG)
+                .setAction("Ångra", new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        documentReference.set(row);
+                    }
+                })
                 .show();
     }
     /*
