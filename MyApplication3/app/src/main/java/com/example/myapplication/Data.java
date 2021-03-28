@@ -3,10 +3,10 @@ package com.example.myapplication;
 
 public class Data {
 
-    private int value;
+    private String value;
     private String prefix;
 
-    public Data(int value, String prefix) {
+    public Data(String value, String prefix) {
         this.value = value;
         this.prefix = prefix;
 
@@ -14,11 +14,11 @@ public class Data {
     public Data() {
     }
 
-    public int getValue() {
+    public String getValue() {
         return value;
     }
 
-    public void setValue(int value) {
+    public void setValue(String value) {
         this.value = value;
     }
 
