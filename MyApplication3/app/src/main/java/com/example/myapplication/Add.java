@@ -53,6 +53,7 @@ import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
@@ -64,10 +65,9 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private Button dateBtn;
     private DatePickerDialog datePickerDialog;
     private SeekBar feelingSeekbar, trainsessionSeekbar;
-    private RecyclerView.Adapter rowRecyclerAdapter;
-    private RecyclerView rowRecyclerView;
-    private RecyclerView.LayoutManager rowLayoutManager;
-    LinearLayout layoutList;
+    private RecyclerView.Adapter rowRecyclerAdapter, dataRecyclerAdapter;
+    private RecyclerView rowRecyclerView, dataRecyclerView;
+    private RecyclerView.LayoutManager rowLayoutManager, dataLayoutManager;
     ArrayList<Row> titles;
 
     @Override
@@ -100,7 +100,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         Button addRow = findViewById(R.id.newTrainsessionBtn);
 
         titles = new ArrayList<>();
+        List<String> data = new ArrayList<>();
+        data.add("10 kg");
+        data.add("20 kg");
 
+        //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
         rowRecyclerView.setHasFixedSize(true);
         rowLayoutManager = new LinearLayoutManager(this);
@@ -108,6 +112,12 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         rowRecyclerView.setLayoutManager(rowLayoutManager);
         ItemTouchHelper itemTouchHelper = new ItemTouchHelper(simpleCallback);
         itemTouchHelper.attachToRecyclerView(rowRecyclerView);
+
+        //Data
+        dataRecyclerView = findViewById(R.id.dataRecyclerView);
+        dataLayoutManager = new LinearLayoutManager(this);
+        dataRecyclerAdapter = new DataAdapter(data);
+        dataRecyclerView.setLayoutManager(dataLayoutManager);
 
         addRow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -133,7 +143,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 newTitle.setView(titleInput).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
-                        titles.add(new Row(titleInput.getText().toString()));
+                        String title = titleInput.getText().toString();
+                        titles.add(new Row(title, data));
                         rowRecyclerView.setAdapter(rowRecyclerAdapter);
                     }
                 }).setNegativeButton("AVBRYT", new DialogInterface.OnClickListener() {
@@ -272,7 +283,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
 
     private void addNote(String text, int feeling, int trainsession, String trainingType, String date, ArrayList<Row> titles){
-        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+
+        /*String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         Map<String, Object> map = new HashMap<>();
         map.put("text", text);
@@ -300,7 +312,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     }
-                });
+                });*/
     }
 
     public void openDatePicker(View view) {
