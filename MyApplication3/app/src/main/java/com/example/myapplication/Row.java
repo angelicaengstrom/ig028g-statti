@@ -5,9 +5,9 @@ import java.util.List;
 public class Row {
 
     private String title;
-    private List<String> titleItems;
+    private List<Data> titleItems;
 
-    public Row(String title, List<String> titleItems) {
+    public Row(String title, List<Data> titleItems) {
         this.title = title;
         this.titleItems = titleItems;
     }
@@ -16,7 +16,7 @@ public class Row {
         return this.title;
     }
 
-    public List<String> getTitleItems(){ return this.titleItems; }
+    public List<Data> getTitleItems(){ return this.titleItems; }
 
 
 }
