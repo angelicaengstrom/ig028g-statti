@@ -33,7 +33,9 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
             imageAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-
+                    String title = titleInput.getText().toString();
+                    titles.add(new Row(title, data));
+                    rowRecyclerView.setAdapter(rowRecyclerAdapter);
                 }
 
             });
@@ -57,7 +59,7 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
     public void onBindViewHolder(@NonNull RowViewHolder holder, int position) {
         Row currentTitle = mRowList.get(position);
         String titleName = currentTitle.getTitle();
-        List<String> data = currentTitle.getTitleItems();
+        List<Data> data = currentTitle.getTitleItems();
 
         holder.title.setText(titleName);
         DataAdapter dataAdapter = new DataAdapter(data);
