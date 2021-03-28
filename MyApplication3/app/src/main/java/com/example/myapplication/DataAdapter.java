@@ -12,9 +12,9 @@ import androidx.recyclerview.widget.RecyclerView;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
-    List<String> data;
+    List<Data> data;
 
-    public DataAdapter(List<String> data){
+    public DataAdapter(List<Data> data){
         this.data = data;
     }
 
@@ -28,8 +28,12 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.editValue.setText(data.get(position));
-        holder.editPrefix.setText(data.get(position));
+        Data currentData = data.get(position);
+        String value = currentData.getValue();
+        String prefix = currentData.getPrefix();
+
+        holder.editValue.setText(value);
+        holder.editPrefix.setText(prefix);
     }
 
     @Override
