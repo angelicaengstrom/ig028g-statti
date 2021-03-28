@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import java.util.ArrayList;
+
 public class Note {
 
     private String text;
@@ -8,14 +10,16 @@ public class Note {
     private String created;
     private String userId;
     private String trainingType;
+    private ArrayList<Row> titles;
 
-    public Note(String text, int feeling, int trainsession, String trainingType, String created, String userId) {
+    public Note(String text, int feeling, int trainsession, String trainingType, String created, String userId, ArrayList<Row> titles) {
         this.text = text;
         this.feeling = feeling;
         this.trainsession = trainsession;
         this.created = created;
         this.trainingType = trainingType;
         this.userId = userId;
+        this.titles = titles;
 
     }
     public Note() {
@@ -69,6 +73,10 @@ public class Note {
         this.userId = userId;
     }
 
+    public ArrayList<Row> getTitles() {return titles; }
+
+    public void setTitles(ArrayList<Row> titles) { this.titles = titles; }
+
     @Override
     public String toString() {
         return "Note{" +
@@ -78,6 +86,7 @@ public class Note {
                 ", trainingtype='" + trainingType + '\'' +
                 ", created='" + created + '\'' +
                 ", userId='" + userId + '\'' +
+                ", titles={" + titles + '}' +
                 '}';
     }
 }
