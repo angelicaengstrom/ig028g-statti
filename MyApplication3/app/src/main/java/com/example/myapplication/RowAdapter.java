@@ -32,10 +32,10 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
 
             imageAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {
+                public void onClick(View v) {/*
                     String title = titleInput.getText().toString();
                     titles.add(new Row(title, data));
-                    rowRecyclerView.setAdapter(rowRecyclerAdapter);
+                    rowRecyclerView.setAdapter(rowRecyclerAdapter);*/
                 }
 
             });
