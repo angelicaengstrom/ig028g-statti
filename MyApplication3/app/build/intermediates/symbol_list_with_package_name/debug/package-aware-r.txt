@@ -2102,6 +2102,7 @@ id imageView2
 id imageView3
 id imageView4
 id imageView5
+id image_add
 id image_remove
 id info
 id invisible
@@ -2116,6 +2117,7 @@ id labeled
 id largeLabel
 id layout
 id layoutList
+id layout_list
 id left
 id leftToRight
 id light
