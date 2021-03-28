@@ -282,7 +282,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
     private void addNote(String text, int feeling, int trainsession, String trainingType, String date, ArrayList<Row> titles){
 
-        /*String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
         Map<String, Object> map = new HashMap<>();
         map.put("text", text);
@@ -310,7 +310,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     public void onFailure(@NonNull Exception e) {
                         Toast.makeText(Add.this, e.getLocalizedMessage(), Toast.LENGTH_SHORT).show();
                     }
-                });*/
+                });
     }
 
     public void openDatePicker(View view) {
