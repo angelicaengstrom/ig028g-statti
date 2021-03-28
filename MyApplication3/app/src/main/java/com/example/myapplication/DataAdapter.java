@@ -28,7 +28,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-
+        holder.editValue.setText(data.get(position));
+        holder.editPrefix.setText(data.get(position));
     }
 
     @Override
@@ -41,6 +42,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         EditText editPrefix;
         public  ViewHolder(@NonNull View itemView){
             super(itemView);
+            editValue = itemView.findViewById(R.id.editData);
+            editPrefix = itemView.findViewById(R.id.editPrefix);
         }
     }
 
