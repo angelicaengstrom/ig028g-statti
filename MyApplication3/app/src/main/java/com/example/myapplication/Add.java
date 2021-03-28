@@ -117,7 +117,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         dataRecyclerView = findViewById(R.id.dataRecyclerView);
         dataLayoutManager = new LinearLayoutManager(this);
         dataRecyclerAdapter = new DataAdapter(data);
-        dataRecyclerView.setLayoutManager(dataLayoutManager);
+        //dataRecyclerView.setLayoutManager(dataLayoutManager);
 
         addRow.setOnClickListener(new View.OnClickListener() {
             @Override
