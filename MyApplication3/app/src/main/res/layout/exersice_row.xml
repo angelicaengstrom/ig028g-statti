@@ -10,22 +10,24 @@
 
     <EditText
         android:id="@+id/editData"
-        android:layout_width="match_parent"
-        android:layout_height="40dp"
+        android:layout_width="81dp"
+        android:layout_height="31dp"
         android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
         android:background="@drawable/round_gray"
         android:hint="30"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
 
     <EditText
         android:id="@+id/editPrefix"
-        android:layout_width="190dp"
-        android:layout_height="40dp"
+        android:layout_width="186dp"
+        android:layout_height="31dp"
         android:background="@drawable/round_gray"
         android:hint="kilogram"
-        android:paddingLeft="10dp" />
+        android:paddingLeft="10dp"
+        android:textSize="14sp" />
 
 
 
