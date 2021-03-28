@@ -244,14 +244,5 @@
         android:layout_marginTop="291dp"
         android:text="Övningar:" />
 
-    <LinearLayout
-        android:id="@+id/layoutList"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        ></LinearLayout>
-
-
-
 
 </RelativeLayout>
