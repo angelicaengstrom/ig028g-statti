@@ -60,6 +60,8 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
         List<String> data = currentTitle.getTitleItems();
 
         holder.title.setText(titleName);
+        DataAdapter dataAdapter = new DataAdapter(data);
+        holder.dataList.setAdapter(dataAdapter);
 
     }
 
