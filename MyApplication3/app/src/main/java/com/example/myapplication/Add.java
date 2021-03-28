@@ -100,9 +100,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         Button addRow = findViewById(R.id.newTrainsessionBtn);
 
         titles = new ArrayList<>();
-        List<String> data = new ArrayList<>();
-        data.add("10 kg");
-        data.add("20 kg");
+        List<Data> data = new ArrayList<>();
+        data.add(new Data());
 
         //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
@@ -117,7 +116,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         dataRecyclerView = findViewById(R.id.dataRecyclerView);
         dataLayoutManager = new LinearLayoutManager(this);
         dataRecyclerAdapter = new DataAdapter(data);
-        //dataRecyclerView.setLayoutManager(dataLayoutManager);
 
         addRow.setOnClickListener(new View.OnClickListener() {
             @Override
