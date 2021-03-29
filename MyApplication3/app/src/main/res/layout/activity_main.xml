@@ -16,7 +16,7 @@
         android:layout_marginTop="88dp"
         android:ems="10"
         android:hint="E-post"
-        android:inputType="textPassword"
+        android:inputType="textEmailAddress"
         android:textColorHint="@android:color/holo_red_dark"
 
         android:textSize="24sp"
