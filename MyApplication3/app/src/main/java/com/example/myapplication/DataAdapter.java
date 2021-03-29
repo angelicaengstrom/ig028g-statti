@@ -15,8 +15,6 @@ import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     List<Data> data;
-    String[] prefixArray = new String[data.size()];
-    String[] valueArray = new String[data.size()];
 
     public DataAdapter(List<Data> data){
         this.data = data;
@@ -33,13 +31,11 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
         Data currentData = data.get(position);
-        String value = currentData.getValue();
         String prefix = currentData.getPrefix();
-        prefixArray[position] = prefix;
-        valueArray[position] = value;
+        String value = currentData.getValue();
 
-        holder.editValue.setText(valueArray[position]);
-        holder.editPrefix.setText(prefixArray[position]);
+        holder.editValue.setText(value);
+        holder.editPrefix.setText(prefix);
         holder.editValue.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -48,7 +44,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                valueArray[position] =  s.toString();
+                //String prefix = currentData.getPrefix();
+                //prefix = s.toString();
             }
 
             @Override
@@ -64,7 +61,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                prefixArray[position] = s.toString();
+                //prefix = s.toString();
             }
 
             @Override
