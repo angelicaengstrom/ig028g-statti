@@ -21,6 +21,8 @@ com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity$1
 com/example/myapplication/DataAdapter.java
  com.example.myapplication.DataAdapter
+ com.example.myapplication.DataAdapter$1
+ com.example.myapplication.DataAdapter$2
  com.example.myapplication.DataAdapter$ViewHolder
 com/example/myapplication/user.java
  com.example.myapplication.user
