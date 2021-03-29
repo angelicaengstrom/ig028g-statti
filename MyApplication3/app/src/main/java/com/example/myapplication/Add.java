@@ -101,7 +101,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         titles = new ArrayList<>();
         List<Data> data = new ArrayList<>();
-        //data.add(new Data());
+        data.add(new Data());
 
         //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
@@ -291,7 +291,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         map.put("trainingType", trainingType);
         map.put("created", date);
         map.put("userId", userId);
-        //map.put("title", titles);
+        map.put("title", titles);
 
 
         FirebaseFirestore.getInstance()
