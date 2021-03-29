@@ -36,7 +36,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_main);
 
 
-        register= (TextView) findViewById(R.id.register);
+        register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
 
         signIn = (Button) findViewById(R.id.signIn);
