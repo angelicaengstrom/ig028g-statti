@@ -1,5 +1,7 @@
 package com.example.myapplication;
 
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,6 +15,8 @@ import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     List<Data> data;
+    String[] prefixArray = new String[data.size()];
+    String[] valueArray = new String[data.size()];
 
     public DataAdapter(List<Data> data){
         this.data = data;
@@ -31,9 +35,43 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
         Data currentData = data.get(position);
         String value = currentData.getValue();
         String prefix = currentData.getPrefix();
+        prefixArray[position] = prefix;
+        valueArray[position] = value;
 
-        holder.editValue.setText(value);
-        holder.editPrefix.setText(prefix);
+        holder.editValue.setText(valueArray[position]);
+        holder.editPrefix.setText(prefixArray[position]);
+        holder.editValue.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                valueArray[position] =  s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
+        holder.editPrefix.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                prefixArray[position] = s.toString();
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+
+            }
+        });
     }
 
     @Override
