@@ -56,7 +56,7 @@
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="80dp"
+        android:layout_marginTop="140dp"
         android:ems="10"
         android:hint="E-post"
         android:inputType="textEmailAddress"
@@ -110,12 +110,11 @@
 
     <Spinner
         android:id="@+id/spinner"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintBottom_toTopOf="@+id/registerUser"
+        android:layout_width="296dp"
+        android:layout_height="41dp"
+        app:layout_constraintBottom_toTopOf="@+id/email"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/age" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
