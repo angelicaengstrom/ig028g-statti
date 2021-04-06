@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,10 +12,14 @@ import android.widget.Spinner;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     List<Data> data;
+    ArrayList<String> PrefixNameArray = new ArrayList<String>();
+    ArrayList<String> ValueAmtArray = new ArrayList<String>();
+    boolean isOnTextChanged = false;
 
     public DataAdapter(List<Data> data){
         this.data = data;
@@ -36,23 +41,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         holder.editValue.setText(value);
         holder.editPrefix.setText(prefix);
-        holder.editValue.addTextChangedListener(new TextWatcher() {
-            @Override
-            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
 
-            }
-
-            @Override
-            public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //String prefix = currentData.getPrefix();
-                //prefix = s.toString();
-            }
-
-            @Override
-            public void afterTextChanged(Editable s) {
-
-            }
-        });
         holder.editPrefix.addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -61,7 +50,28 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
             @Override
             public void onTextChanged(CharSequence s, int start, int before, int count) {
-                //prefix = s.toString();
+                isOnTextChanged = true;
+                data.get(holder.getAdapterPosition()).setPrefix(s.toString());
+            }
+
+            @Override
+            public void afterTextChanged(Editable s) {
+                if (isOnTextChanged == true) {
+                    isOnTextChanged = false;
+
+
+                }
+            }
+        });
+        holder.editValue.addTextChangedListener(new TextWatcher() {
+            @Override
+            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
+
+            }
+
+            @Override
+            public void onTextChanged(CharSequence s, int start, int before, int count) {
+                data.get(holder.getAdapterPosition()).setValue(s.toString());
             }
 
             @Override
