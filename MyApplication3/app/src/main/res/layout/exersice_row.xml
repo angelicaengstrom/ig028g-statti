@@ -17,6 +17,7 @@
         android:layout_weight="1"
         android:background="@drawable/round_gray"
         android:hint="30"
+        android:inputType="number|numberDecimal"
         android:paddingLeft="10dp"
         android:textSize="14sp" />
 
@@ -26,6 +27,7 @@
         android:layout_height="31dp"
         android:background="@drawable/round_gray"
         android:hint="kilogram"
+        android:inputType="textShortMessage|textPersonName"
         android:paddingLeft="10dp"
         android:textSize="14sp" />
 
