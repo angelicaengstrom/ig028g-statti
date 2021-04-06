@@ -1946,10 +1946,6 @@ id browser_actions_menu_item_text
 id browser_actions_menu_items
 id browser_actions_menu_view
 id btn_holder
-id button2
-id button3
-id button4
-id button5
 id buttonPanel
 id button_continue
 id button_create
@@ -1967,8 +1963,6 @@ id center_horizontal
 id center_vertical
 id chain
 id chains
-id changePhoto
-id changeSites
 id checkbox
 id checked
 id chip
@@ -2034,7 +2028,6 @@ id easeInOut
 id easeOut
 id editData
 id editPrefix
-id editTextTextPersonName
 id edit_phone_number
 id edit_query
 id elastic
@@ -2099,7 +2092,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView
 id imageView2
 id imageView3
 id imageView4
@@ -2225,7 +2217,6 @@ id pin
 id position
 id postLayout
 id profileImageView
-id profileScreen
 id progressBar
 id progressBar2
 id progressBar3
@@ -2462,7 +2453,6 @@ layout activity_calender
 layout activity_forget_password
 layout activity_graph
 layout activity_main
-layout activity_profile
 layout activity_register_user
 layout activity_settings
 layout browser_actions_context_menu_page
