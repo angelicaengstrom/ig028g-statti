@@ -18,13 +18,22 @@ import java.util.List;
 public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
     private ArrayList<Row> mRowList;
     private static final String TAG = "RowAdapter";
+    private OnItemClickListener mListener;
+
+    public interface OnItemClickListener{
+        void onItemClick(int position);
+    }
+
+    public void setOnItemClickListener(OnItemClickListener listener){
+        mListener = listener;
+    }
 
     public static class RowViewHolder extends RecyclerView.ViewHolder{
         public TextView title;
         public ImageView imageAdd;
         public RecyclerView dataList;
 
-        public RowViewHolder(@NonNull View itemView) {
+        public RowViewHolder(@NonNull View itemView, OnItemClickListener listener) {
             super(itemView);
             title = itemView.findViewById(R.id.titleTextView);
             imageAdd = itemView.findViewById(R.id.image_add);
@@ -36,6 +45,13 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
                     String title = titleInput.getText().toString();
                     titles.add(new Row(title, data));
                     rowRecyclerView.setAdapter(rowRecyclerAdapter);*/
+                    if(listener != null){
+                        int position = getAdapterPosition();
+                        Log.d("demo", "onClick: add to title " + position);
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onItemClick(position);
+                        }
+                    }
                 }
 
             });
@@ -51,7 +67,7 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
     @Override
     public RowViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.note_row, parent, false);
-        RowViewHolder rvh = new RowViewHolder(v);
+        RowViewHolder rvh = new RowViewHolder(v, mListener);
         return rvh;
     }
 
