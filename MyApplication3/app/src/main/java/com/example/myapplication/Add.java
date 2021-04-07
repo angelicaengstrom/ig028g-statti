@@ -65,7 +65,8 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private Button dateBtn;
     private DatePickerDialog datePickerDialog;
     private SeekBar feelingSeekbar, trainsessionSeekbar;
-    private RecyclerView.Adapter rowRecyclerAdapter, dataRecyclerAdapter;
+    private RowAdapter rowRecyclerAdapter;
+    private RecyclerView.Adapter dataRecyclerAdapter;
     private RecyclerView rowRecyclerView, dataRecyclerView;
     private RecyclerView.LayoutManager rowLayoutManager, dataLayoutManager;
     ArrayList<Row> titles;
@@ -100,8 +101,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         Button addRow = findViewById(R.id.newTrainsessionBtn);
 
         titles = new ArrayList<>();
-        List<Data> data = new ArrayList<>();
-        data.add(new Data());
 
         //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
@@ -115,7 +114,15 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         //Data
         dataRecyclerView = findViewById(R.id.dataRecyclerView);
         dataLayoutManager = new LinearLayoutManager(this);
-        dataRecyclerAdapter = new DataAdapter(data);
+
+        rowRecyclerAdapter.setOnItemClickListener(new RowAdapter.OnItemClickListener() {
+            @Override
+            public void onItemClick(int position) {
+                Log.d("demo", "onClick: position = " + position);
+                titles.get(position).addTitleItem(new Data());
+                rowRecyclerView.setAdapter(rowRecyclerAdapter);
+            }
+        });
 
         addRow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -141,9 +148,12 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 newTitle.setView(titleInput).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
+                        List<Data> data = new ArrayList<>();
+                        data.add(new Data());
                         String title = titleInput.getText().toString();
                         titles.add(new Row(title, data));
                         rowRecyclerView.setAdapter(rowRecyclerAdapter);
+                        dataRecyclerAdapter = new DataAdapter(data);
                     }
                 }).setNegativeButton("AVBRYT", new DialogInterface.OnClickListener() {
                     @Override
