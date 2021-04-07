@@ -22,6 +22,7 @@
             android:background="@drawable/round_white"
             android:paddingLeft="10dp"
             android:paddingTop="5dp"
+            android:paddingRight="10dp"
             android:text="show:title"
             android:textColor="#29504C"
             android:textColorHint="#FFFFFF"
@@ -35,8 +36,8 @@
 
         <ImageView
             android:id="@+id/image_add"
-            android:layout_width="48dp"
-            android:layout_height="35dp"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:background="@drawable/round_primary"
             android:padding="5dp"
@@ -47,7 +48,7 @@
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dataRecyclerView"
         android:layout_width="320dp"
-        android:layout_height="109dp"
+        android:layout_height="82dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
 </LinearLayout>
