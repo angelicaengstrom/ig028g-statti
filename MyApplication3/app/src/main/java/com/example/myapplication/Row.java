@@ -12,6 +12,10 @@ public class Row {
         this.titleItems = titleItems;
     }
 
+    public void addTitleItem(Data item) {
+        titleItems.add(item);
+    }
+
     public String getTitle() {
         return this.title;
     }
