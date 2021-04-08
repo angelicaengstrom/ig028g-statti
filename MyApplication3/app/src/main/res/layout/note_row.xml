@@ -2,8 +2,8 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:background="?attr/selectableItemBackground"
     android:orientation="vertical">
 
@@ -39,22 +39,24 @@
             android:layout_height="wrap_content"
             android:padding="5dp" />
 
-            <ImageView
-                android:id="@+id/image_add"
-                android:layout_width="44dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@drawable/round_primary"
-                android:padding="5dp"
-                app:srcCompat="@drawable/ic_baseline_add_24" />
-        </LinearLayout>
-
+        <ImageView
+            android:id="@+id/image_add"
+            android:layout_width="44dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="@drawable/round_primary"
+            android:padding="5dp"
+            app:srcCompat="@drawable/ic_baseline_add_24" />
     </LinearLayout>
-
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/dataRecyclerView"
         android:layout_width="319dp"
         android:layout_height="59dp"
+        android:scrollbars="vertical"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+    </ScrollView>
 
 </LinearLayout>
