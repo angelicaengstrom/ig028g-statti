@@ -54,6 +54,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         holder.editValue.setText(value);
         holder.editPrefix.setText(prefix);
+        holder.editValue.setHint("30");
+        holder.editPrefix.setHint("minuter/kilogram/reps etc.");
 
         holder.editPrefix.addTextChangedListener(new TextWatcher() {
             @Override
@@ -71,8 +73,6 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
             public void afterTextChanged(Editable s) {
                 if (isOnTextChanged == true) {
                     isOnTextChanged = false;
-
-
                 }
             }
         });
