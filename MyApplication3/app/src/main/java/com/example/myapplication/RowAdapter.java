@@ -77,7 +77,6 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
 
         holder.title.setText(titleName);
         DataAdapter dataAdapter = new DataAdapter(data);
-        //holder.dataList.setHasFixedSize(false);
         holder.dataList.setAdapter(dataAdapter);
 
         dataAdapter.setOnEraseClickListener(new DataAdapter.OnEraseClickListener() {
