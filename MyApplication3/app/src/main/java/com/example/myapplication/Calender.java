@@ -33,6 +33,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -60,13 +61,16 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
 
 
         //Calender
+        String date = getTodaysDate();
+        String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
+        initRecyclerView(userId, date);
+
         CalendarView calendarView = findViewById(R.id.calendarView);
         calendarView.setOnDateChangeListener(new CalendarView.OnDateChangeListener() {
             @Override
             public void onSelectedDayChange(@NonNull CalendarView view, int year, int month, int dayOfMonth) {
                 month = month + 1;
                 String date = dayOfMonth + "/" + month + " - " + year;
-                String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
                 initRecyclerView(userId, date);
             }
@@ -131,6 +135,16 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                     }
                 });
 
+    }
+
+    private String getTodaysDate() {
+        Calendar cal = Calendar.getInstance();
+        int year = cal.get(Calendar.YEAR);
+        int month = cal.get(Calendar.MONTH);
+        int dayOfMonth = cal.get(Calendar.DAY_OF_MONTH);
+        month = month + 1;
+        String date = dayOfMonth + "/" + month + " - " + year;
+        return date;
     }
 
     private void initRecyclerView(String user, String date){
