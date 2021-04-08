@@ -1,6 +1,7 @@
 package com.example.myapplication;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class Note {
 
@@ -10,9 +11,9 @@ public class Note {
     private String created;
     private String userId;
     private String trainingType;
-    private ArrayList<Row> titles;
+    private List<Row> titles;
 
-    public Note(String text, int feeling, int trainsession, String trainingType, String created, String userId, ArrayList<Row> titles) {
+    public Note(String text, int feeling, int trainsession, String trainingType, String created, String userId, List<Row> titles) {
         this.text = text;
         this.feeling = feeling;
         this.trainsession = trainsession;
@@ -73,9 +74,9 @@ public class Note {
         this.userId = userId;
     }
 
-    public ArrayList<Row> getTitles() {return titles; }
+    public List<Row> getTitles() {return titles; }
 
-    public void setTitles(ArrayList<Row> titles) { this.titles = titles; }
+    public void setTitles(List<Row> titles) { this.titles = titles; }
 
     @Override
     public String toString() {
