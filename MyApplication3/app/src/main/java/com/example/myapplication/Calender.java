@@ -41,7 +41,7 @@ import java.util.Map;
 public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private static final String TAG = "Add";
     CalenderRecyclerAdapter calenderRecyclerAdapter;
-    RecyclerView recyclerView;
+    RecyclerView recyclerView, titleRecyclerView;
     private int currentYear = 0;
     private int currentMonth = 0;
     private int currentDay = 0;
@@ -56,6 +56,8 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
 
         //Anteckningar
         recyclerView = findViewById(R.id.recyclerView);
+        titleRecyclerView = findViewById(R.id.calTitles);
+
 
         //Calender
         CalendarView calendarView = findViewById(R.id.calendarView);
@@ -143,6 +145,19 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
 
         calenderRecyclerAdapter = new CalenderRecyclerAdapter(options);
         recyclerView.setAdapter(calenderRecyclerAdapter);
+
+        calenderRecyclerAdapter.setOnDeleteClickListener(new CalenderRecyclerAdapter.OnDeleteClickListener() {
+            @Override
+            public void onDeleteClick(DocumentSnapshot Snapshot) {
+                Snapshot.getReference().delete()
+                        .addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Log.d(TAG, "onSuccess: Note deleted");
+                            }
+                        });
+            }
+        });
 
         calenderRecyclerAdapter.startListening();
     }
