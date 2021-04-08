@@ -1954,6 +1954,8 @@ id button_next
 id button_resend_email
 id button_sign_in
 id cache_measures
+id calTitle
+id calTitles
 id calendarView
 id calender
 id cancel_action
@@ -2097,7 +2099,10 @@ id imageView3
 id imageView4
 id imageView5
 id image_add
+id image_feeling
 id image_remove
+id image_trains
+id imagedelNote
 id info
 id invisible
 id invisible_frame
@@ -2250,6 +2255,7 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
+id scrollView2
 id scrollable
 id search_badge
 id search_bar
@@ -2329,7 +2335,9 @@ id textView2
 id textView3
 id textView4
 id textView5
+id textView6
 id textView7
+id textView8
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2458,6 +2466,7 @@ layout activity_settings
 layout browser_actions_context_menu_page
 layout browser_actions_context_menu_row
 layout calender_row
+layout calender_row_title
 layout custom_dialog
 layout design_bottom_navigation_item
 layout design_bottom_sheet_dialog
