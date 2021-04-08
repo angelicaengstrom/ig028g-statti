@@ -37,7 +37,8 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name="com.example.myapplication.Add"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            android:windowSoftInputMode="adjustNothing" />
         <activity
             android:name="com.example.myapplication.MainActivity"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
