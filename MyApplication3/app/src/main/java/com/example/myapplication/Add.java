@@ -106,7 +106,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
-        //rowRecyclerView.setHasFixedSize(true);
         rowLayoutManager = new LinearLayoutManager(this);
         rowRecyclerAdapter = new RowAdapter(titles);
         rowRecyclerView.setLayoutManager(rowLayoutManager);
