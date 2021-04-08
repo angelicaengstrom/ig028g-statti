@@ -16,7 +16,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
-    private ArrayList<Row> mRowList;
+    private List<Row> mRowList;
     private static final String TAG = "RowAdapter";
     private OnItemClickListener mListener;
 
@@ -39,12 +39,10 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
             imageAdd = itemView.findViewById(R.id.image_add);
             dataList = itemView.findViewById(R.id.dataRecyclerView);
 
+
             imageAdd.setOnClickListener(new View.OnClickListener() {
                 @Override
-                public void onClick(View v) {/*
-                    String title = titleInput.getText().toString();
-                    titles.add(new Row(title, data));
-                    rowRecyclerView.setAdapter(rowRecyclerAdapter);*/
+                public void onClick(View v) {
                     if(listener != null){
                         int position = getAdapterPosition();
                         Log.d("demo", "onClick: add to title " + position);
@@ -59,7 +57,7 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
         }
     }
 
-    public RowAdapter(ArrayList<Row> rowList){
+    public RowAdapter(List<Row> rowList){
         mRowList = rowList;
     }
 
@@ -79,7 +77,16 @@ public class RowAdapter extends RecyclerView.Adapter<RowAdapter.RowViewHolder> {
 
         holder.title.setText(titleName);
         DataAdapter dataAdapter = new DataAdapter(data);
+        //holder.dataList.setHasFixedSize(false);
         holder.dataList.setAdapter(dataAdapter);
+
+        dataAdapter.setOnEraseClickListener(new DataAdapter.OnEraseClickListener() {
+            @Override
+            public void onEraseClick(int position) {
+                currentTitle.eraseTitleItem(position);
+                holder.dataList.setAdapter(dataAdapter);
+            }
+        });
 
     }
 
