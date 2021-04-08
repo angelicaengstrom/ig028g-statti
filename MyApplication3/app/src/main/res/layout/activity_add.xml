@@ -21,8 +21,10 @@
         android:layout_width="match_parent"
         android:layout_height="475dp"
         android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="0dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="58dp">
 
         <EditText
@@ -104,8 +106,8 @@
             app:layout_constraintEnd_toStartOf="@+id/trainingType"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.957" />
+            app:layout_constraintTop_toBottomOf="@+id/otherNote"
+            app:layout_constraintVertical_bias="0.413" />
 
         <Spinner
             android:id="@+id/trainingType"
@@ -235,10 +237,10 @@
             android:text="Övningar:"
             app:layout_constraintBottom_toTopOf="@+id/rowRecyclerView"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.061"
+            app:layout_constraintHorizontal_bias="0.086"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView2"
-            app:layout_constraintVertical_bias="0.625" />
+            app:layout_constraintVertical_bias="0.696" />
 
         <Button
             android:id="@+id/newTrainsessionBtn"
@@ -271,10 +273,10 @@
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_bias="0.4"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintVertical_bias="0.843"></androidx.recyclerview.widget.RecyclerView>
+            app:layout_constraintVertical_bias="0.842"></androidx.recyclerview.widget.RecyclerView>
 
         <Button
             android:id="@+id/saveNoteBtn"
