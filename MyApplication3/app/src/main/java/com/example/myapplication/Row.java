@@ -16,6 +16,10 @@ public class Row {
         titleItems.add(item);
     }
 
+    public void eraseTitleItem(int position){
+        titleItems.remove(position);
+    }
+
     public String getTitle() {
         return this.title;
     }
