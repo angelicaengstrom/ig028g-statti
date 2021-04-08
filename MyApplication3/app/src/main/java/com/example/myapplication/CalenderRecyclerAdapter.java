@@ -40,8 +40,14 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
         holder.feelingTextView.setText(""+note.getFeeling());
         holder.trainingsessionTextView.setText(""+note.getTrainsession());
         holder.otherNotesTextView.setText(note.getText());
+
+        if(note.getText() == "") {
+            holder.otherNotesTextView.setText("Inga anteckningar den här dagen");
+        }
+
         int trainingsession = note.getTrainsession();
         int feeling = note.getFeeling();
+
         if(feeling >= 7){
             holder.feelingImageView.setImageResource(R.drawable.ic_baseline_tag_faces_24);
         } else if (feeling > 3 && feeling < 7){
