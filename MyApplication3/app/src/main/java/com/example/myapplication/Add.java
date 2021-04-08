@@ -11,12 +11,14 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import android.app.AlertDialog;
 import android.app.DatePickerDialog;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
 import android.text.InputType;
+import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
@@ -69,7 +71,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     private RecyclerView.Adapter dataRecyclerAdapter;
     private RecyclerView rowRecyclerView, dataRecyclerView;
     private RecyclerView.LayoutManager rowLayoutManager, dataLayoutManager;
-    ArrayList<Row> titles;
+    List<Row> titles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -104,7 +106,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         //Row
         rowRecyclerView = findViewById(R.id.rowRecyclerView);
-        rowRecyclerView.setHasFixedSize(true);
+        //rowRecyclerView.setHasFixedSize(true);
         rowLayoutManager = new LinearLayoutManager(this);
         rowRecyclerAdapter = new RowAdapter(titles);
         rowRecyclerView.setLayoutManager(rowLayoutManager);
@@ -115,6 +117,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         dataRecyclerView = findViewById(R.id.dataRecyclerView);
         dataLayoutManager = new LinearLayoutManager(this);
 
+        //add Data
         rowRecyclerAdapter.setOnItemClickListener(new RowAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
@@ -124,6 +127,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
             }
         });
 
+        //add Row
         addRow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -166,7 +170,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
 
         //Save Note
-        FloatingActionButton fab = findViewById(R.id.saveNoteBtn);
+        Button fab = findViewById(R.id.saveNoteBtn);
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -281,7 +285,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         String text = parent.getItemAtPosition(position).toString();
-        Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
+        //Toast.makeText(parent.getContext(), text, Toast.LENGTH_SHORT).show();
     }
 
     @Override
@@ -290,7 +294,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
     }
 
 
-    private void addNote(String text, int feeling, int trainsession, String trainingType, String date, ArrayList<Row> titles){
+    private void addNote(String text, int feeling, int trainsession, String trainingType, String date, List<Row> titles){
 
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
 
@@ -312,7 +316,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
                         Log.d(TAG, "onSuccess: Succesfully added the note");
-                        Toast.makeText(Add.this, "Note have been added", Toast.LENGTH_SHORT).show();
+                        Toast.makeText(Add.this, "Bra jobbat!", Toast.LENGTH_SHORT).show();
                     }
                 })
                 .addOnFailureListener(new OnFailureListener() {
