@@ -1,28 +1,41 @@
 package com.example.myapplication;
 
+import android.provider.ContactsContract;
 import android.text.Editable;
 import android.text.TextWatcher;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.AdapterView;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.Spinner;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.List;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     List<Data> data;
-    ArrayList<String> PrefixNameArray = new ArrayList<String>();
-    ArrayList<String> ValueAmtArray = new ArrayList<String>();
+    private OnEraseClickListener mListener;
+    private static final String TAG = "DataAdapter";
+
     boolean isOnTextChanged = false;
 
     public DataAdapter(List<Data> data){
         this.data = data;
+    }
+
+    public interface OnEraseClickListener{
+        void onEraseClick(int position);
+    }
+
+    public void setOnEraseClickListener(OnEraseClickListener listener){
+        mListener = listener;
     }
 
     @NonNull
@@ -30,7 +43,7 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         LayoutInflater layoutInflater =  LayoutInflater.from(parent.getContext());
         View view = layoutInflater.inflate(R.layout.exersice_row, parent, false);
-        return new ViewHolder(view);
+        return new ViewHolder(view, mListener);
     }
 
     @Override
@@ -89,10 +102,25 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
     class ViewHolder extends RecyclerView.ViewHolder {
         EditText editValue;
         EditText editPrefix;
-        public  ViewHolder(@NonNull View itemView){
+        ImageView imageErase;
+        public  ViewHolder(@NonNull View itemView, OnEraseClickListener listener){
             super(itemView);
             editValue = itemView.findViewById(R.id.editData);
             editPrefix = itemView.findViewById(R.id.editPrefix);
+            imageErase = itemView.findViewById(R.id.image_remove);
+
+            imageErase.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    if(listener != null){
+                        int position = getAdapterPosition();
+                        Log.d("demo", "onClick: erase title at " + position);
+                        if(position != RecyclerView.NO_POSITION){
+                            listener.onEraseClick(position);
+                        }
+                    }
+                }
+            });
         }
     }
 
