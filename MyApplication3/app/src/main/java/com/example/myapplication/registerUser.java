@@ -63,7 +63,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
 
     }
 
-    // TODO: Code to send a verification to users email
+
     @Override
     public void onClick(View view) {
         switch (view.getId()){
