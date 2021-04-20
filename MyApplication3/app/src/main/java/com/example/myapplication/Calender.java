@@ -33,6 +33,7 @@ import com.google.firebase.firestore.Query;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
 
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Date;
 import java.util.HashMap;
@@ -42,6 +43,7 @@ import java.util.Map;
 public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private static final String TAG = "Add";
     CalenderRecyclerAdapter calenderRecyclerAdapter;
+    CalTitlesRecyclerAdapter titlesRecyclerAdapter;
     RecyclerView recyclerView, titleRecyclerView;
     private int currentYear = 0;
     private int currentMonth = 0;
@@ -158,7 +160,37 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                 .build();
 
         calenderRecyclerAdapter = new CalenderRecyclerAdapter(options);
-        recyclerView.setAdapter(calenderRecyclerAdapter);
+
+
+        FirebaseFirestore.getInstance()
+                .collection("notes")
+                .whereEqualTo("created", date)
+                .whereEqualTo("userId", user)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+                    @Override
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        Log.d(TAG, "onSuccess: We're getting the data");
+                        List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
+                        for(DocumentSnapshot snapshot: snapshotList){
+                            Log.d(TAG, "onSuccess: " + snapshot.getData().toString());
+                        }
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Log.e(TAG, "onFailure: ", e);
+                    }
+                });
+
+
+        List<Row> title = new ArrayList<>();
+        List<Data> data = new ArrayList<>();
+        data.add(new Data("10", "bajs"));
+        title.add(new Row("kiss", data));
+        titlesRecyclerAdapter = new CalTitlesRecyclerAdapter(title);
+        //titleRecyclerView.setAdapter(titlesRecyclerAdapter);
 
         calenderRecyclerAdapter.setOnDeleteClickListener(new CalenderRecyclerAdapter.OnDeleteClickListener() {
             @Override
@@ -172,7 +204,7 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                         });
             }
         });
-
+        recyclerView.setAdapter(calenderRecyclerAdapter);
         calenderRecyclerAdapter.startListening();
     }
     /*
