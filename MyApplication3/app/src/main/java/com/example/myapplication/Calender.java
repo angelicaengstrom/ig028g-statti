@@ -3,6 +3,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
@@ -10,6 +11,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CalendarView;
 import android.widget.TextView;
@@ -22,16 +24,20 @@ import com.google.firebase.Timestamp;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GetTokenResult;
+import com.google.firebase.firestore.CollectionReference;
 import com.google.firebase.firestore.DocumentChange;
 import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.EventListener;
+import com.google.firebase.firestore.FieldPath;
 import com.google.firebase.firestore.FieldValue;
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.FirebaseFirestoreException;
 import com.google.firebase.firestore.Query;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
 import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firebase.firestore.SetOptions;
+import com.squareup.okhttp.internal.DiskLruCache;
 
 import java.util.ArrayList;
 import java.util.Calendar;
@@ -41,14 +47,16 @@ import java.util.List;
 import java.util.Map;
 
 public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
-    private static final String TAG = "Add";
+    private static final String TAG = "Calender";
     CalenderRecyclerAdapter calenderRecyclerAdapter;
     CalTitlesRecyclerAdapter titlesRecyclerAdapter;
     RecyclerView recyclerView, titleRecyclerView;
+    private RecyclerView.LayoutManager titlesLayoutManager;
     private int currentYear = 0;
     private int currentMonth = 0;
     private int currentDay = 0;
     private FirebaseAuth mAuth;
+    List<Row> titles = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -60,7 +68,7 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
         //Anteckningar
         recyclerView = findViewById(R.id.recyclerView);
         titleRecyclerView = findViewById(R.id.calTitles);
-
+        titlesLayoutManager = new LinearLayoutManager(this);
 
         //Calender
         String date = getTodaysDate();
@@ -161,37 +169,51 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
 
         calenderRecyclerAdapter = new CalenderRecyclerAdapter(options);
 
+        CollectionReference noteRef = FirebaseFirestore.getInstance().collection("notes");
+
+        List<Data> data = new ArrayList<>();
+        data.add(new Data("10", "bajs"));
+        titles.add(new Row("kiss", data));
+
+        titlesRecyclerAdapter = new CalTitlesRecyclerAdapter(titles);
+
+        //titleRecyclerView.setAdapter(titlesRecyclerAdapter);
+
+        noteRef.whereEqualTo("userId", user)
+                .whereEqualTo("created", date)
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
+            @Override
+            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                titles.clear();
+
+                for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
+                    String exercise = documentSnapshot.get("exercise").toString();
+                    Log.d(TAG, "onSuccess: TEST" + documentSnapshot.get("exercise").toString());
+                }
+            }
+        });
 
         FirebaseFirestore.getInstance()
                 .collection("notes")
-                .whereEqualTo("created", date)
                 .whereEqualTo("userId", user)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-                    @Override
-                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                        Log.d(TAG, "onSuccess: We're getting the data");
-                        List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
-                        for(DocumentSnapshot snapshot: snapshotList){
-                            Log.d(TAG, "onSuccess: " + snapshot.getData().toString());
-                        }
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.e(TAG, "onFailure: ", e);
-                    }
-                });
+                .whereEqualTo("created", date);
 
+                /*
+                .addSnapshotListener(new EventListener<QuerySnapshot>() {
+            @Override
+            public void onEvent(@Nullable QuerySnapshot value, @Nullable FirebaseFirestoreException error) {
+                titles.clear();
+                for(DocumentSnapshot snapshot : value){
+                    titles.add(new Row(snapshot.getString("title"), data));
+                    Log.d(TAG, "onEvent: Title: " + snapshot.contains("exercise"));
+                }
+                titlesRecyclerAdapter.notifyDataSetChanged();
+                recyclerView.setAdapter(calenderRecyclerAdapter);
 
-        List<Row> title = new ArrayList<>();
-        List<Data> data = new ArrayList<>();
-        data.add(new Data("10", "bajs"));
-        title.add(new Row("kiss", data));
-        titlesRecyclerAdapter = new CalTitlesRecyclerAdapter(title);
-        //titleRecyclerView.setAdapter(titlesRecyclerAdapter);
-
+            }
+        });
+*/
         calenderRecyclerAdapter.setOnDeleteClickListener(new CalenderRecyclerAdapter.OnDeleteClickListener() {
             @Override
             public void onDeleteClick(DocumentSnapshot Snapshot) {
