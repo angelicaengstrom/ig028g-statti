@@ -2032,6 +2032,7 @@ id easeInOut
 id easeOut
 id editData
 id editPrefix
+id editTextTextPersonName3
 id edit_phone_number
 id edit_query
 id elastic
@@ -2223,6 +2224,8 @@ id phone_number
 id pin
 id position
 id postLayout
+id profileEmailAdress
+id profileFullName
 id profileImageView
 id progressBar
 id progressBar2
@@ -2247,6 +2250,7 @@ id root
 id rounded
 id rowRecyclerView
 id row_index_key
+id savInfo
 id saveNoteBtn
 id save_non_transition_alpha
 id save_overlay_view
@@ -2463,6 +2467,7 @@ layout activity_calender
 layout activity_forget_password
 layout activity_graph
 layout activity_main
+layout activity_profile
 layout activity_register_user
 layout activity_settings
 layout browser_actions_context_menu_page
