@@ -309,7 +309,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         FirebaseFirestore.getInstance()
                 .collection("notes")
-                //.add(note)
                 .add(map)
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
