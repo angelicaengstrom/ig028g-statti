@@ -56,7 +56,7 @@
         android:layout_marginRight="34dp"
         android:layout_toEndOf="@+id/profileImageView"
         android:layout_toRightOf="@+id/profileImageView"
-        android:text="show:user.name"
+        android:text="För- och efternamn"
         android:textStyle="bold" />
 
     <Button
@@ -67,15 +67,15 @@
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginStart="10dp"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="151dp"
+        android:layout_marginStart="116dp"
+        android:layout_marginLeft="116dp"
+        android:layout_marginTop="343dp"
         android:backgroundTint="@color/teal_700"
-        android:text="Uppdatera profilbild"
+        android:onClick="updateProfile"
+        android:text="Ändra ..."
         android:textColor="#ffff"
         android:textSize="10sp"
-        android:textStyle="bold"
-        android:onClick="updateProfile"/>
+        android:textStyle="bold" />
 
     <TextView
         android:id="@+id/ViewEmail"
@@ -91,7 +91,7 @@
         android:layout_marginRight="34dp"
         android:layout_toEndOf="@+id/profileImageView"
         android:layout_toRightOf="@+id/profileImageView"
-        android:text="show.user.email" />
+        android:text="E-post" />
 
     <ImageView
         android:id="@+id/profileImageView"
