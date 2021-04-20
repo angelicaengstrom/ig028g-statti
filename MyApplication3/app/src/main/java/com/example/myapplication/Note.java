@@ -74,7 +74,7 @@ public class Note {
         this.userId = userId;
     }
 
-    public List<Row> getTitles() {return titles; }
+    public List<Row> getTitles() { return this.titles; }
 
     public void setTitles(List<Row> titles) { this.titles = titles; }
 
