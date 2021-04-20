@@ -32,7 +32,8 @@ public class CalTitlesRecyclerAdapter extends RecyclerView.Adapter<CalTitlesRecy
     @Override
     public void onBindViewHolder(@NonNull CalTitlesRecyclerAdapter.CalTitlesViewHolder holder, int position) {
         Row currentTitle = titles.get(position);
-        holder.titleTextView.setText(currentTitle.getTitle());
+        holder.titleTextView.setText("Test");
+       // holder.titleTextView.setText(currentTitle.getTitle());
         List<Data> data = currentTitle.getTitleItems();
 
         /*
@@ -42,7 +43,7 @@ public class CalTitlesRecyclerAdapter extends RecyclerView.Adapter<CalTitlesRecy
 
     @Override
     public int getItemCount() {
-        return 0;
+        return titles.size();
     }
 
     public static class CalTitlesViewHolder extends RecyclerView.ViewHolder{
