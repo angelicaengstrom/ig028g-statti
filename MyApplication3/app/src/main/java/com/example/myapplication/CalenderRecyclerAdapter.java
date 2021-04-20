@@ -13,9 +13,17 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.material.tabs.TabLayout;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
+import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firestore.v1.Document;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, CalenderRecyclerAdapter.CalenderViewHolder>{
@@ -40,6 +48,53 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
         holder.feelingTextView.setText(""+note.getFeeling());
         holder.trainingsessionTextView.setText(""+note.getTrainsession());
         holder.otherNotesTextView.setText(note.getText());
+
+        List<Row> titles = new ArrayList<>();
+        List<String> test = new ArrayList<>();
+        CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
+        List<Data> data = new ArrayList<>();
+        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("notes").child("title");
+        DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("title").child("titleItems");
+        dataReference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                data.clear();
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                List<Row> Temp = new ArrayList<>();
+                Log.d("Count: ",""+ dataSnapshot.getChildrenCount());
+
+
+                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
+                    Note notes = snapshot.getValue(Note.class);
+                    Log.d("Get Data", "" + notes.getFeeling());
+                    //Temp = note.getTitles();
+                }
+                for(int i = 0; i < Temp.size(); i++){ //Temp är tom så den går ej vidare
+                    String txt = Temp.get(i).getTitle();
+                    test.add(txt);
+                    data.add(new Data());
+                    titles.add(new Row(txt, data));
+                }
+                    titleAdapter.notifyDataSetChanged();
+                Log.d("TITLE", "Titles: " + test + "Notes " + note.getText());
+                }
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
+
+        //CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
+        holder.titlesRecyclerView.setAdapter(titleAdapter);
 
         if(note.getText() == "") {
             holder.otherNotesTextView.setText("Inga anteckningar den här dagen");
