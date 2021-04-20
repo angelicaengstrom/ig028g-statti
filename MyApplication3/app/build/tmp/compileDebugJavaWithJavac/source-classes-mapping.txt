@@ -8,31 +8,16 @@ com/example/myapplication/RowAdapter.java
  com.example.myapplication.RowAdapter$OnItemClickListener
  com.example.myapplication.RowAdapter$RowViewHolder
  com.example.myapplication.RowAdapter$RowViewHolder$1
-<<<<<<< HEAD
-com/example/myapplication/Settings.java
- com.example.myapplication.Settings
- com.example.myapplication.Settings$1
- com.example.myapplication.Settings$2
- com.example.myapplication.Settings$3
+com/example/myapplication/BuildConfig.java
+ com.example.myapplication.BuildConfig
 com/example/myapplication/Row.java
  com.example.myapplication.Row
-=======
-com/example/myapplication/CalenderRecyclerAdapter.java
- com.example.myapplication.CalenderRecyclerAdapter
- com.example.myapplication.CalenderRecyclerAdapter$CalenderViewHolder
- com.example.myapplication.CalenderRecyclerAdapter$CalenderViewHolder$1
- com.example.myapplication.CalenderRecyclerAdapter$OnDeleteClickListener
->>>>>>> 75c74488e0bbbc5fd87136e5c27c3849c84ae5a7
-com/example/myapplication/Note.java
- com.example.myapplication.Note
-com/example/myapplication/Settings.java
- com.example.myapplication.Settings
- com.example.myapplication.Settings$1
- com.example.myapplication.Settings$2
- com.example.myapplication.Settings$3
-com/example/myapplication/MainActivity.java
- com.example.myapplication.MainActivity
- com.example.myapplication.MainActivity$1
+com/example/myapplication/registerUser.java
+ com.example.myapplication.registerUser
+ com.example.myapplication.registerUser$1
+ com.example.myapplication.registerUser$1$1
+com/example/myapplication/profile.java
+ com.example.myapplication.profile
 com/example/myapplication/DataAdapter.java
  com.example.myapplication.DataAdapter
  com.example.myapplication.DataAdapter$1
@@ -42,18 +27,18 @@ com/example/myapplication/DataAdapter.java
  com.example.myapplication.DataAdapter$ViewHolder$1
 com/example/myapplication/user.java
  com.example.myapplication.user
-<<<<<<< HEAD
 com/example/myapplication/Data.java
  com.example.myapplication.Data
-=======
-com/example/myapplication/Calender.java
- com.example.myapplication.Calender
- com.example.myapplication.Calender$1
- com.example.myapplication.Calender$2
- com.example.myapplication.Calender$3
- com.example.myapplication.Calender$4
- com.example.myapplication.Calender$4$1
->>>>>>> 75c74488e0bbbc5fd87136e5c27c3849c84ae5a7
+com/example/myapplication/MainActivity.java
+ com.example.myapplication.MainActivity
+ com.example.myapplication.MainActivity$1
+com/example/myapplication/Note.java
+ com.example.myapplication.Note
+com/example/myapplication/Settings.java
+ com.example.myapplication.Settings
+ com.example.myapplication.Settings$1
+ com.example.myapplication.Settings$2
+ com.example.myapplication.Settings$3
 com/example/myapplication/Add.java
  com.example.myapplication.Add
  com.example.myapplication.Add$1
@@ -70,19 +55,9 @@ com/example/myapplication/Add.java
 com/example/myapplication/Graph.java
  com.example.myapplication.Graph
  com.example.myapplication.Graph$1
-<<<<<<< HEAD
 com/example/myapplication/CalTitlesRecyclerAdapter.java
  com.example.myapplication.CalTitlesRecyclerAdapter
  com.example.myapplication.CalTitlesRecyclerAdapter$CalTitlesViewHolder
-=======
->>>>>>> 75c74488e0bbbc5fd87136e5c27c3849c84ae5a7
-com/example/myapplication/BuildConfig.java
- com.example.myapplication.BuildConfig
-com/example/myapplication/registerUser.java
- com.example.myapplication.registerUser
- com.example.myapplication.registerUser$1
- com.example.myapplication.registerUser$1$1
-<<<<<<< HEAD
 com/example/myapplication/Calender.java
  com.example.myapplication.Calender
  com.example.myapplication.Calender$1
@@ -90,8 +65,7 @@ com/example/myapplication/Calender.java
  com.example.myapplication.Calender$3
  com.example.myapplication.Calender$4
  com.example.myapplication.Calender$5
- com.example.myapplication.Calender$6
- com.example.myapplication.Calender$6$1
+ com.example.myapplication.Calender$5$1
 com/example/myapplication/CalenderRecyclerAdapter.java
  com.example.myapplication.CalenderRecyclerAdapter
  com.example.myapplication.CalenderRecyclerAdapter$1
@@ -99,9 +73,3 @@ com/example/myapplication/CalenderRecyclerAdapter.java
  com.example.myapplication.CalenderRecyclerAdapter$CalenderViewHolder
  com.example.myapplication.CalenderRecyclerAdapter$CalenderViewHolder$1
  com.example.myapplication.CalenderRecyclerAdapter$OnDeleteClickListener
-=======
-com/example/myapplication/Row.java
- com.example.myapplication.Row
-com/example/myapplication/Data.java
- com.example.myapplication.Data
->>>>>>> 75c74488e0bbbc5fd87136e5c27c3849c84ae5a7
