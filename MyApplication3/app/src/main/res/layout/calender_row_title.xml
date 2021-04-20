@@ -9,4 +9,21 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="TextView" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/calDataRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+    </ScrollView>
+
 </LinearLayout>
