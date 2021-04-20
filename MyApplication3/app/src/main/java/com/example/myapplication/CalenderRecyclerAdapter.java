@@ -13,6 +13,8 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.tabs.TabLayout;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -28,6 +30,7 @@ import java.util.List;
 
 public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, CalenderRecyclerAdapter.CalenderViewHolder>{
     private OnDeleteClickListener mListener;
+    private static final String TAG = "CalenderRecyclerAdapter";
 
 
     public CalenderRecyclerAdapter(@NonNull FirestoreRecyclerOptions<Note> options) {
@@ -48,53 +51,31 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
         holder.feelingTextView.setText(""+note.getFeeling());
         holder.trainingsessionTextView.setText(""+note.getTrainsession());
         holder.otherNotesTextView.setText(note.getText());
+        Log.d(TAG, "GETTHETITLES: "+ note.getTitles());
 
         List<Row> titles = new ArrayList<>();
-        List<String> test = new ArrayList<>();
-        CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
         List<Data> data = new ArrayList<>();
-        DatabaseReference reference = FirebaseDatabase.getInstance().getReference("notes").child("title");
-        DatabaseReference dataReference = FirebaseDatabase.getInstance().getReference().child("title").child("titleItems");
-        dataReference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot snapshot) {
-                data.clear();
-            }
-
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-        reference.addValueEventListener(new ValueEventListener() {
-            @Override
-            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-                List<Row> Temp = new ArrayList<>();
-                Log.d("Count: ",""+ dataSnapshot.getChildrenCount());
-
-
-                for(DataSnapshot snapshot : dataSnapshot.getChildren()) {
-                    Note notes = snapshot.getValue(Note.class);
-                    Log.d("Get Data", "" + notes.getFeeling());
-                    //Temp = note.getTitles();
-                }
-                for(int i = 0; i < Temp.size(); i++){ //Temp är tom så den går ej vidare
-                    String txt = Temp.get(i).getTitle();
-                    test.add(txt);
-                    data.add(new Data());
-                    titles.add(new Row(txt, data));
-                }
-                    titleAdapter.notifyDataSetChanged();
-                Log.d("TITLE", "Titles: " + test + "Notes " + note.getText());
-                }
-            @Override
-            public void onCancelled(@NonNull DatabaseError error) {
-
-            }
-        });
-
-        //CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
+        data.add(new Data("10", "tusen"));
+        titles.add(new Row("Hej", data));
+        CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
         holder.titlesRecyclerView.setAdapter(titleAdapter);
+
+        FirebaseFirestore.getInstance().collection("notes").document("Nr7zqBI9IAqEBkWPRTlh")
+                .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
+            @Override
+            public void onSuccess(DocumentSnapshot documentSnapshot) {
+
+                Log.d(TAG, "onSuccess: " + documentSnapshot.getId());
+                        Log.d(TAG, "DATA: " + documentSnapshot.getData());
+
+                    }
+                })
+                .addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+
+                    }
+                });
 
         if(note.getText() == "") {
             holder.otherNotesTextView.setText("Inga anteckningar den här dagen");
