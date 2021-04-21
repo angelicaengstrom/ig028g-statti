@@ -188,6 +188,9 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                 titles.clear();
 
                 for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
+                    Note note = documentSnapshot.toObject(Note.class);
+                    titles = note.getTitles();
+                    Log.d(TAG, "onSuccess: TITLEEES " + note.getFeeling());
                     String exercise = documentSnapshot.get("exercise").toString();
                     Log.d(TAG, "onSuccess: TEST" + documentSnapshot.get("exercise").toString());
                 }
