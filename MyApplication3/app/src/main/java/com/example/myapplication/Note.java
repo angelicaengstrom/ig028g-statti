@@ -76,6 +76,8 @@ public class Note {
 
     public List<Row> getTitles() { return this.titles; }
 
+    //Fixa funktion så att du kan hämta title
+
     public void setTitles(List<Row> titles) { this.titles = titles; }
 
     @Override
