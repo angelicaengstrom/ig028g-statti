@@ -7,7 +7,7 @@
     tools:context=".profile">
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/editProfileImage"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="56dp"
@@ -25,9 +25,9 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:text="För- och efternamn"
-        app:layout_constraintEnd_toEndOf="@+id/imageView2"
-        app:layout_constraintStart_toStartOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintEnd_toEndOf="@+id/editProfileImage"
+        app:layout_constraintStart_toStartOf="@+id/editProfileImage"
+        app:layout_constraintTop_toBottomOf="@+id/editProfileImage" />
 
     <EditText
         android:id="@+id/profileEmailAdress"
