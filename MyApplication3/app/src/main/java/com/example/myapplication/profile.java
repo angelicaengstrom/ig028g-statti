@@ -10,11 +10,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.firestore.FirebaseFirestore;
+
 public class profile extends AppCompatActivity {
     public static final String TAG = "TAG";
     EditText profileFullName, profileEmail, profileAge;
     ImageView profileImageView;
-
+    FirebaseAuth auth;
+    FirebaseFirestore fstore;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +29,9 @@ public class profile extends AppCompatActivity {
         String email = data.getStringExtra("email");
         String age = data.getStringExtra("age");
 
+        auth = FirebaseAuth.getInstance();
+        fstore = FirebaseFirestore.getInstance();
+
         profileFullName = findViewById(R.id.profileFullName);
         profileEmail = findViewById(R.id.profileEmailAdress);
         profileAge = findViewById(R.id.profileAge);
@@ -34,7 +41,7 @@ public class profile extends AppCompatActivity {
             @Override
             public void onClick(View view) {
             Toast.makeText(profile.this,"Whatever",Toast.LENGTH_SHORT).show();
-            
+
             }
         });
 
