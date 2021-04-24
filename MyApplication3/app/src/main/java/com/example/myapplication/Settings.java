@@ -50,14 +50,7 @@ public class Settings extends AppCompatActivity {
 
 
 
-        updateProfileBtn.setOnClickListener((view -> {
-            Intent intent1 = new Intent(view.getContext(),profile.class);
-            intent1.putExtra("fullname", "...");
-            intent1.putExtra("email", "...");
-            intent1.putExtra("age", "...");
 
-
-        }));
 
 
 
@@ -91,13 +84,20 @@ public class Settings extends AppCompatActivity {
 
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error){
                 Toast.makeText(Settings.this, "Ett fel har inträffat!", Toast.LENGTH_LONG).show();
 
             }
         });
+        updateProfileBtn.setOnClickListener((view -> {
+            Intent intent1 = new Intent(view.getContext(),profile.class);
+            intent1.putExtra("fullname",fullNameTextView.getText().toString());
+            intent1.putExtra("email", emailTextView.getText().toString());
+            intent1.putExtra("age", "Not sure about the age!");
+
+
+        }));
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
