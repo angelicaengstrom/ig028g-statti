@@ -48,16 +48,17 @@ public class Settings extends AppCompatActivity {
         profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
 
-        updateProfileBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                openEditProfile();
-            }
-        });
-        public void openEditProfile(){
-            Intent intent = new Intent(this, profile.class);
-            startActivity(intent);
-        }
+
+
+        updateProfileBtn.setOnClickListener((view -> {
+            Intent intent1 = new Intent(view.getContext(),profile.class);
+            intent1.putExtra("name", "...");
+            intent1.putExtra("email", "...");
+            intent1.putExtra("age", "...");
+
+
+        }));
+
 
 
         logout.setOnClickListener(new View.OnClickListener() {
