@@ -48,8 +48,16 @@ public class Settings extends AppCompatActivity {
         profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
 
-
-
+        updateProfileBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                openEditProfile();
+            }
+        });
+        public void openEditProfile(){
+            Intent intent = new Intent(this, profile.class);
+            startActivity(intent);
+        }
 
 
         logout.setOnClickListener(new View.OnClickListener() {
