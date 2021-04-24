@@ -43,7 +43,7 @@
         app:layout_constraintTop_toBottomOf="@+id/profileFullName" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName3"
+        android:id="@+id/profileAge"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
@@ -64,7 +64,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName3"
+        app:layout_constraintTop_toBottomOf="@+id/profileAge"
         app:layout_constraintVertical_bias="0.782" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
