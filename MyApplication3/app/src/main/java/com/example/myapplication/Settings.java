@@ -52,7 +52,7 @@ public class Settings extends AppCompatActivity {
 
         updateProfileBtn.setOnClickListener((view -> {
             Intent intent1 = new Intent(view.getContext(),profile.class);
-            intent1.putExtra("name", "...");
+            intent1.putExtra("fullname", "...");
             intent1.putExtra("email", "...");
             intent1.putExtra("age", "...");
 
