@@ -8,7 +8,8 @@
         android:id="@+id/calTitle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:text="TextView"
+        android:background="@drawable/round_gray"/>
 
     <ScrollView
         android:layout_width="match_parent"
