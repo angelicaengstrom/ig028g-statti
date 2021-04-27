@@ -14,10 +14,11 @@ import com.firebase.ui.firestore.FirestoreRecyclerAdapter;
 import com.firebase.ui.firestore.FirestoreRecyclerOptions;
 
 import java.util.List;
+import java.util.Map;
 
 public class CalTitlesRecyclerAdapter extends RecyclerView.Adapter<CalTitlesRecyclerAdapter.CalTitlesViewHolder> {
-    List<Row> titles;
-    public CalTitlesRecyclerAdapter(List<Row> titles) {
+    List<Map<String,Object>> titles;
+    public CalTitlesRecyclerAdapter(List<Map<String,Object>> titles) {
         this.titles = titles;
     }
 
@@ -31,10 +32,10 @@ public class CalTitlesRecyclerAdapter extends RecyclerView.Adapter<CalTitlesRecy
 
     @Override
     public void onBindViewHolder(@NonNull CalTitlesRecyclerAdapter.CalTitlesViewHolder holder, int position) {
-        Row currentTitle = titles.get(position);
-        holder.titleTextView.setText("Test");
+        Object currentTitle = titles.get(position);
+        holder.titleTextView.setText(currentTitle.toString());
        // holder.titleTextView.setText(currentTitle.getTitle());
-        List<Data> data = currentTitle.getTitleItems();
+        //List<Data> data = currentTitle.getTitleItems();
 
         /*
         DataAdapter dataAdapter = new DataAdapter(data);
