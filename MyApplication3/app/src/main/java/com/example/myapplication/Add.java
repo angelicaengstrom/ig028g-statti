@@ -304,7 +304,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         map.put("trainingType", trainingType);
         map.put("created", date);
         map.put("userId", userId);
-        map.put("title", titles);
+        map.put("exercise", titles);
 
 
         FirebaseFirestore.getInstance()
