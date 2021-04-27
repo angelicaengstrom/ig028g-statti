@@ -49,14 +49,11 @@ import java.util.Map;
 public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStateListener{
     private static final String TAG = "Calender";
     CalenderRecyclerAdapter calenderRecyclerAdapter;
-    CalTitlesRecyclerAdapter titlesRecyclerAdapter;
-    RecyclerView recyclerView, titleRecyclerView;
-    private RecyclerView.LayoutManager titlesLayoutManager;
+    RecyclerView recyclerView;
     private int currentYear = 0;
     private int currentMonth = 0;
     private int currentDay = 0;
     private FirebaseAuth mAuth;
-    List<Row> titles = new ArrayList<>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,8 +64,6 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
 
         //Anteckningar
         recyclerView = findViewById(R.id.recyclerView);
-        titleRecyclerView = findViewById(R.id.calTitles);
-        titlesLayoutManager = new LinearLayoutManager(this);
 
         //Calender
         String date = getTodaysDate();
@@ -168,39 +163,6 @@ public class Calender extends AppCompatActivity implements FirebaseAuth.AuthStat
                 .build();
 
         calenderRecyclerAdapter = new CalenderRecyclerAdapter(options);
-
-        CollectionReference noteRef = FirebaseFirestore.getInstance().collection("notes");
-
-        List<Data> data = new ArrayList<>();
-        data.add(new Data("10", "bajs"));
-        titles.add(new Row("kiss", data));
-
-        titlesRecyclerAdapter = new CalTitlesRecyclerAdapter(titles);
-
-        //titleRecyclerView.setAdapter(titlesRecyclerAdapter);
-
-        noteRef.whereEqualTo("userId", user)
-                .whereEqualTo("created", date)
-                .get()
-                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
-            @Override
-            public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
-                titles.clear();
-
-                for(QueryDocumentSnapshot documentSnapshot : queryDocumentSnapshots){
-                    Note note = documentSnapshot.toObject(Note.class);
-                    titles = note.getTitles();
-                    Log.d(TAG, "onSuccess: TITLEEES " + note.getFeeling());
-                    String exercise = documentSnapshot.get("exercise").toString();
-                    Log.d(TAG, "onSuccess: TEST" + documentSnapshot.get("exercise").toString());
-                }
-            }
-        });
-
-        FirebaseFirestore.getInstance()
-                .collection("notes")
-                .whereEqualTo("userId", user)
-                .whereEqualTo("created", date);
 
                 /*
                 .addSnapshotListener(new EventListener<QuerySnapshot>() {
