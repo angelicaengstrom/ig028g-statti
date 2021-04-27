@@ -116,7 +116,8 @@
         android:layout_alignParentTop="true"
         android:layout_marginStart="55dp"
         android:layout_marginLeft="55dp"
-        android:layout_marginTop="150dp" />
+        android:layout_marginTop="150dp"
+        android:visibility="gone"/>
 
 
 </RelativeLayout>
