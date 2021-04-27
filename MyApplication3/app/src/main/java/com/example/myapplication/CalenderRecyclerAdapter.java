@@ -23,10 +23,13 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.firestore.DocumentSnapshot;
 import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QuerySnapshot;
 import com.google.firestore.v1.Document;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, CalenderRecyclerAdapter.CalenderViewHolder>{
     private OnDeleteClickListener mListener;
@@ -51,34 +54,49 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
         holder.feelingTextView.setText(""+note.getFeeling());
         holder.trainingsessionTextView.setText(""+note.getTrainsession());
         holder.otherNotesTextView.setText(note.getText());
-        Log.d(TAG, "GETTHETITLES: "+ note.getTitles());
+        String noExcersize = "Inga övningar";
+        holder.titleTextView.setText(noExcersize);
 
-        List<Row> titles = new ArrayList<>();
-        List<Data> data = new ArrayList<>();
-        data.add(new Data("10", "tusen"));
-        titles.add(new Row("Hej", data));
-        CalTitlesRecyclerAdapter titleAdapter = new CalTitlesRecyclerAdapter(titles);
-        holder.titlesRecyclerView.setAdapter(titleAdapter);
-
-        FirebaseFirestore.getInstance().collection("notes").document("Nr7zqBI9IAqEBkWPRTlh")
-                .get().addOnSuccessListener(new OnSuccessListener<DocumentSnapshot>() {
-            @Override
-            public void onSuccess(DocumentSnapshot documentSnapshot) {
-
-                Log.d(TAG, "onSuccess: " + documentSnapshot.getId());
-                        Log.d(TAG, "DATA: " + documentSnapshot.getData());
-
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
+        FirebaseFirestore.getInstance().collection("notes")
+                .whereEqualTo("created", note.getCreated())
+                .whereEqualTo("userId", note.getUserId())
+                .whereEqualTo("text", note.getText())
+                .whereEqualTo("trainingType", note.getTrainingType())
+                .whereEqualTo("feeling", note.getFeeling())
+                .whereEqualTo("trainsession", note.getTrainsession())
+                .get()
+                .addOnSuccessListener(new OnSuccessListener<QuerySnapshot>() {
                     @Override
-                    public void onFailure(@NonNull Exception e) {
+                    public void onSuccess(QuerySnapshot queryDocumentSnapshots) {
+                        List<DocumentSnapshot> snapshotList = queryDocumentSnapshots.getDocuments();
+                        if(snapshotList.get(0).exists()){
+                            List<Map<String, Object>> titles = (List<Map<String, Object>>) snapshotList.get(0).get("exercise");
+                            holder.titleTextView.setText(titles.toString());
+                        }
+
+
 
                     }
                 });
 
+/*
+        FirebaseFirestore.getInstance().collection("notes")
+                .document("mghEXEWaSrNcWbVjRyb9")
+                .get()
+                .addOnCompleteListener(task ->{
+                    if (task.isSuccessful()) {
+                        DocumentSnapshot document = task.getResult();
+                        if (document.exists()) {
+                            List<Map<String, Object>> titles = (List<Map<String, Object>>) document.get("exercise");
+                            String excersize = titles.toString();
+                            holder.titleTextView.setText(excersize);
+                        }
+                    }
+                    });*/
+
+
         if(note.getText() == "") {
-            holder.otherNotesTextView.setText("Inga anteckningar den här dagen");
+            holder.otherNotesTextView.setText("Inga övriga anteckningar den här dagen");
         }
 
         int trainingsession = note.getTrainsession();
@@ -109,9 +127,8 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
     }
 
     class CalenderViewHolder extends RecyclerView.ViewHolder {
-        TextView trainingTypeTextView, feelingTextView, trainingsessionTextView, otherNotesTextView;
+        TextView trainingTypeTextView, feelingTextView, trainingsessionTextView, otherNotesTextView, titleTextView;
         ImageView imageDelete;
-        RecyclerView titlesRecyclerView;
         ImageView feelingImageView, trainsImageView;
         public CalenderViewHolder(@NonNull View itemView, OnDeleteClickListener listener) {
             super(itemView);
@@ -122,7 +139,7 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
             imageDelete = itemView.findViewById(R.id.imagedelNote);
             feelingImageView = itemView.findViewById(R.id.image_feeling);
             trainsImageView = itemView.findViewById(R.id.image_trains);
-            titlesRecyclerView = itemView.findViewById(R.id.calTitles);
+            titleTextView = itemView.findViewById(R.id.calTitleTextView);
 
             imageDelete.setOnClickListener(new View.OnClickListener() {
                 @Override
