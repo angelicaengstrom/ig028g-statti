@@ -30,10 +30,9 @@ public class Settings extends AppCompatActivity {
     private DatabaseReference reference;
 
     private String userID;
-    private Button logout;
+    private Button logout, updateProfileBtn;
 
     ImageView profileImageView;
-    Button updateProfileBtn;
     ProgressBar progressBar;
 
     int TAKE_IMAGE_CODE = 10001;
@@ -48,6 +47,10 @@ public class Settings extends AppCompatActivity {
         updateProfileBtn = (Button) findViewById(R.id.updateProfileBtn);
         profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
+
+
+
+
 
 
 
@@ -66,6 +69,7 @@ public class Settings extends AppCompatActivity {
         final TextView fullNameTextView = (TextView) findViewById(R.id.ViewFullname);
         final TextView emailTextView = (TextView) findViewById(R.id.ViewEmail);
 
+
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener(){
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot){
@@ -77,15 +81,23 @@ public class Settings extends AppCompatActivity {
 
                     fullNameTextView.setText(fullName);
                     emailTextView.setText(email);
+
                 }
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError error){
                 Toast.makeText(Settings.this, "Ett fel har inträffat!", Toast.LENGTH_LONG).show();
 
             }
         });
+        updateProfileBtn.setOnClickListener((view -> {
+            Intent intent1 = new Intent(view.getContext(),profile.class);
+            intent1.putExtra("fullname",fullNameTextView.getText().toString());
+            intent1.putExtra("email", emailTextView.getText().toString());
+            intent1.putExtra("age", "Not sure about the age!");
+
+
+        }));
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
