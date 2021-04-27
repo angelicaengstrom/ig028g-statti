@@ -2,6 +2,7 @@ package com.example.myapplication;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class Note {
 
@@ -75,8 +76,6 @@ public class Note {
     }
 
     public List<Row> getTitles() { return this.titles; }
-
-    //Fixa funktion så att du kan hämta title
 
     public void setTitles(List<Row> titles) { this.titles = titles; }
 
