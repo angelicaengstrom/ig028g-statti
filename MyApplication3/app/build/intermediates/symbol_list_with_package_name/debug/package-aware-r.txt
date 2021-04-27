@@ -1957,7 +1957,7 @@ id button_sign_in
 id cache_measures
 id calDataRecyclerView
 id calTitle
-id calTitles
+id calTitleTextView
 id calendarView
 id calender
 id cancel_action
@@ -2261,7 +2261,6 @@ id scroll
 id scrollIndicatorDown
 id scrollIndicatorUp
 id scrollView
-id scrollView2
 id scrollable
 id search_badge
 id search_bar
