@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="90dp">
+    android:layout_height="wrap_content">
 
     <TextView
         android:id="@+id/trainingTypeTextView"
@@ -62,35 +62,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:tint="#960000"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/calTitleTextView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.984"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.439"
         app:srcCompat="@drawable/ic_baseline_delete_24" />
-
-    <ScrollView
-        android:id="@+id/scrollView2"
-        android:layout_width="381dp"
-        android:layout_height="40dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/otherNotesTextView">
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/calTitles"
-            android:layout_width="371dp"
-            android:layout_height="14dp"
-            android:layout_marginTop="6dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/trainingsessionTextView"
-            app:layout_constraintVertical_bias="1.0" />
-    </ScrollView>
 
     <ImageView
         android:id="@+id/image_trains"
@@ -127,4 +105,17 @@
         app:layout_constraintBottom_toBottomOf="@+id/trainingTypeTextView"
         app:layout_constraintEnd_toStartOf="@+id/image_feeling"
         app:layout_constraintTop_toTopOf="@+id/trainingTypeTextView" />
+
+    <TextView
+        android:id="@+id/calTitleTextView"
+        android:layout_width="313dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_gray"
+        android:text="show:excersises"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/otherNotesTextView"
+        app:layout_constraintVertical_bias="0.866" />
 </androidx.constraintlayout.widget.ConstraintLayout>
