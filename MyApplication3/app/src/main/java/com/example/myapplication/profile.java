@@ -1,5 +1,6 @@
 package com.example.myapplication;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -11,9 +12,15 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
 
+import com.google.android.gms.tasks.OnFailureListener;
+import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.firestore.DocumentReference;
 import com.google.firebase.firestore.FirebaseFirestore;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class profile extends AppCompatActivity {
     public static final String TAG = "TAG";
@@ -59,6 +66,24 @@ public class profile extends AppCompatActivity {
                 return;
             }
                 String email = profileFullName.getText().toString();
+                user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
+                    @Override
+                    public void onSuccess(Void aVoid) {
+                        DocumentReference docRef = fstore.collection("users",).document(user.getUid());
+                        Map<String, Object> edited = new HashMap<>();
+                        edited.put("Email", email);
+                        edited.put("fullName", fullname);
+                        edited.put("age", age);
+
+                        Toast.makeText(profile.this, "E-posten har ändrats", Toast.LENGTH_SHORT).show();
+                    }
+                }).addOnFailureListener(new OnFailureListener() {
+                    @Override
+                    public void onFailure(@NonNull Exception e) {
+                        Toast.makeText(profile.this, "E-posten finns readan", Toast.LENGTH_SHORT).show();
+
+                    }
+                })
         }
         });
 
