@@ -74,6 +74,7 @@ public class profile extends AppCompatActivity {
                         edited.put("Email", email);
                         edited.put("fullName", fullname);
                         edited.put("age", age);
+                        docRef.update(edited);
 
                         Toast.makeText(profile.this, "E-posten har ändrats", Toast.LENGTH_SHORT).show();
                     }
@@ -83,7 +84,7 @@ public class profile extends AppCompatActivity {
                         Toast.makeText(profile.this, "E-posten finns readan", Toast.LENGTH_SHORT).show();
 
                     }
-                })
+                });
         }
         });
 
