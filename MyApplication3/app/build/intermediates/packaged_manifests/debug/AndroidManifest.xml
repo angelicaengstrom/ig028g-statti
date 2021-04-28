@@ -23,7 +23,6 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity android:name="com.example.myapplication.profile" />
-        <activity android:name="com.example.myapplication.settingg" />
         <activity android:name="com.example.myapplication.forgetPassword" />
         <activity
             android:name="com.example.myapplication.registerUser"
