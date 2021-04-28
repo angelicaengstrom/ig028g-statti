@@ -1784,6 +1784,7 @@ drawable fui_idp_button_background_twitter
 drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable graph_background
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
 drawable ic_baseline_arrow_drop_down_24
@@ -2032,7 +2033,7 @@ id easeInOut
 id easeOut
 id editData
 id editPrefix
-id editTextTextPersonName3
+id editProfileImage
 id edit_phone_number
 id edit_query
 id elastic
@@ -2071,16 +2072,12 @@ id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
 id gone
-id graf_condition
-id graf_strength
-id graf_technique
 id graph
 id graph_wrap
 id group_divider
 id grouping
 id groups
 id guideline
-id h1
 id header
 id header_text
 id header_title
@@ -2097,7 +2094,6 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
-id imageView2
 id imageView3
 id imageView4
 id imageView5
@@ -2224,6 +2220,7 @@ id phone_number
 id pin
 id position
 id postLayout
+id profileAge
 id profileEmailAdress
 id profileFullName
 id profileImageView
@@ -2341,7 +2338,6 @@ id textView3
 id textView4
 id textView5
 id textView6
-id textView7
 id textView8
 id text_input_end_icon
 id text_input_error_icon
@@ -2594,6 +2590,7 @@ layout text_view_with_theme_line_height
 layout text_view_without_line_height
 menu menu_navigation
 mipmap ic_launcher
+mipmap ic_launcher_foreground
 mipmap ic_launcher_round
 plurals fui_error_weak_password
 plurals mtrl_badge_content_description
