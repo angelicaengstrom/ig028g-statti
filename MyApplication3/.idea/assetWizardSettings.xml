@@ -81,7 +81,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/Graph.png" />
+                                                <entry key="imagePath" value="$USER_HOME$/Downloads/statti_logo.png" />
                                                 <entry key="scalingPercent" value="109" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
@@ -115,7 +115,7 @@
                                   </option>
                                   <option name="values">
                                     <map>
-                                      <entry key="legacyIconShape" value="NONE" />
+                                      <entry key="legacyIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>
