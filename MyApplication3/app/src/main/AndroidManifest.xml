@@ -10,7 +10,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".profile"></activity>
-        <activity android:name=".settingg" />
         <activity android:name=".forgetPassword" />
         <activity
             android:name=".registerUser"
