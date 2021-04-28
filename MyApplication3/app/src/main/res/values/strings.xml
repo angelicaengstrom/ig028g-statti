@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Träningsapp</string>
+    <string name="app_name">Statti</string>
     <string-array name="trainingType">
         <item>Kondition</item>
         <item>Styrka</item>
