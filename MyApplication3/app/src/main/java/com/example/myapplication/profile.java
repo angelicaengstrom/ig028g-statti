@@ -35,6 +35,7 @@ public class profile extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         fstore = FirebaseFirestore.getInstance();
+        user = auth.getCurrentUser();
 
         profileFullName = findViewById(R.id.profileFullName);
         profileEmail = findViewById(R.id.profileEmailAdress);
@@ -57,7 +58,7 @@ public class profile extends AppCompatActivity {
                     Toast.makeText(profile.this, "En eller flera är tomma", Toast.LENGTH_SHORT).show();
                 return;
             }
-                String email = profileFullName.getText().toString().isEmpty();
+                String email = profileFullName.getText().toString();
         }
         });
 
