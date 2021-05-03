@@ -73,9 +73,6 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
                             List<Map<String, Object>> titles = (List<Map<String, Object>>) snapshotList.get(0).get("exercise");
                             holder.titleTextView.setText(titles.toString());
                         }
-
-
-
                     }
                 });
 
