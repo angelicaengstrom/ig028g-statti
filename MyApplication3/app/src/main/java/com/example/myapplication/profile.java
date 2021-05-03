@@ -69,7 +69,7 @@ public class profile extends AppCompatActivity {
                 user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        DocumentReference docRef = fstore.collection("users",).document(user.getUid());
+                        DocumentReference docRef = fstore.collection("users").document(user.getUid());
                         Map<String, Object> edited = new HashMap<>();
                         edited.put("Email", email);
                         edited.put("fullName", fullname);
