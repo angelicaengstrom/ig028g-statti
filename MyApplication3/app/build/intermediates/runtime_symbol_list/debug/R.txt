@@ -2246,7 +2246,7 @@ int id root 0x7f09018e
 int id rounded 0x7f09018f
 int id rowRecyclerView 0x7f090190
 int id row_index_key 0x7f090191
-int id savInfo 0x7f090192
+int id saveInfo 0x7f090192
 int id saveNoteBtn 0x7f090193
 int id save_non_transition_alpha 0x7f090194
 int id save_overlay_view 0x7f090195
