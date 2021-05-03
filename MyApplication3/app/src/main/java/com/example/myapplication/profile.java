@@ -69,12 +69,19 @@ public class profile extends AppCompatActivity {
                 user.updateEmail(email).addOnSuccessListener(new OnSuccessListener<Void>() {
                     @Override
                     public void onSuccess(Void aVoid) {
-                        DocumentReference docRef = fstore.collection("users",).document(user.getUid());
+                        DocumentReference docRef = fstore.collection("users").document(user.getUid());
                         Map<String, Object> edited = new HashMap<>();
                         edited.put("Email", email);
                         edited.put("fullName", fullname);
                         edited.put("age", age);
-                        docRef.update(edited);
+                        docRef.update(edited).addOnSuccessListener(new OnSuccessListener<Void>() {
+                            @Override
+                            public void onSuccess(Void aVoid) {
+                                Toast.makeText(profile.this, "Profil är uppdaterad", Toast.LENGTH_SHORT).show();
+                                startActivity(new Intent(getApplicationContext(), Settings.class));
+                                finish();
+                            }
+                        });
 
                         Toast.makeText(profile.this, "E-posten har ändrats", Toast.LENGTH_SHORT).show();
                     }

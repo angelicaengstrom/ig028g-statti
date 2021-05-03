@@ -2247,7 +2247,7 @@ id root
 id rounded
 id rowRecyclerView
 id row_index_key
-id savInfo
+id saveInfo
 id saveNoteBtn
 id save_non_transition_alpha
 id save_overlay_view

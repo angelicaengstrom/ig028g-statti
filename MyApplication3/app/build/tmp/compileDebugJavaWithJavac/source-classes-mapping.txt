@@ -8,11 +8,6 @@ com/example/myapplication/RowAdapter.java
  com.example.myapplication.RowAdapter$OnItemClickListener
  com.example.myapplication.RowAdapter$RowViewHolder
  com.example.myapplication.RowAdapter$RowViewHolder$1
-com/example/myapplication/Settings.java
- com.example.myapplication.Settings
- com.example.myapplication.Settings$1
- com.example.myapplication.Settings$2
- com.example.myapplication.Settings$3
 com/example/myapplication/CalenderRecyclerAdapter.java
  com.example.myapplication.CalenderRecyclerAdapter
  com.example.myapplication.CalenderRecyclerAdapter$1
@@ -21,6 +16,11 @@ com/example/myapplication/CalenderRecyclerAdapter.java
  com.example.myapplication.CalenderRecyclerAdapter$OnDeleteClickListener
 com/example/myapplication/Note.java
  com.example.myapplication.Note
+com/example/myapplication/Settings.java
+ com.example.myapplication.Settings
+ com.example.myapplication.Settings$1
+ com.example.myapplication.Settings$2
+ com.example.myapplication.Settings$3
 com/example/myapplication/MainActivity.java
  com.example.myapplication.MainActivity
  com.example.myapplication.MainActivity$1
@@ -62,6 +62,10 @@ com/example/myapplication/CalTitlesRecyclerAdapter.java
 com/example/myapplication/profile.java
  com.example.myapplication.profile
  com.example.myapplication.profile$1
+ com.example.myapplication.profile$2
+ com.example.myapplication.profile$2$1
+ com.example.myapplication.profile$2$2
+ com.example.myapplication.profile$2$2$1
 com/example/myapplication/BuildConfig.java
  com.example.myapplication.BuildConfig
 com/example/myapplication/registerUser.java
