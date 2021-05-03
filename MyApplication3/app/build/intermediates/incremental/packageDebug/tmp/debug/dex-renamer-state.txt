@@ -1,19 +1,10 @@
-#Mon May 03 08:45:01 CEST 2021
+#Mon May 03 09:23:33 CEST 2021
+path.2=classes2.dex
 path.1=classes.dex
 path.0=classes.dex
-renamed.5=classes6.dex
-renamed.4=classes5.dex
-renamed.3=classes4.dex
 renamed.2=classes3.dex
 renamed.1=classes2.dex
 renamed.0=classes.dex
-base.5=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.4=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.3=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-base.2=C\:\\home\\angelicaengstrom\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
-base.1=C\:\\home\\angelicaengstrom\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
-base.0=C\:\\home\\angelicaengstrom\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
-path.5=classes2.dex
-path.4=classes.dex
-path.3=classes.dex
-path.2=classes2.dex
+base.2=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes2.dex
+base.1=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeProjectDexDebug\\classes.dex
+base.0=C\:\\Users\\mahmo\\OneDrive\\Documents\\GitHub\\IPP\\MyApplication3\\app\\build\\intermediates\\dex\\debug\\mergeExtDexDebug\\classes.dex
