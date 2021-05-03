@@ -13,9 +13,9 @@
         android:id="@+id/banner"
         android:layout_width="265dp"
         android:layout_height="75dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="4dp"
         android:gravity="center_horizontal"
-        android:text="Appnamn"
+        android:text="STATTI"
         android:textAlignment="center"
         android:textSize="60sp"
         android:textStyle="bold"
@@ -52,40 +52,42 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="@+id/fullname" />
 
+
     <EditText
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="140dp"
+        android:layout_marginTop="120dp"
         android:ems="10"
         android:hint="E-post"
         android:inputType="textEmailAddress"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/age" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="76dp"
         android:ems="10"
         android:hint="Lösenord"
         android:inputType="textPassword"
         android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/email" />
-
 
     <Button
         android:id="@+id/registerUser"
         android:layout_width="264dp"
         android:layout_height="56dp"
-        android:layout_marginTop="92dp"
+        android:layout_marginTop="72dp"
         android:text="Registera"
         android:textSize="24sp"
         app:backgroundTint="@color/purple_200"
@@ -103,12 +105,11 @@
         android:visibility="invisible"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.939" />
+        app:layout_constraintVertical_bias="1.0" />
 
     <Spinner
         android:id="@+id/spinner"
