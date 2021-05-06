@@ -23,13 +23,13 @@
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
         <activity android:name="com.example.myapplication.profile" />
-        <activity android:name="com.example.myapplication.forgetPassword" />
+        <activity
+            android:name="com.example.myapplication.forgetPassword"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name="com.example.myapplication.registerUser"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity
-            android:name="com.example.myapplication.Settings"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name="com.example.myapplication.Settings" />
         <activity
             android:name="com.example.myapplication.Graph"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
