@@ -29,7 +29,9 @@
         <activity
             android:name="com.example.myapplication.registerUser"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-        <activity android:name="com.example.myapplication.Settings" />
+        <activity
+            android:name="com.example.myapplication.Settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name="com.example.myapplication.Graph"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
