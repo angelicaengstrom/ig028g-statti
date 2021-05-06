@@ -4,98 +4,103 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/background"
     tools:context=".registerUser">
 
-    <!-- android:background="@drawable/photo" -->
 
-
-    <TextView
+    <ImageView
         android:id="@+id/banner"
-        android:layout_width="265dp"
-        android:layout_height="75dp"
+        android:layout_width="179dp"
+        android:layout_height="126dp"
         android:layout_marginTop="4dp"
-        android:gravity="center_horizontal"
-        android:text="STATTI"
-        android:textAlignment="center"
-        android:textSize="60sp"
-        android:textStyle="bold"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/logga" />
+
 
     <EditText
         android:id="@+id/fullname"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white"
         android:ems="10"
-        android:hint="För- pch efternamn"
+        android:hint="För- och efternamn"
         android:inputType="text"
-        android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.495"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@id/banner" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/banner" />
 
     <EditText
         android:id="@+id/age"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white"
         android:ems="10"
         android:hint="Ålder"
         android:inputType="number"
-        android:textSize="24sp"
-        app:layout_constraintHorizontal_bias="0.495"
+        android:padding="5dp"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/fullname" />
-
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fullname" />
 
     <EditText
         android:id="@+id/email"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="120dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white"
         android:ems="10"
         android:hint="E-post"
         android:inputType="textEmailAddress"
-        android:textSize="24sp"
+        android:padding="5dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/age" />
+        app:layout_constraintTop_toBottomOf="@+id/spinner" />
 
     <EditText
         android:id="@+id/password"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/round_white"
         android:ems="10"
-        android:hint="Lösenord"
+        android:hint="Lösenord (minst 8 bokstäver)"
         android:inputType="textPassword"
-        android:textSize="24sp"
+        android:padding="5dp"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/email" />
+        app:layout_constraintTop_toBottomOf="@+id/email" />
 
     <Button
         android:id="@+id/registerUser"
         android:layout_width="264dp"
         android:layout_height="56dp"
-        android:layout_marginTop="72dp"
         android:text="Registera"
+        android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        app:backgroundTint="@color/purple_200"
+        app:backgroundTint="@color/teal_700"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/password" />
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -108,16 +113,62 @@
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0" />
+        app:layout_constraintTop_toBottomOf="@+id/registerUser"
+        app:layout_constraintVertical_bias="0.404" />
 
     <Spinner
         android:id="@+id/spinner"
         android:layout_width="296dp"
         android:layout_height="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/email"
+        android:layout_marginTop="12dp"
+        android:background="@drawable/round_white"
+        style="@android:style/Widget.Holo.ProgressBar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <TextView
+        android:id="@+id/textView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Genom att registrera godkänner du våra"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password" />
+
+    <TextView
+        android:id="@+id/sekretesspolicy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="28dp"
+        android:layout_marginLeft="28dp"
+        android:text="Sekretesspolicy"
+        android:textColor="@color/teal_200"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:text="och vår"
+        android:textColor="#FFFFFF"
+        app:layout_constraintEnd_toStartOf="@+id/anvandarvillkor"
+        app:layout_constraintHorizontal_bias="0.541"
+        app:layout_constraintStart_toEndOf="@+id/sekretesspolicy"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
+
+    <TextView
+        android:id="@+id/anvandarvillkor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:text="Användarvillkor"
+        android:textColor="@color/teal_200"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
