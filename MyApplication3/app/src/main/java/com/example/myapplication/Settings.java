@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
@@ -32,7 +33,6 @@ public class Settings extends AppCompatActivity {
     private String userID;
     private Button logout, updateProfileBtn;
 
-    ImageView profileImageView;
     ProgressBar progressBar;
 
     int TAKE_IMAGE_CODE = 10001;
@@ -43,16 +43,9 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        progressBar = findViewById(R.id.progressBar3);
-        updateProfileBtn = (Button) findViewById(R.id.updateProfileBtn);
-        profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
-
-
-
-
-
-
+        Drawable d = getResources().getDrawable(R.drawable.settingborder);
+        //getActionBar().setBackgroundDrawable(d);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -68,6 +61,8 @@ public class Settings extends AppCompatActivity {
 
         final TextView fullNameTextView = (TextView) findViewById(R.id.ViewFullname);
         final TextView emailTextView = (TextView) findViewById(R.id.ViewEmail);
+        final TextView ageTextView = (TextView) findViewById(R.id.ageTextView);
+        final TextView genderTextView = (TextView) findViewById(R.id.genderTextView);
 
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener(){
@@ -78,9 +73,13 @@ public class Settings extends AppCompatActivity {
                 if(userProfile != null){
                     String fullName = userProfile.fullName;
                     String email = userProfile.Email;
+                    String age = userProfile.age;
+                    String gender = userProfile.Gender;
 
                     fullNameTextView.setText(fullName);
                     emailTextView.setText(email);
+                    ageTextView.setText(age);
+                    genderTextView.setText(gender);
 
                 }
             }
@@ -90,6 +89,7 @@ public class Settings extends AppCompatActivity {
 
             }
         });
+        /*
         updateProfileBtn.setOnClickListener((view -> {
             Intent intent1 = new Intent(view.getContext(),profile.class);
             intent1.putExtra("fullname",fullNameTextView.getText().toString());
@@ -97,7 +97,7 @@ public class Settings extends AppCompatActivity {
             intent1.putExtra("age", "Not sure about the age!");
 
 
-        }));
+        }));*/
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
