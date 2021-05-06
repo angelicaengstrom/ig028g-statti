@@ -7,6 +7,18 @@
     android:background="@drawable/background"
     tools:context=".Settings">
 
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="350dp"
+        android:layout_height="81dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/settingborder" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
         android:layout_width="match_parent"
@@ -19,16 +31,16 @@
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="675dp"
+        android:layout_height="398dp"
         android:layout_above="@+id/bottom_navigation"
+        android:layout_below="@+id/imageView2"
         android:layout_alignParentStart="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginStart="0dp"
         android:layout_marginLeft="0dp"
-        android:layout_marginTop="0dp"
+        android:layout_marginTop="-2dp"
         android:layout_marginEnd="0dp"
         android:layout_marginRight="0dp"
         android:layout_marginBottom="0dp">
@@ -42,7 +54,6 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             android:layout_centerHorizontal="true"
-            android:layout_marginBottom="48dp"
             android:backgroundTint="@color/white"
             android:text="Logga ut"
             android:textColor="#8F8F8F"
@@ -52,7 +63,7 @@
             app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/genderTextView"
-            app:layout_constraintVertical_bias="1.0" />
+            app:layout_constraintVertical_bias="0.891" />
 
         <TextView
             android:id="@+id/ViewFullname"
@@ -61,7 +72,7 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:layout_toEndOf="@+id/profileImageView"
             android:layout_toRightOf="@+id/profileImageView"
             android:text="För- och efternamn"
@@ -69,7 +80,7 @@
             android:textSize="20dp"
             android:textStyle="bold"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
+            app:layout_constraintHorizontal_bias="0.503"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/profileImageView" />
 
@@ -80,15 +91,16 @@
             android:layout_alignParentTop="true"
             android:layout_alignParentEnd="true"
             android:layout_alignParentRight="true"
-            android:layout_marginTop="16dp"
+            android:layout_marginTop="4dp"
             android:layout_toEndOf="@+id/profileImageView"
             android:layout_toRightOf="@+id/profileImageView"
             android:text="E-post"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ViewFullname" />
+
 
         <ImageView
             android:id="@+id/profileImageView"
@@ -98,19 +110,19 @@
             android:layout_alignParentLeft="true"
             android:layout_alignParentTop="true"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             app:srcCompat="@drawable/logga" />
-
 
         <TextView
             android:id="@+id/ageTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:text="Ålder"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
@@ -120,11 +132,12 @@
             android:id="@+id/genderTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="8dp"
             android:text="Kön"
             android:textColor="@color/white"
-            android:textSize="20dp"
+            android:textSize="15dp"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.501"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/ageTextView" />
 
