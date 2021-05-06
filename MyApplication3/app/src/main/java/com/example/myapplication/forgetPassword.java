@@ -5,6 +5,7 @@ package com.example.myapplication;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -23,6 +24,7 @@ import org.w3c.dom.Text;
 public class forgetPassword extends AppCompatActivity {
     private EditText emailEditText;
     private Button resetPasswordButton;
+    private TextView backTextView;
 
     FirebaseAuth auth;
 
@@ -33,6 +35,16 @@ public class forgetPassword extends AppCompatActivity {
 
         emailEditText = (EditText) findViewById(R.id.email);
         resetPasswordButton = (Button) findViewById(R.id.resetPassword);
+        backTextView = (TextView) findViewById(R.id.backTextView);
+
+        Intent intent = new Intent(this, MainActivity.class);
+
+        backTextView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(intent);
+            }
+        });
 
         auth = FirebaseAuth.getInstance();
         resetPasswordButton.setOnClickListener(new View.OnClickListener() {
@@ -42,6 +54,8 @@ public class forgetPassword extends AppCompatActivity {
             }
         });
     }
+
+
     private void resetPassword(){
         String email = emailEditText.getText().toString().trim();
         
