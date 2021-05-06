@@ -18,7 +18,7 @@
 12-->[com.firebaseui:firebase-ui-auth:7.1.1] /home/angelicaengstrom/.gradle/caches/transforms-2/files-2.1/53ec27a34f59064443ec6078c159d4a8/jetified-firebase-ui-auth-7.1.1/AndroidManifest.xml:13:22-64
 13
 14    <application
-14-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:5:5-39:19
+14-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:5:5-41:19
 15        android:name="androidx.multidex.MultiDexApplication"
 16        android:allowBackup="true"
 16-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:6:9-35
@@ -39,56 +39,56 @@
 25        <activity android:name="com.example.myapplication.profile" />
 25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:9-54
 25-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:12:19-42
-26        <activity android:name="com.example.myapplication.forgetPassword" />
-26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:9-52
-26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:19-49
-27        <activity
-27-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:9-16:83
-28            android:name="com.example.myapplication.registerUser"
-28-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:15:13-41
-29            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-29-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:13-80
-30        <activity
-30-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:9-19:83
-31            android:name="com.example.myapplication.Settings"
-31-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:13-37
-32            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-32-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:13-80
+26        <activity
+26-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:9-15:15
+27            android:name="com.example.myapplication.forgetPassword"
+27-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:13:19-49
+28            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+28-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:14:13-80
+29        <activity
+29-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:16:9-18:83
+30            android:name="com.example.myapplication.registerUser"
+30-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:17:13-41
+31            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+31-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:18:13-80
+32        <activity android:name="com.example.myapplication.Settings" />
+32-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:19:9-21:16
+32-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:20:13-37
 33        <activity
-33-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:20:9-22:83
+33-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:22:9-24:83
 34            android:name="com.example.myapplication.Graph"
-34-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:21:13-34
+34-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:23:13-34
 35            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-35-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:22:13-80
+35-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:24:13-80
 36        <activity
-36-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:23:9-25:83
+36-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:25:9-27:83
 37            android:name="com.example.myapplication.Calender"
-37-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:24:13-37
+37-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:26:13-37
 38            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
-38-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:25:13-80
+38-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:27:13-80
 39        <activity
-39-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:26:9-29:59
+39-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:28:9-31:59
 40            android:name="com.example.myapplication.Add"
-40-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:27:13-32
+40-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:29:13-32
 41            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
-41-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:28:13-80
+41-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:30:13-80
 42            android:windowSoftInputMode="adjustNothing" />
-42-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:29:13-56
+42-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:31:13-56
 43        <activity
-43-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:30:9-38:20
+43-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:32:9-40:20
 44            android:name="com.example.myapplication.MainActivity"
-44-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:31:13-41
+44-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:33:13-41
 45            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" >
-45-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:32:13-80
+45-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:34:13-80
 46            <intent-filter>
-46-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:33:13-37:29
+46-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:35:13-39:29
 47                <action android:name="android.intent.action.MAIN" />
-47-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:34:17-69
-47-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:34:25-66
+47-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:36:17-69
+47-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:36:25-66
 48
 49                <category android:name="android.intent.category.LAUNCHER" />
-49-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:36:17-77
-49-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:36:27-74
+49-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:38:17-77
+49-->/home/angelicaengstrom/Documents/GitHub/IPP/MyApplication3/app/src/main/AndroidManifest.xml:38:27-74
 50            </intent-filter>
 51        </activity>
 52
