@@ -18,6 +18,7 @@
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".Settings"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
              />
         <activity
             android:name=".Graph"
