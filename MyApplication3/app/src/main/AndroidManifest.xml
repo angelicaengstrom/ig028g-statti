@@ -10,13 +10,15 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
         <activity android:name=".profile"></activity>
-        <activity android:name=".forgetPassword" />
+        <activity android:name=".forgetPassword"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen"
+            />
         <activity
             android:name=".registerUser"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".Settings"
-            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+             />
         <activity
             android:name=".Graph"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
