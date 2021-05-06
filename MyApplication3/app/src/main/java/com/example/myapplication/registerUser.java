@@ -13,6 +13,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Spinner;
 import android.widget.TextView;
@@ -25,7 +26,8 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class registerUser extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    private TextView banner, registerUser;
+    private TextView registerUser;
+    private ImageView banner;
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword ;
     private ProgressBar progressBar;
 
@@ -40,7 +42,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         setContentView(R.layout.activity_register_user);
 
         mAuth = FirebaseAuth.getInstance();
-        banner= (TextView) findViewById(R.id.banner);
+        banner = (ImageView) findViewById(R.id.banner);
         banner.setOnClickListener(this);
         registerUser = (Button) findViewById(R.id.registerUser);
         registerUser.setOnClickListener(this);
@@ -80,6 +82,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
         String fullName = editTextFullName.getText().toString().trim();
         String age = editTextAge.getText().toString().trim();
+        String gender = spinner.getSelectedItem().toString();
 
 
         if(fullName.isEmpty()){
@@ -114,14 +117,14 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
             return;
         }
 
-
+        Intent intent = new Intent(this, MainActivity.class);
         progressBar.setVisibility(View.VISIBLE);
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
-                            user user = new user(fullName, age, email);
+                            user user = new user(fullName, age, email, gender);
 
                             FirebaseDatabase.getInstance().getReference("Users")
                                     .child(FirebaseAuth.getInstance().getCurrentUser().getUid())  //return the id for the register user
@@ -131,8 +134,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
                                     if (task.isSuccessful()) {
                                         Toast.makeText(registerUser.this, "Användaren har registerats", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
-
-                                        //vidare till
+                                        startActivity(intent);
 
                                     } else {
                                         Toast.makeText(registerUser.this, "Användaren har inte registerat, var snäll försök igen", Toast.LENGTH_LONG).show();
@@ -155,7 +157,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String choice = adapterView.getItemAtPosition(i).toString();
-        Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
     }
 
     @Override
