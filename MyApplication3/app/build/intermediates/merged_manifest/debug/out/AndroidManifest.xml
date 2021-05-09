@@ -22,6 +22,9 @@
         android:supportsRtl="true"
         android:testOnly="true"
         android:theme="@style/Theme.MyApplication" >
+        <activity
+            android:name="com.example.myapplication.CalenderPopUp"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity android:name="com.example.myapplication.profile" />
         <activity
             android:name="com.example.myapplication.forgetPassword"
