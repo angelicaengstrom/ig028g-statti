@@ -63,7 +63,9 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array date
 array gender
+array item
 array trainingType
 attr action
 attr actionBarDivider
@@ -1024,6 +1026,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1232,6 +1235,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1786,12 +1790,15 @@ drawable fui_idp_button_background_twitter
 drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable graph
 drawable graph_background
 drawable graphborder
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
 drawable ic_baseline_arrow_back_24
 drawable ic_baseline_arrow_drop_down_24
+drawable ic_baseline_arrow_left_24
+drawable ic_baseline_arrow_right_24
 drawable ic_baseline_close
 drawable ic_baseline_date_range_24
 drawable ic_baseline_delete_24
@@ -1943,6 +1950,7 @@ id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
 id backTextView
+id backToCalenderBtn
 id banner
 id barrier
 id baseline
@@ -2011,6 +2019,7 @@ id cut
 id dark
 id dataRecyclerView
 id dateBtn
+id dateTextView
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2106,10 +2115,15 @@ id ignore
 id ignoreRequest
 id image
 id imageView
+id imageView10
 id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageView6
+id imageView7
+id imageView8
+id imageView9
 id image_add
 id image_feeling
 id image_remove
@@ -2305,6 +2319,10 @@ id snap
 id snapMargins
 id spacer
 id spinner
+id spinner2
+id spinner3
+id spinner4
+id spinnerTextView
 id spline
 id split_action_bar
 id spread
@@ -2348,6 +2366,13 @@ id textTop
 id textView
 id textView10
 id textView11
+id textView12
+id textView13
+id textView14
+id textView16
+id textView17
+id textView18
+id textView19
 id textView2
 id textView3
 id textView4
@@ -2475,6 +2500,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add
 layout activity_calender
+layout activity_calender_pop_up
 layout activity_forget_password
 layout activity_graph
 layout activity_main
@@ -2589,6 +2615,7 @@ layout notification_template_part_time
 layout select_dialog_item_material
 layout select_dialog_multichoice_material
 layout select_dialog_singlechoice_material
+layout spinner_item
 layout support_simple_spinner_dropdown_item
 layout test_action_chip
 layout test_chip_zero_corner_radius
