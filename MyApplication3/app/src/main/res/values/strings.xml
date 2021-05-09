@@ -11,6 +11,18 @@
         <item>Kvinna</item>
         <item>Annat</item>
     </string-array>
+
+    <string-array name="date">
+        <item>Årsvis</item>
+        <item>Månadsvis</item>
+        <item>Veckovis</item>
+    </string-array>
+
+    <string-array name="item">
+        <item>Kilogram</item>
+        <item>Reps</item>
+        <item>Sets</item>
+    </string-array>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>
