@@ -9,11 +9,10 @@ com/example/myapplication/RowAdapter.java
  com.example.myapplication.RowAdapter$OnItemClickListener
  com.example.myapplication.RowAdapter$RowViewHolder
  com.example.myapplication.RowAdapter$RowViewHolder$1
-com/example/myapplication/Settings.java
- com.example.myapplication.Settings
- com.example.myapplication.Settings$1
- com.example.myapplication.Settings$2
- com.example.myapplication.Settings$3
+com/example/myapplication/registerUser.java
+ com.example.myapplication.registerUser
+ com.example.myapplication.registerUser$1
+ com.example.myapplication.registerUser$1$1
 com/example/myapplication/CalenderRecyclerAdapter.java
  com.example.myapplication.CalenderRecyclerAdapter
  com.example.myapplication.CalenderRecyclerAdapter$1
@@ -34,13 +33,31 @@ com/example/myapplication/DataAdapter.java
  com.example.myapplication.DataAdapter$ViewHolder$1
 com/example/myapplication/user.java
  com.example.myapplication.user
+com/example/myapplication/CalenderPopUp.java
+ com.example.myapplication.CalenderPopUp
+ com.example.myapplication.CalenderPopUp$1
+ com.example.myapplication.CalenderPopUp$2
+ com.example.myapplication.CalenderPopUp$3
+ com.example.myapplication.CalenderPopUp$3$1
+com/example/myapplication/Data.java
+ com.example.myapplication.Data
+com/example/myapplication/Row.java
+ com.example.myapplication.Row
+com/example/myapplication/CalTitlesRecyclerAdapter.java
+ com.example.myapplication.CalTitlesRecyclerAdapter
+ com.example.myapplication.CalTitlesRecyclerAdapter$CalTitlesViewHolder
+com/example/myapplication/profile.java
+ com.example.myapplication.profile
+ com.example.myapplication.profile$1
+ com.example.myapplication.profile$2
+ com.example.myapplication.profile$2$1
+ com.example.myapplication.profile$2$2
+com/example/myapplication/BuildConfig.java
+ com.example.myapplication.BuildConfig
 com/example/myapplication/Calender.java
  com.example.myapplication.Calender
  com.example.myapplication.Calender$1
  com.example.myapplication.Calender$2
- com.example.myapplication.Calender$3
- com.example.myapplication.Calender$4
- com.example.myapplication.Calender$4$1
 com/example/myapplication/Add.java
  com.example.myapplication.Add
  com.example.myapplication.Add$1
@@ -57,22 +74,8 @@ com/example/myapplication/Add.java
 com/example/myapplication/Graph.java
  com.example.myapplication.Graph
  com.example.myapplication.Graph$1
-com/example/myapplication/CalTitlesRecyclerAdapter.java
- com.example.myapplication.CalTitlesRecyclerAdapter
- com.example.myapplication.CalTitlesRecyclerAdapter$CalTitlesViewHolder
-com/example/myapplication/profile.java
- com.example.myapplication.profile
- com.example.myapplication.profile$1
- com.example.myapplication.profile$2
- com.example.myapplication.profile$2$1
- com.example.myapplication.profile$2$2
-com/example/myapplication/BuildConfig.java
- com.example.myapplication.BuildConfig
-com/example/myapplication/registerUser.java
- com.example.myapplication.registerUser
- com.example.myapplication.registerUser$1
- com.example.myapplication.registerUser$1$1
-com/example/myapplication/Row.java
- com.example.myapplication.Row
-com/example/myapplication/Data.java
- com.example.myapplication.Data
+com/example/myapplication/Settings.java
+ com.example.myapplication.Settings
+ com.example.myapplication.Settings$1
+ com.example.myapplication.Settings$2
+ com.example.myapplication.Settings$3
