@@ -191,6 +191,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
         });
 
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(this, MainActivity.class));
+            this.finish();
+        }
+
 
         mAuth = FirebaseAuth.getInstance();
 
