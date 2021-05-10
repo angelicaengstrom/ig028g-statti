@@ -348,7 +348,7 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         @Override
         public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
             new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                    .addBackgroundColor(ContextCompat.getColor(Add.this, R.color.teal_700))
+                    .addBackgroundColor(ContextCompat.getColor(Add.this, R.color.green))
                     .addActionIcon(R.drawable.ic_baseline_delete_24)
                     .create()
                     .decorate();
