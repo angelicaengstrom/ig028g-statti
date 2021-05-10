@@ -95,7 +95,7 @@
         android:text="Registera"
         android:textColor="@android:color/background_light"
         android:textSize="24sp"
-        app:backgroundTint="@color/teal_700"
+        app:backgroundTint="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -144,7 +144,7 @@
         android:layout_marginStart="28dp"
         android:layout_marginLeft="28dp"
         android:text="Sekretesspolicy"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/green"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
@@ -167,7 +167,7 @@
         android:layout_marginEnd="28dp"
         android:layout_marginRight="28dp"
         android:text="Användarvillkor"
-        android:textColor="@color/teal_200"
+        android:textColor="@color/green"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView9" />
 
