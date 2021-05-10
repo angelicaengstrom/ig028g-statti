@@ -31,7 +31,7 @@ public class Settings extends AppCompatActivity {
     private DatabaseReference reference;
 
     private String userID;
-    private Button logout, updateProfileBtn;
+    private Button logout;
 
     ProgressBar progressBar;
 
@@ -44,14 +44,15 @@ public class Settings extends AppCompatActivity {
         setContentView(R.layout.activity_settings);
 
         logout = (Button) findViewById(R.id.logoutbtn);
-        Drawable d = getResources().getDrawable(R.drawable.settingborder);
-        //getActionBar().setBackgroundDrawable(d);
+
+        Intent intent = new Intent(this, MainActivity.class);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 FirebaseAuth.getInstance().signOut();
                 finish();
+                startActivity(intent);
             }
         });
 
@@ -89,15 +90,6 @@ public class Settings extends AppCompatActivity {
 
             }
         });
-        /*
-        updateProfileBtn.setOnClickListener((view -> {
-            Intent intent1 = new Intent(view.getContext(),profile.class);
-            intent1.putExtra("fullname",fullNameTextView.getText().toString());
-            intent1.putExtra("email", emailTextView.getText().toString());
-            intent1.putExtra("age", "Not sure about the age!");
-
-
-        }));*/
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -127,27 +119,4 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
-
-    public void updateProfile(View view) {
-    }
-    /*
-    public void handleImageClick(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null){
-            startActivityForResult(intent, TAKE_IMAGE_CODE);
-        }
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == TAKE_IMAGE_CODE) {
-            switch(resultCode){
-                case RESULT_OK:
-                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                    profileImageView.setI
-            }
-        }
-    }*/
 }
