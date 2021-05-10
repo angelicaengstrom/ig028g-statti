@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:layout_width="match_parent"
+    android:layout_width="289dp"
     android:layout_height="wrap_content"
+    android:background="#00000000"
     android:orientation="horizontal"
     android:paddingTop="5dp"
     android:paddingBottom="5dp">
@@ -15,31 +15,31 @@
         android:layout_marginLeft="10dp"
         android:layout_marginRight="5dp"
         android:layout_weight="1"
-        android:background="@drawable/round_gray"
+        android:background="@drawable/round_white"
         android:inputType="number|numberDecimal"
         android:paddingLeft="10dp"
+        android:textColor="#353535"
         android:textSize="14sp" />
 
     <EditText
         android:id="@+id/editPrefix"
-        android:layout_width="186dp"
+        android:layout_width="164dp"
         android:layout_height="31dp"
-        android:background="@drawable/round_gray"
+        android:background="@drawable/round_white"
         android:inputType="textShortMessage|textPersonName"
         android:paddingLeft="10dp"
+        android:textColor="#353535"
         android:textSize="14sp" />
 
 
-
-    
     <ImageView
         android:id="@+id/image_remove"
         android:layout_width="25dp"
         android:layout_height="25dp"
-        android:src="@drawable/ic_baseline_close"
-        app:tint="@color/black"
         android:layout_gravity="center_vertical"
         android:layout_marginLeft="5dp"
-        android:layout_marginRight="10dp"/>
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_baseline_close"
+        app:tint="@color/white" />
 
 </LinearLayout>
