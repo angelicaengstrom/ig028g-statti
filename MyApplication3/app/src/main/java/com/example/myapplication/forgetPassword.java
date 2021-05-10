@@ -60,7 +60,7 @@ public class forgetPassword extends AppCompatActivity {
         String email = emailEditText.getText().toString().trim();
         
         if(email.isEmpty()){
-            emailEditText.setError("Du har inte skrivit något e-post");
+            emailEditText.setError("E-post måste skrivas");
             emailEditText.requestFocus();
             return;
         }
@@ -73,7 +73,7 @@ public class forgetPassword extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<Void> task) {
                 if (task.isSuccessful()){
-                    Toast.makeText(forgetPassword.this, "Var snäll *check* ditt epost", Toast.LENGTH_LONG).show();
+                    Toast.makeText(forgetPassword.this, "Ett mail har skickats till din E-post", Toast.LENGTH_LONG).show();
                 }else{
                     Toast.makeText(forgetPassword.this,"Något fel har inträffat, försök igen senare",Toast.LENGTH_LONG).show();
                 }
