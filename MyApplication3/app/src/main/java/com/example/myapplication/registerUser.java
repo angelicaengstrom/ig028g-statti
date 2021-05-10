@@ -23,6 +23,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class registerUser extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
@@ -132,8 +133,12 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
                                 @Override
                                 public void onComplete(@NonNull Task<Void> task) {
                                     if (task.isSuccessful()) {
-                                        Toast.makeText(registerUser.this, "Användaren har registerats", Toast.LENGTH_LONG).show();
+                                        Toast.makeText(registerUser.this, "Användaren har registerats, verifiera ditt konto på din e-post", Toast.LENGTH_LONG).show();
                                         progressBar.setVisibility(View.GONE);
+
+                                        FirebaseUser firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
+                                        firebaseUser.sendEmailVerification();
+
                                         startActivity(intent);
 
                                     } else {
@@ -157,7 +162,6 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
     @Override
     public void onItemSelected(AdapterView<?> adapterView, View view, int i, long l) {
         String choice = adapterView.getItemAtPosition(i).toString();
-        //Toast.makeText(getApplicationContext(), choice, Toast.LENGTH_LONG).show();
     }
 
     @Override
