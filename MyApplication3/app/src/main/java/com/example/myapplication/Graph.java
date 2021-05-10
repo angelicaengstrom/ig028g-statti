@@ -12,6 +12,7 @@ import android.widget.Button;
 import android.widget.Spinner;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class Graph extends AppCompatActivity {
 
@@ -39,8 +40,12 @@ public class Graph extends AppCompatActivity {
         spinner3.setAdapter(adapter3);
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
-
         bottomNavigationView.setSelectedItemId(R.id.graph);
+
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(this, MainActivity.class));
+            this.finish();
+        }
 
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
