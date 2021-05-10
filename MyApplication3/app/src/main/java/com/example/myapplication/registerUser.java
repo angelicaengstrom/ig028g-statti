@@ -85,7 +85,6 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
         String age = editTextAge.getText().toString().trim();
         String gender = spinner.getSelectedItem().toString();
 
-
         if(fullName.isEmpty()){
             editTextFullName.setError("Namnet måste skrivas");
             editTextFullName.requestFocus();
@@ -120,6 +119,7 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
 
         Intent intent = new Intent(this, MainActivity.class);
         progressBar.setVisibility(View.VISIBLE);
+
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(new OnCompleteListener<AuthResult>() {
                     @Override
@@ -150,13 +150,9 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
                         } else {
                             Toast.makeText(registerUser.this, "Användaren har inte registerat, var snäll försök igen", Toast.LENGTH_LONG).show();
                             progressBar.setVisibility(View.GONE);
-
                         }
                     }
                 });
-
-
-
     }
 
     @Override
