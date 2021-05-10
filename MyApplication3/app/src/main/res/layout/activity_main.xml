@@ -79,10 +79,10 @@
         android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/forgotPassword"
-        app:layout_constraintHorizontal_bias="0.037"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signIn"
-        app:layout_constraintVertical_bias="0.04" />
+        app:layout_constraintVertical_bias="0.0" />
 
     <TextView
         android:id="@+id/forgotPassword"
@@ -92,10 +92,10 @@
         android:textColor="@android:color/darker_gray"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.744"
+        app:layout_constraintHorizontal_bias="0.741"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/signIn"
-        app:layout_constraintVertical_bias="0.175" />
+        app:layout_constraintVertical_bias="0.136" />
 
     <ProgressBar
         android:id="@+id/progressBar2"
