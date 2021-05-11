@@ -173,10 +173,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         fab.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + spinner.getSelectedItem().toString()
-                        + dateBtn.getText());
-
                         addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
                                 trainsessionSeekbar.getProgress(), spinner.getSelectedItem().toString(),
                                 dateBtn.getText().toString(), titles);
@@ -318,7 +314,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "onSuccess: Succesfully added the note");
                         Toast.makeText(Add.this, "Bra jobbat!", Toast.LENGTH_SHORT).show();
                     }
                 })
