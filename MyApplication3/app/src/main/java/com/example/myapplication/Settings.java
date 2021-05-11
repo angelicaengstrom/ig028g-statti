@@ -29,14 +29,8 @@ import com.google.firebase.database.ValueEventListener;
 public class Settings extends AppCompatActivity {
     private FirebaseUser user;
     private DatabaseReference reference;
-
     private String userID;
     private Button logout;
-
-    ProgressBar progressBar;
-
-    int TAKE_IMAGE_CODE = 10001;
-
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -87,7 +81,6 @@ public class Settings extends AppCompatActivity {
             @Override
             public void onCancelled(@NonNull DatabaseError error){
                 Toast.makeText(Settings.this, "Ett fel har inträffat!", Toast.LENGTH_LONG).show();
-
             }
         });
 
