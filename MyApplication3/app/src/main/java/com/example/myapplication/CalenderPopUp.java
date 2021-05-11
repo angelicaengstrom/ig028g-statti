@@ -40,7 +40,7 @@ public class CalenderPopUp extends AppCompatActivity implements FirebaseAuth.Aut
         String userId = FirebaseAuth.getInstance().getCurrentUser().getUid();
         String date = Calender.date;
         dateTextView.setText(date);
-        initRecyclerView(userId, date);
+        showNote(userId, date);
 
         goBack.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -82,7 +82,7 @@ public class CalenderPopUp extends AppCompatActivity implements FirebaseAuth.Aut
                 });
 
     }
-    private void initRecyclerView(String user, String date){
+    private void showNote(String user, String date){
         Query query = FirebaseFirestore.getInstance()
                 .collection("notes")
                 .whereEqualTo("userId", user)
