@@ -7,9 +7,6 @@
     android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
-    <!-- android:background="@drawable/photo" -->
-
     <EditText
         android:id="@+id/email"
         android:layout_width="300dp"
