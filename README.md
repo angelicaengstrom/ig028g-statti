@@ -8,20 +8,12 @@ If logged in the user can make a adaptable note and view it on the calender. The
 
 Because android is very buggy on my computer the android SDK is the worst phone that could be selected. Nexus One. Thats why the screen is so small.
 
-The login page:
+The current application:
+
+
 <img width="125" alt="app_login" src="https://user-images.githubusercontent.com/78786414/119404406-0bb46500-bce0-11eb-8280-8188e7284aa5.png">
-
-The register page:
 <img width="125" alt="app_register" src="https://user-images.githubusercontent.com/78786414/119404424-13740980-bce0-11eb-8b8f-1a5a7bd9ba54.png">
-
-The forgot password page:
 <img width="127" alt="app_forgot" src="https://user-images.githubusercontent.com/78786414/119404429-15d66380-bce0-11eb-8ae7-6cf0eb6bd337.png">
-
-The notewriting page:
 <img width="251" alt="app_note2" src="https://user-images.githubusercontent.com/78786414/119404449-1c64db00-bce0-11eb-84c0-b6a261067b5a.png">
-
-The calender page:
 <img width="253" alt="app_calender2" src="https://user-images.githubusercontent.com/78786414/119404458-1f5fcb80-bce0-11eb-9968-5664208a8f93.png">
-
-The logout page:
 <img width="126" alt="app_settings" src="https://user-images.githubusercontent.com/78786414/119404473-2555ac80-bce0-11eb-96fc-dfffa4da64ef.png">
