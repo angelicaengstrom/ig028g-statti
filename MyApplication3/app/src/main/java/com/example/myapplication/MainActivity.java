@@ -35,7 +35,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-
         register = (TextView) findViewById(R.id.register);
         register.setOnClickListener(this);
 
@@ -51,7 +50,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         forgotPassword = (TextView) findViewById(R.id.forgotPassword);
         forgotPassword.setOnClickListener(this);
 
-        //gör att personen inte kan komma tillbaka till login
         if(FirebaseAuth.getInstance().getCurrentUser() != null){
             startActivity(new Intent(this, Add.class));
             this.finish();
@@ -71,7 +69,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
             case R.id.forgotPassword:
                 startActivity(new Intent(this, forgetPassword.class));
-
         }
     }
 
@@ -80,23 +77,23 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         String password = editTextPassword.getText().toString().trim();
 
         if (email.isEmpty()){
-            editTextEmail.setError("Du måste skriva ditt email för att logga in");
+            editTextEmail.setError("Detta fält får inte vara tomt");
             editTextEmail.requestFocus();
             return;
         }
         if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            editTextEmail.setError("Du har skrivit fel email, var snäll försök igen");
+            editTextEmail.setError("Denna e-post existerar inte i systemet");
             editTextEmail.requestFocus();
             return;
         }
         if (password.isEmpty()) {
-            editTextPassword.setError("Du måste skriva lösenord");
+            editTextPassword.setError("Detta fält får inte vara tomt");
             editTextPassword.requestFocus();
             return;
 
         }
         if(password.length()< 8){
-            editTextPassword.setError("Lösenordet är fel, försök igen");
+            editTextPassword.setError("Lösenordet är i fel format");
             editTextPassword.requestFocus();
             return;
         }

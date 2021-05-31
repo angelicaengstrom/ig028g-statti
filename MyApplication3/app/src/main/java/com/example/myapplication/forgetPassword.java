@@ -55,7 +55,6 @@ public class forgetPassword extends AppCompatActivity {
         });
     }
 
-
     private void resetPassword(){
         String email = emailEditText.getText().toString().trim();
         
@@ -64,8 +63,8 @@ public class forgetPassword extends AppCompatActivity {
             emailEditText.requestFocus();
             return;
         }
-        if (Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            emailEditText.setError("Du skrev fel e-post");
+        if (!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
+            emailEditText.setError("Denna e-post existerar inte i systemet");
             emailEditText.requestFocus();
             return;
         }

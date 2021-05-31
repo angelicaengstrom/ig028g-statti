@@ -73,6 +73,11 @@ public class Calender extends AppCompatActivity {
             }
         });
 
+        if(FirebaseAuth.getInstance().getCurrentUser() == null){
+            startActivity(new Intent(this, MainActivity.class));
+            this.finish();
+        }
+
         //Navigeringsmeny
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
         bottomNavigationView.setSelectedItemId(R.id.calender);

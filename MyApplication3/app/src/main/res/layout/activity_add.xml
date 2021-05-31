@@ -305,7 +305,7 @@
                 android:layout_alignParentEnd="true"
                 android:layout_alignParentRight="true"
                 android:layout_alignParentBottom="true"
-                android:background="#353535"
+                android:background="@color/white"
                 android:paddingLeft="10dp"
                 android:paddingRight="10dp"
                 android:text="Spara Anteckning"

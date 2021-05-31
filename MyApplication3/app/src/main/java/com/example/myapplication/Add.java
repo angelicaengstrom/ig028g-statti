@@ -61,7 +61,6 @@ import java.util.Map;
 import it.xabaras.android.recyclerview.swipedecorator.RecyclerViewSwipeDecorator;
 
 public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateListener, AdapterView.OnItemSelectedListener {
-    private FirebaseAuth mAuth;
     private static final String TAG = "Add";
     private EditText otherNoteEditText;
     private Button dateBtn;
@@ -98,7 +97,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         spinner.setAdapter(adapter);
         spinner.setOnItemSelectedListener(this);
 
-
         //Add exercises
         Button addRow = findViewById(R.id.newTrainsessionBtn);
 
@@ -120,7 +118,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         rowRecyclerAdapter.setOnItemClickListener(new RowAdapter.OnItemClickListener() {
             @Override
             public void onItemClick(int position) {
-                Log.d("demo", "onClick: position = " + position);
                 titles.get(position).addTitleItem(new Data());
                 rowRecyclerView.setAdapter(rowRecyclerAdapter);
             }
@@ -147,7 +144,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                         titleInput.setHint("ex. Fotboll");
                         break;
                 }
-
                 newTitle.setView(titleInput).setPositiveButton("OK", new DialogInterface.OnClickListener() {
                     @Override
                     public void onClick(DialogInterface dialog, int which) {
@@ -169,14 +165,10 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
 
 
         //Save Note
-        Button fab = findViewById(R.id.saveNoteBtn);
-        fab.setOnClickListener(new View.OnClickListener() {
+        Button save = findViewById(R.id.saveNoteBtn);
+        save.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        Log.d(TAG, "onClick: " + otherNoteEditText.getText()
-                        + feelingSeekbar.getProgress() + trainsessionSeekbar.getProgress() + spinner.getSelectedItem().toString()
-                        + dateBtn.getText());
-
                         addNote(otherNoteEditText.getText().toString(), feelingSeekbar.getProgress(),
                                 trainsessionSeekbar.getProgress(), spinner.getSelectedItem().toString(),
                                 dateBtn.getText().toString(), titles);
@@ -190,9 +182,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                     }
 
         });
-
-
-        mAuth = FirebaseAuth.getInstance();
 
         //Navigation menu
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -313,7 +302,6 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
                 .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
                     @Override
                     public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "onSuccess: Succesfully added the note");
                         Toast.makeText(Add.this, "Bra jobbat!", Toast.LENGTH_SHORT).show();
                     }
                 })
