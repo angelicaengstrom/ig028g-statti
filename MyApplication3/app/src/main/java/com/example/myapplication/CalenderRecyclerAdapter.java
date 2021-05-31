@@ -73,27 +73,8 @@ public class CalenderRecyclerAdapter extends FirestoreRecyclerAdapter<Note, Cale
                             List<Map<String, Object>> titles = (List<Map<String, Object>>) snapshotList.get(0).get("exercise");
                             holder.titleTextView.setText(titles.toString());
                         }
-
-
-
                     }
                 });
-
-/*
-        FirebaseFirestore.getInstance().collection("notes")
-                .document("mghEXEWaSrNcWbVjRyb9")
-                .get()
-                .addOnCompleteListener(task ->{
-                    if (task.isSuccessful()) {
-                        DocumentSnapshot document = task.getResult();
-                        if (document.exists()) {
-                            List<Map<String, Object>> titles = (List<Map<String, Object>>) document.get("exercise");
-                            String excersize = titles.toString();
-                            holder.titleTextView.setText(excersize);
-                        }
-                    }
-                    });*/
-
 
         if(note.getText() == "") {
             holder.otherNotesTextView.setText("Inga övriga anteckningar den här dagen");

@@ -63,7 +63,9 @@ animator mtrl_fab_hide_motion_spec
 animator mtrl_fab_show_motion_spec
 animator mtrl_fab_transformation_sheet_collapse_spec
 animator mtrl_fab_transformation_sheet_expand_spec
+array date
 array gender
+array item
 array trainingType
 attr action
 attr actionBarDivider
@@ -1024,6 +1026,7 @@ color background_floating_material_light
 color background_material_dark
 color background_material_light
 color black
+color blue
 color bright_foreground_disabled_material_dark
 color bright_foreground_disabled_material_light
 color bright_foreground_inverse_material_dark
@@ -1111,6 +1114,7 @@ color fui_bgTwitter
 color fui_buttonShadow
 color fui_linkColor
 color fui_transparent
+color green
 color highlighted_text_material_dark
 color highlighted_text_material_light
 color material_blue_grey_800
@@ -1232,6 +1236,7 @@ color test_mtrl_calendar_day_selected
 color tooltip_background_dark
 color tooltip_background_light
 color white
+color yellow
 dimen abc_action_bar_content_inset_material
 dimen abc_action_bar_content_inset_with_nav
 dimen abc_action_bar_default_height_material
@@ -1728,6 +1733,7 @@ drawable abc_textfield_search_material
 drawable abc_vector_test
 drawable avd_hide_password
 drawable avd_show_password
+drawable background
 drawable btn_checkbox_checked_mtrl
 drawable btn_checkbox_checked_to_unchecked_mtrl_animation
 drawable btn_checkbox_unchecked_mtrl
@@ -1736,6 +1742,7 @@ drawable btn_radio_off_mtrl
 drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
+drawable calenderborder
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -1784,11 +1791,17 @@ drawable fui_idp_button_background_twitter
 drawable fui_idp_button_background_yahoo
 drawable googleg_disabled_color_18
 drawable googleg_standard_color_18
+drawable graph
 drawable graph_background
+drawable graphborder
 drawable ic_baseline_add_24
 drawable ic_baseline_add_photo_alternate_24
+drawable ic_baseline_arrow_back_24
 drawable ic_baseline_arrow_drop_down_24
+drawable ic_baseline_arrow_left_24
+drawable ic_baseline_arrow_right_24
 drawable ic_baseline_close
+drawable ic_baseline_create_24
 drawable ic_baseline_date_range_24
 drawable ic_baseline_delete_24
 drawable ic_baseline_event_note_24
@@ -1805,6 +1818,7 @@ drawable ic_mtrl_checked_circle
 drawable ic_mtrl_chip_checked_black
 drawable ic_mtrl_chip_checked_circle
 drawable ic_mtrl_chip_close_circle
+drawable logga
 drawable material_cursor_drawable
 drawable material_ic_calendar_black_24dp
 drawable material_ic_clear_black_24dp
@@ -1825,6 +1839,7 @@ drawable mtrl_popupmenu_background
 drawable mtrl_popupmenu_background_dark
 drawable mtrl_tabs_default_indicator
 drawable navigation_empty_icon
+drawable noteborder
 drawable notification_action_background
 drawable notification_bg
 drawable notification_bg_low
@@ -1842,6 +1857,7 @@ drawable round_gray
 drawable round_primary
 drawable round_white
 drawable selector
+drawable settingborder
 drawable test_custom_background
 drawable tooltip_frame_dark
 drawable tooltip_frame_light
@@ -1919,6 +1935,7 @@ id add
 id adjust_height
 id adjust_width
 id age
+id ageTextView
 id alertTitle
 id aligned
 id all
@@ -1926,6 +1943,7 @@ id always
 id animateToEnd
 id animateToStart
 id anonymous_button
+id anvandarvillkor
 id apple_signin_button
 id asConfigured
 id async
@@ -1933,6 +1951,8 @@ id auto
 id autoComplete
 id autoCompleteToEnd
 id autoCompleteToStart
+id backTextView
+id backToCalenderBtn
 id banner
 id barrier
 id baseline
@@ -2001,6 +2021,7 @@ id cut
 id dark
 id dataRecyclerView
 id dateBtn
+id dateTextView
 id date_picker_actions
 id decelerate
 id decelerateAndComplete
@@ -2068,6 +2089,7 @@ id fragment_container_view_tag
 id fragment_phone
 id fragment_register_email
 id fullname
+id genderTextView
 id ghost_view
 id ghost_view_holder
 id glide_custom_view_target_tag
@@ -2094,9 +2116,17 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageView
+id imageView10
+id imageView11
+id imageView2
 id imageView3
 id imageView4
 id imageView5
+id imageView6
+id imageView7
+id imageView8
+id imageView9
 id image_add
 id image_feeling
 id image_remove
@@ -2226,7 +2256,6 @@ id profileFullName
 id profileImageView
 id progressBar
 id progressBar2
-id progressBar3
 id progress_circular
 id progress_horizontal
 id radio
@@ -2269,6 +2298,7 @@ id search_mag_icon
 id search_plate
 id search_src_text
 id search_voice_btn
+id sekretesspolicy
 id select_dialog_listview
 id selected
 id selection_type
@@ -2292,6 +2322,9 @@ id snap
 id snapMargins
 id spacer
 id spinner
+id spinner2
+id spinner3
+id spinner4
 id spline
 id split_action_bar
 id spread
@@ -2333,12 +2366,22 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textView
+id textView10
+id textView11
+id textView12
+id textView13
+id textView14
+id textView16
+id textView17
+id textView18
+id textView19
 id textView2
 id textView3
 id textView4
-id textView5
 id textView6
+id textView7
 id textView8
+id textView9
 id text_input_end_icon
 id text_input_error_icon
 id text_input_start_icon
@@ -2378,7 +2421,6 @@ id unchecked
 id uniform
 id unlabeled
 id up
-id updateProfileBtn
 id useLogo
 id view_offset_helper
 id visible
@@ -2459,6 +2501,7 @@ layout abc_select_dialog_material
 layout abc_tooltip
 layout activity_add
 layout activity_calender
+layout activity_calender_pop_up
 layout activity_forget_password
 layout activity_graph
 layout activity_main
@@ -3112,6 +3155,8 @@ style MaterialAlertDialog_MaterialComponents_Title_Panel
 style MaterialAlertDialog_MaterialComponents_Title_Panel_CenterStacked
 style MaterialAlertDialog_MaterialComponents_Title_Text
 style MaterialAlertDialog_MaterialComponents_Title_Text_CenterStacked
+style MyActionBar
+style MyTheme
 style Platform_AppCompat
 style Platform_AppCompat_Light
 style Platform_MaterialComponents

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.graphics.Bitmap;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.provider.MediaStore;
 import android.view.MenuItem;
@@ -30,9 +31,8 @@ public class Settings extends AppCompatActivity {
     private DatabaseReference reference;
 
     private String userID;
-    private Button logout, updateProfileBtn;
+    private Button logout;
 
-    ImageView profileImageView;
     ProgressBar progressBar;
 
     int TAKE_IMAGE_CODE = 10001;
@@ -43,22 +43,16 @@ public class Settings extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_settings);
 
-        progressBar = findViewById(R.id.progressBar3);
-        updateProfileBtn = (Button) findViewById(R.id.updateProfileBtn);
-        profileImageView = (ImageView) findViewById(R.id.profileImageView);
         logout = (Button) findViewById(R.id.logoutbtn);
 
-
-
-
-
-
+        Intent intent = new Intent(this, MainActivity.class);
 
         logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v){
                 FirebaseAuth.getInstance().signOut();
                 finish();
+                startActivity(intent);
             }
         });
 
@@ -68,6 +62,8 @@ public class Settings extends AppCompatActivity {
 
         final TextView fullNameTextView = (TextView) findViewById(R.id.ViewFullname);
         final TextView emailTextView = (TextView) findViewById(R.id.ViewEmail);
+        final TextView ageTextView = (TextView) findViewById(R.id.ageTextView);
+        final TextView genderTextView = (TextView) findViewById(R.id.genderTextView);
 
 
         reference.child(userID).addListenerForSingleValueEvent(new ValueEventListener(){
@@ -78,9 +74,13 @@ public class Settings extends AppCompatActivity {
                 if(userProfile != null){
                     String fullName = userProfile.fullName;
                     String email = userProfile.Email;
+                    String age = userProfile.age;
+                    String gender = userProfile.Gender;
 
                     fullNameTextView.setText(fullName);
                     emailTextView.setText(email);
+                    ageTextView.setText(age);
+                    genderTextView.setText(gender);
 
                 }
             }
@@ -90,14 +90,6 @@ public class Settings extends AppCompatActivity {
 
             }
         });
-        updateProfileBtn.setOnClickListener((view -> {
-            Intent intent1 = new Intent(view.getContext(),profile.class);
-            intent1.putExtra("fullname",fullNameTextView.getText().toString());
-            intent1.putExtra("email", emailTextView.getText().toString());
-            intent1.putExtra("age", "Not sure about the age!");
-
-
-        }));
 
 
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
@@ -127,27 +119,4 @@ public class Settings extends AppCompatActivity {
             }
         });
     }
-
-    public void updateProfile(View view) {
-    }
-    /*
-    public void handleImageClick(View view) {
-        Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
-        if (intent.resolveActivity(getPackageManager()) != null){
-            startActivityForResult(intent, TAKE_IMAGE_CODE);
-        }
-    }
-
-
-    @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-        if(requestCode == TAKE_IMAGE_CODE) {
-            switch(resultCode){
-                case RESULT_OK:
-                    Bitmap bitmap = (Bitmap) data.getExtras().get("data");
-                    profileImageView.setI
-            }
-        }
-    }*/
 }

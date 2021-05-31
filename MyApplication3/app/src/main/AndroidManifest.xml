@@ -9,8 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MyApplication">
-        <activity android:name=".profile"></activity>
-        <activity android:name=".forgetPassword" />
+        <activity android:name=".CalenderPopUp"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
+        <activity android:name=".profile" />
+        <activity
+            android:name=".forgetPassword"
+            android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />
         <activity
             android:name=".registerUser"
             android:theme="@style/Theme.AppCompat.Light.NoActionBar.FullScreen" />

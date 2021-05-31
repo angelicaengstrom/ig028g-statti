@@ -348,66 +348,11 @@ public class Add extends AppCompatActivity implements FirebaseAuth.AuthStateList
         @Override
         public void onChildDraw(@NonNull Canvas c, @NonNull RecyclerView recyclerView, @NonNull RecyclerView.ViewHolder viewHolder, float dX, float dY, int actionState, boolean isCurrentlyActive) {
             new RecyclerViewSwipeDecorator.Builder(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive)
-                    .addBackgroundColor(ContextCompat.getColor(Add.this, R.color.teal_700))
+                    .addBackgroundColor(ContextCompat.getColor(Add.this, R.color.green))
                     .addActionIcon(R.drawable.ic_baseline_delete_24)
                     .create()
                     .decorate();
             super.onChildDraw(c, recyclerView, viewHolder, dX, dY, actionState, isCurrentlyActive);
         }
     };
-
-    /*
-    
-    public void createDocument(View view){
-        FirebaseFirestore.getInstance();
-
-        /*
-        Map<String, Object> map = new HashMap<>();
-        map.put("text", "sov mycket");
-        map.put("feeling", 5);
-        map.put("trainsession", 10);
-        map.put("created", new Timestamp(new Date()));
-
-        Note note = new Note("sov mycket", 5, 10);
-
-        FirebaseFirestore.getInstance().collection("notes")
-                //.add(map)
-                .add(note)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "onSuccess: task was succesfull");
-                        Log.d(TAG, "onSuccess: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                        Log.d(TAG, "onFailure: task was NOT succesfull");
-                    }
-                });
-
-        /* SKAPAR EN NY COLLECTION
-        Map<String, Object> map = new HashMap<>();
-        map.put("name", "iPhone11");
-        map.put("price", 699);
-        map.put("isAvailable", true);
-
-        FirebaseFirestore.getInstance()
-                .collection("products")
-                .add(map)
-                .addOnSuccessListener(new OnSuccessListener<DocumentReference>() {
-                    @Override
-                    public void onSuccess(DocumentReference documentReference) {
-                        Log.d(TAG, "onSuccess: Product is added succesfully");
-                        Log.d(TAG, "onSuccess: " + documentReference.getId());
-                    }
-                })
-                .addOnFailureListener(new OnFailureListener() {
-                    @Override
-                    public void onFailure(@NonNull Exception e) {
-                    }
-                });
-    }
-    */
 }

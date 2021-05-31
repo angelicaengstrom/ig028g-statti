@@ -109,7 +109,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 if(task.isSuccessful()){
                     FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
                     if (user.isEmailVerified()) {
-                        //skicka vidare till första sidan,,,, add ????
                         Intent intent = new Intent(MainActivity.this, Add.class);
                         startActivity(intent);
                         finish();

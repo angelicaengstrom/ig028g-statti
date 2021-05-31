@@ -81,7 +81,7 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
-                                                <entry key="imagePath" value="$USER_HOME$/Downloads/statti_logo.png" />
+                                                <entry key="imagePath" value="$USER_HOME$/Pictures/ipp/icon.png" />
                                                 <entry key="scalingPercent" value="109" />
                                                 <entry key="trimmed" value="true" />
                                               </map>
@@ -111,11 +111,6 @@
                                           </PersistentState>
                                         </value>
                                       </entry>
-                                    </map>
-                                  </option>
-                                  <option name="values">
-                                    <map>
-                                      <entry key="legacyIconShape" value="CIRCLE" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -309,7 +304,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/sentiment_neutral/baseline_sentiment_neutral_24.xml" />
+                                      <entry key="url" value="file:$USER_HOME$/Android/Sdk/icons/material/materialicons/create/baseline_create_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -319,8 +314,8 @@
                         </option>
                         <option name="values">
                           <map>
-                            <entry key="color" value="1f7a71" />
-                            <entry key="outputName" value="ic_baseline_sentiment_neutral_24" />
+                            <entry key="color" value="ffffff" />
+                            <entry key="outputName" value="ic_baseline_create_24" />
                             <entry key="sourceFile" value="$USER_HOME$/C:\Users\mahmo\OneDrive\Documents\GitHub\IPP\MyApplication3" />
                           </map>
                         </option>
