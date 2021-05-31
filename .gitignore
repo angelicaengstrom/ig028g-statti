@@ -83,3 +83,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+*.xml
+MyApplication3/app/build/intermediates/merged_manifest/debug/out/AndroidManifest.xml
