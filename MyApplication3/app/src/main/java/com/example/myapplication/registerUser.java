@@ -6,6 +6,7 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.util.Patterns;
 import android.view.View;
@@ -27,7 +28,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class registerUser extends AppCompatActivity implements View.OnClickListener, AdapterView.OnItemSelectedListener {
-    private TextView registerUser;
+    private TextView registerUser, anvandarVillkor, sekretessPolicy;
     private ImageView banner;
     private EditText editTextFullName, editTextAge, editTextEmail, editTextPassword ;
     private ProgressBar progressBar;
@@ -63,6 +64,8 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
 
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
 
+        anvandarVillkor = findViewById(R.id.anvandarvillkor);
+        sekretessPolicy = findViewById(R.id.sekretesspolicy);
 
     }
 
@@ -75,6 +78,12 @@ public class registerUser extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.registerUser:
                 registerUser();
+                break;
+            case R.id.anvandarvillkor:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/document/d/1A9LLSoKxRcysapjjWQYmrcMu1Gjgkxas058FWTYrsKc/edit?usp=sharing")));
+                break;
+            case R.id.sekretesspolicy:
+                startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse("https://docs.google.com/document/d/1iU3cMGUFp8dCks3eUfXGHyj4SFzvICajgHC1MHMaOK0/edit?usp=sharing")));
                 break;
         }
     }
