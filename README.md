@@ -1,4 +1,4 @@
-# IPP
+# Statti
 An trainingapp made with Android Studio and Firebase. Under construction.
 
 The main purpose of the application is to add training notes and thereafter view the trainingprogress visually.
